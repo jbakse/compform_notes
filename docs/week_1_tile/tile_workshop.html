@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Tile Kit Workshop</h1>
+<h2>Repeating Tiles</h2>
+<h3>Top matches bottom, left matches right.</h3>
+<p><img src="./tile_workshop/patterns.png" alt="patterns"></p>
+<h2>Repeating Tiles with Alternates</h2>
+<h3>Top matches bottom, left matches right. Alternate tiles used to break up pattern.</h3>
+<p><img src="./tile_workshop/patterns_alt.png" alt="patterns"></p>
+<h2>Rotatable Tiles</h2>
+<h3>Top matches bottom, left matches right. Rotated tiles still match up.</h3>
+<p><img src="./tile_workshop/patterns_truchet.png" alt="truchet"></p>
+<p>See also: <a href="https://en.wikipedia.org/wiki/Truchet_tiles">Truchet Tiles</a></p>
+<h2>Edge-matched Tile Sets</h2>
+<h3>A set of tiles where the sides of each tile match up to the opposing side of another tile in the set.</h3>
+<p><img src="./tile_workshop/patterns_set.png" alt="set"></p>
+<h3>One way to create a tile set is to consider each edge to be one of two states: occupied or empty. Since there are 4 sides, and each has two states, there will be 4^2 = 16 tiles in the set.</h3>
+<p><img src="./tile_workshop/edge_full_shadow.png" alt="edge_full_shadow"></p>
+<h3>Depending on the design, some of these tiles may be rotations of other tiles.</h3>
+<p><img src="./tile_workshop/edge_full.png" alt="edge_full"></p>
+<h3>In those cases, a smaller set will still work.</h3>
+<p><img src="./tile_workshop/edge_5.png" alt="edge_5"></p>
+<h3>With a set of tiles, you can start creating forms.</h3>
+<p><img src="./tile_workshop/edge_form.png" alt="edge_form"></p>
+<h3>A wide variety of looks can be created.</h3>
+<p><img src="./tile_workshop/multi_comp_form.png" alt="multi_comp_form"></p>
+<p>See also: <a href="https://en.wikipedia.org/wiki/Wang_tile">Wang Tiles</a></p>
+<h2>Corner-matched Tile Sets</h2>
+<h3>You can also create a set by considering the corners to be empty or occupied.</h3>
+<p><img src="./tile_workshop/corner_16.png" alt="corner_16"></p>
+<p><img src="./tile_workshop/corner_form.png" alt="corner_form"></p>
+<h1>Consider</h1>
+<ul>
+<li>How does this method impact design rhythm, complexity, concord, similarity, repetition?</li>
+<li>How are these design different from/similar to patterns?</li>
+<li>What kind of forms does this method lead to naturally? How can this be embraced/avoided?</li>
+<li>What are the essential elements of this method?</li>
+<li>How does a tile kit like this compare to building kits like lego blocks.</li>
+<li>How does a tile kit compare to a font?</li>
+<li>How does working within constraints impact creativity?</li>
+<li>What are the advantages/disadvantaged to working by hand?</li>
+<li>How would variations on the tile work? Staggered? Triangles? Rectangles?</li>
+<li>What if each edge/corner had three states instead of two?</li>
+<li>How could these tiles work in 3 dimensions?</li>
+</ul>
+<h1>Activity</h1>
+<h2>Create and edge-matched tile kit. Use markers on paper squares. Make up a design that allows rotation,this is faster to draw out than a full set. Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet.</h2>
+<h2>The image below shows which tiles you need to make, and how many to many to make of each.</h2>
+<p><img src="./tile_workshop/edge_counts.png" alt="edge_counts"></p>
+<h2>After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class blog.</h2>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

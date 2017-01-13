@@ -13,7 +13,7 @@
 Week    | Date      | Topic                 | Tool  | Notes
 ---     | ---       | ---                   | ---   | ---
 **Foundation**		|
-1       | Jan 27    | Tile Graphics         | Paper | [class notes](#)
+1       | Jan 27    | Tile Graphics         | Paper | [class notes](week_1)
 2       | Feb 03    | Random Values       	| p5.js | [class notes](week_2)
 3		| Feb-10	| Parameters			| p5.js | [class notes](#)
 4		| Feb-17	| Noise					| p5.js | [class notes](#)

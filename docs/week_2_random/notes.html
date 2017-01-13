@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h3>Brand New School - Adobe Mural - c. 2007</h3>
+<p><img src="http://www.tsfim.com/wordpress/wp-content/uploads/2008/06/adobe_slide_02.jpg" alt="Adobe Mural">
+<a href="http://brandnewschool.com/projects/mural-installation">Adobe Mural</a></p>
+<h3>Justin Bakse - Markov Map and Untitled - c. 2014</h3>
+<p><img src="http://justinbakse.com/preview_2/new_york/computational/images/markov_map_1.png" alt="Markov Map">
+<img src="http://justinbakse.com/preview_2/detroit/vines/images/illustrator.png" alt="Untitled"></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

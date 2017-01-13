@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Tile Set Design Examples</h1>
+<h2>Josef Albers - Bauhaus Lettering Set - 1926-31</h2>
+<p><img src="https://s-media-cache-ak0.pinimg.com/736x/a1/51/42/a15142d6be1048869220f180720e8e67.jpg" alt="Sketch">
+<img src="http://www.moma.org/media/W1siZiIsIjY2NzIwIl0sWyJwIiwiY29udmVydCIsIi1yZXNpemUgMTI4MHgxMjgwXHUwMDNFIl1d.jpg?sha=73f0e9c465058815" alt="Lettering Set">
+<a href="http://www.moma.org/collection/works/2724">Piece @ Moma</a><a href="http://www.moma.org/collection/artists/97?locale=en">Joseph Albers @ Moma</a></p>
+<h2>Anni Albers</h2>
+<p><img src="http://www.moma.org/media/W1siZiIsIjIyMTY4MSJdLFsicCIsImNvbnZlcnQiLCItcmVzaXplIDIwMDB4MjAwMFx1MDAzRSJdXQ.jpg?sha=00147c0b3abde9d0" alt="Anni">
+<a href="http://www.albersfoundation.org/">The Josef &amp; Anni Albers Founation</a>, <a href="http://www.moma.org/collection/artists/96?=undefined&amp;page=1">MOMA</a></p>
+<h2>Pauline Gorelov</h2>
+<p><img src="http://www.paulinegorelov.com/media/filter/l/img/hyperstructurewhite_modulartile_paulinegorelov_02.jpg" alt="Tiles">
+<img src="http://www.paulinegorelov.com/media/filter/l/img/braindead01_modularstickers_paulinegorelov.jpg" alt="Wall">
+<a href="http://www.paulinegorelov.com/">Artist’s Site</a></p>
+<h2>Chris Clark</h2>
+<p><img src="https://farm3.staticflickr.com/2649/4138406110_f5c0df1e2a_z.jpg?zz=1" alt="Type cube">
+<a href="http://www.chris-clarke.co.uk/">Artist’s Site</a></p>
+<h2>Jessica Svendsen - Yale Architecture Lecture Series Poster - 2015</h2>
+<p><img src="http://payload395.cargocollective.com/1/11/358022/10201935/YaleSchoolOfArchitecture_JessicaSvendsen_Fall2015_5_701.jpg" alt="Yale Architecture">
+<a href="http://jessicasvendsen.com/">Artist’s Site</a>
+<a href="http://jessicasvendsen.com/100-Days-with-Josef-Muller-Brockmann">100 Days with Josef Müller-Brockmann</a></p>
+<h2>We Are Plural</h2>
+<p><img src="http://weareplural.com/wp-content/uploads/2010/02/typeforce_2.jpg" alt="Type">
+<a href="http://weareplural.com/work/typeforce-01/2/">Artist’s Site</a></p>
+<h2>Nintendo</h2>
+<p><img src="http://www.zeldadungeon.net/Zelda03/Walkthrough/03/002.png" alt="zelda">
+<img src="http://flyingkirbypub.net/Weekly/Zeron/Maps/Machiavellianism.png" alt="advance wars"></p>
+<h2>Darryl Brown</h2>
+<p><img src="http://1.bp.blogspot.com/-6j9iTMENSbA/TwveinllLkI/AAAAAAAABcs/rbmhK3YoRNk/s1600/ThankYouCards2.jpg" alt="Stamp">
+<a href="http://darryldesigns.blogspot.com/2012/01/handmade-modular-type.html">Artist’s Site</a></p>
+<h2>Unknown</h2>
+<p><img src="http://56.media.tumblr.com/22cbad261bbd62e3a35fadb0a36f25b7/tumblr_mhh86bOfQE1qa8awvo1_500.jpg" alt="Tiles">
+<img src="https://s-media-cache-ak0.pinimg.com/736x/10/08/b9/1008b9eb526e8cc41ee77a6c416b4167.jpg" alt="More Tiles">
+<img src="http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg" alt="More Tiles"></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

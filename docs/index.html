@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Computational Form</h1>
+<h2>Make Things that Make Things!</h2>
+<h1>Resources</h1>
+<ul>
+<li><a href="syllabus.html">Syllaubs</a></li>
+<li><a href="https://desolate-cliffs-53268.herokuapp.com/">Class Blog</a></li>
+<li><a href="#">Class Github</a></li>
+</ul>
+<h1>Calendar</h1>
+<table>
+<thead>
+<tr><th>Week</th><th>Date</th><th>Topic</th><th>Tool</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Foundation</strong></td></tr>
+<tr><td>1</td><td>Jan 27</td><td>Tile Graphics</td><td>Paper</td><td><a href="week_1">class notes</a></td></tr>
+<tr><td>2</td><td>Feb 03</td><td>Random Values</td><td>p5.js</td><td><a href="week_2">class notes</a></td></tr>
+<tr><td>3</td><td>Feb-10</td><td>Parameters</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td>4</td><td>Feb-17</td><td>Noise</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td>5</td><td>Feb-24</td><td>Comp Form Strategies</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td></td></tr>
+<tr><td><strong>Exploration</strong></td></tr>
+<tr><td>6</td><td>Mar-03</td><td>Generating Animation</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td>7</td><td>Mar-10</td><td>Processing Pixels</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td>8</td><td>Mar-17</td><td>Turtle Graphics</td><td>p5.js + custom</td><td><a href="#">class notes</a></td></tr>
+<tr><td> </td><td><em>Mar-24</em></td><td><em>Spring Break</em></td></tr>
+<tr><td>9</td><td>Mar-31</td><td>Vector Data</td><td>paper.js</td><td><a href="#">class notes</a></td></tr>
+<tr><td>10</td><td>Apr-07</td><td>Generating Text</td><td>js+html</td><td><a href="#">class notes</a></td></tr>
+<tr><td>11</td><td>Apr-14</td><td>Generating Music</td><td>js+custom</td><td><a href="#">class notes</a></td></tr>
+<tr><td>12</td><td>Apr-21</td><td>Generating 3D Forms</td><td>OpenSCAD</td><td><a href="#">class notes</a></td></tr>
+<tr><td>13</td><td>Apr-28</td><td>Live Video + Sound</td><td>Vuo</td><td><a href="#">class notes</a></td></tr>
+<tr><td>14</td><td>May-05</td><td>Interactive Comp Form</td><td>TBD</td><td><a href="#">class notes</a></td></tr>
+<tr><td>15</td><td>May-12</td><td>TBD</td><td>TBD</td><td><a href="#">class notes</a></td></tr>
+</tbody>
+</table>
+<style>
+td:empty {
+    border: none;
+    height: 20px;
+}
+th {
+    display: none;
+}
+em {
+    color: #CCC;
+    font-style: normal;
+}
+</style>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

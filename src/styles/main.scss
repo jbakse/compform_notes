@@ -19,9 +19,31 @@ body {
 	font-weight: 300;
 }
 
-.js-toc {
-	position: fixed;
+.top-bar {
+	// height: 80px;
+	line-height: 36px;
+	// border-bottom: 1px solid gray;
+	padding-left: 20px;
 }
+
+.top-bar .title {
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 18px;
+}
+
+.side-bar {
+	top: 0;
+	position: fixed;
+	display: none;
+}
+
+.show-toc .side-bar {
+	display: block;
+}
+
+.js-toc {}
 
 .container {
 	margin-left: 100px;
@@ -55,7 +77,8 @@ h2 {
 	// background-color: rgba(0,255,0,.05);
 }
 
-h3 {
+h3,
+h4 {
 	font-size: $base-font-size * 1.2;
 	line-height: $base-font-size * 2;
 	margin-top: $base-font-size * 1;
@@ -99,6 +122,15 @@ i {
 }
 
 //////////////////////////////
+// images
+
+img {
+	width: 100%;
+	// margin-bottom: 18px;
+	display: block;
+}
+
+//////////////////////////////
 // tables
 
 table {
@@ -119,6 +151,18 @@ th {
 
 //////////////////////////////
 // lists
+
+ol,
+ul {
+	margin-bottom: 18px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	padding-left: 20px;
+}
 
 li {
 	list-style: disc;

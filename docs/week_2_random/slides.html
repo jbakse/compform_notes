@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Procedurally Generated Image Examples</h1>
+<h3>Jean Arp - Collage with Squares Arranged According to the Laws of Chance - 1917</h3>
+<p><img src="https://olearygraphics.files.wordpress.com/2010/10/arp-squares.jpg?w=1620" alt="Chance"></p>
+<h3>James Paterson (Presstube) - Page 0 (Detail) - 2004</h3>
+<p><img src="images/presstube.png" alt="Presstube"></p>
+<ul>
+<li><a href="http://presstube.com/project.php?id=217">Page 0</a></li>
+<li><a href="http://presstube.com/projects.php?pt_pp=18&amp;&amp;pp=all">Presstube Old Site</a></li>
+</ul>
+<h3>Joshua Davis (Praystation) - Various</h3>
+<p><img src="https://c1.staticflickr.com/1/394/19086181864_692730ebc5_z.jpg" alt="Joshua Davis">
+<img src="images/joshuadavis.png" alt="Joshua Davis"></p>
+<ul>
+<li><a href="http://www.joshuadavis.com/">Artist’s Site</a></li>
+</ul>
+<h3>Jared Tarbell (Complexification) - Substrate and Bubble Chamber - 2003</h3>
+<p><img src="http://www.complexification.net/gallery/machines/substrate/substratePRN.jpg" alt="substrate">
+<img src="http://www.complexification.net/gallery/machines/bubblechamber/bubblePRN.jpg" alt="Bubble Chamber"></p>
+<ul>
+<li><a href="http://www.complexification.net/">complexification</a></li>
+<li><a href="http://www.complexification.net/gallery/machines/substrate/index.php">substrate</a></li>
+<li><a href="http://www.complexification.net/gallery/machines/bubblechamber/">bubble chamber</a></li>
+</ul>
+<h3>Dave Bollinger</h3>
+<p><img src="images/bollinger.png" alt="1">
+<img src="images/bollinger2.png" alt="2"></p>
+<ul>
+<li><a href="https://www.flickr.com/photos/davebollinger/">Artit’s Photostream</a></li>
+</ul>
+<!-- ### JK Keller - Echo #12 - 2009
+![Echo #12](http://jk-keller.com/dirty_mousepads/_img/jk_keller-echo-12-page.jpg)
+[Arist's Site](http://jk-keller.com/) -->
+<h3>Laurie Waxman (Parsons 2016) - Alphabet Iterations - 2015</h3>
+<p><img src="http://lauriewaxman.com/work/images/alphabet1.gif" alt="Alphabet">
+<a href="http://lauriewaxman.com/">Arist’s Site</a></p>
+<h3>Greg Schomburg - Smeary Cloud Study - c. 2015</h3>
+<p><img src="images/schomburg.png" alt="Smeary">
+<img src="images/s3izpencils.jpg" alt="Pencils">
+<a href="https://github.com/gschomburg/sketches/tree/master/smearycloud">Source</a>
+<a href="http://s3iz.com/index_flourish.html">Pencils</a></p>
+<h3>Cellar Door Games - Rogue Legacy - 2013</h3>
+<p><img src="http://cdn.gamer-network.net/2013/06/21/141458-steamworkshop_webupload_previewfile_136969358_preview-1.png" alt="Map">
+<img src="http://images.gameskinny.com/gameskinny/96e77fdc7b81c5cfcae37508d240edb3.png" alt="Boss">
+<a href="http://roguelegacy.com/">Rogue Legacy</a></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

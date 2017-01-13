@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>p5 Lab</title>
+    <style type="text/css" media="screen">
+
+        #editor 
+        { 
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 50%;
+            
+            border-right: 1px solid #AAA;
+
+            line-height: 20px !important;
+        }
+
+        #preview
+        { 
+            border: none;
+
+            position: fixed;
+            top: 0;
+            height: 100%;
+            
+            width: 50%;
+            right: 0;
+            background-color: #FEFEFE;
+        }
+
+        #reminder
+        {
+            position: absolute;
+            box-sizing: border-box;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            padding: 5px 10px;
+
+
+            background-color: #F0F0F0;
+            color: #666;
+            
+            font-family: Monaco;
+            font-size: 10px;
+            z-index: 10;
+            border-right: 1px solid #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="editor"></div>
+    <div id="reminder">Open the javascript console with ⌥⌘J</div>
+    <iframe id="preview" src="p5_view.html"></iframe>
+
+    <script type="text/javascript" src="javascript/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script language="javascript" type="text/javascript" src="javascript/p5_lab.js"></script>
+
+</body>
+
+</html>

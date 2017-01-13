@@ -15,7 +15,14 @@
 
 	</head>
 	<body id="compform" class="<%= file.frontMatter.toc%>-toc">
-		<div class="js-toc"></div>
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"><%= file.frontMatter.title %></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
 		<!-- title: <%= file.frontMatter.title %> -->
 		<div class="container">
 			<%= contents %>

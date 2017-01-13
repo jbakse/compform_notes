@@ -3,7 +3,7 @@
 
 var config = {}
 
-config.publicDirectory = "./public"
+config.publicDirectory = "./docs"
 config.sourceDirectory = "./src"
 config.contentDirectory = "./content"
 config.base_url = "/"
@@ -108,7 +108,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
 	gulp.watch(config.markdown.watch, ['markdown']);
 	gulp.watch(config.sass.watch, ['sass']);
-	// gulp.watch(config.copy.src, ['copy']);
+	gulp.watch(config.copy.src, ['copy']);
 });
 
 gulp.task('default', ['watch', 'copy', 'markdown', 'sass', 'browser-sync']);

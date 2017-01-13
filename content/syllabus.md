@@ -1,4 +1,7 @@
-
+---
+title: Comp Form Syllabus
+toc: show
+---
 
 # Course Syllabus
 

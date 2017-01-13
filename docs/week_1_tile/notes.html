@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<p>that great video game graphics art video series on youtube</p>
+<p><a href="http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg">http://previews.123rf.com/images/claranatoli/claranatoli0701/claranatoli070100082/709614-Traditional-ancient-ceramics-Valencia-Spain-Stock-Photo-spanish-tile.jpg</a></p>
+<p><a href="http://www.spriters-resource.com/resources/sheets/19/20592.png">http://www.spriters-resource.com/resources/sheets/19/20592.png</a></p>
+<p><a href="http://www.jamisbuck.org/mazes/">http://www.jamisbuck.org/mazes/</a></p>
+<p><a href="http://www.spelunkyworld.com/whatis.html">http://www.spelunkyworld.com/whatis.html</a></p>
+<p>Tiled</p>
+<p>3:50 Intro Sierpinski
+4:00 Comp Form Intro
+4:50 Break
+5:00 Workshop Intro
+5:10 Workshop Work Time
+5:50 Class Blog
+6:00 Workshop Reference Images
+6:10 Assignent Review</p>
+<h2>Assignment 2 — Research</h2>
+<p>This week, in addition to your normal daily experiment posting, I’d like you to spend some time online looking at what others have done.</p>
+<p>Find and explore web sites related to computational form and procedural generation. Post one link to the class blog every day this week. With each link posting include an image and a one sentence description of the site. Try to find a variety of links, and include hash tags below if applicable.</p>
+<p>Tags: <code>#artist</code>, <code>#tool</code>, <code>#language</code>, <code>#article</code>, <code>#book</code>, <code>#image</code>, <code>#video</code>, <code>#sound</code></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

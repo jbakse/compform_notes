@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 2 - Working with Random</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 2 - Working with Random</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 2 - Working with Random -->
+		<div class="container">
+			<style>.bar-chart {border: 1px solid #CCC;  margin-bottom: 18px;}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="bar_chart.js"></script>
+<h2>Activity: 2D6 vs 1D12</h2>
+<p><a href="dice.html">Roll the Dice</a></p>
+<h1>Homework Review</h1>
+<p>If you see <em>interesting</em> work, books, or tools related to the class online. Please do post links to the blog.</p>
+<p><strong>Whenever you post work you didn’t make yourself include a link to the source, and if possible the artist’s name.</strong></p>
+<h1>Slides: Progen Images</h1>
+<p><a href="slides.html">Procedurally Generated Imagee</a></p>
+<h1>What p5 Is</h1>
+<p>From the p5js Homepage:</p>
+<blockquote>
+<p>p5.js is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.</p>
+</blockquote>
+<p>P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.</p>
+<p>If you have never worked with with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:</p>
+<ul>
+<li><a href="http://p5js.org/">p5.js Website</a></li>
+<li><a href="http://pucd2035-e-f15.github.io/class_notes/">Justin’s Creative Computing Class Notes</a></li>
+</ul>
+<h1>The Methodical Application of Chance</h1>
+<h2>Generating Random Numbers</h2>
+<p>Plain Javascript provides <code>Math.random()</code> to generate a random number.</p>
+<p>Processing provides the <code>random()</code> for generating random numbers.
+Without any parameters, <code>random()</code> generates a random number between 0 and 1 (not including the 1). You can pass parameters to control the range of the number. The numbers produced by random are pretty close to evenly distributed.</p>
+<p><a href="./random.js" class="p5_example show-code show-lab-link hidden">random</a></p>
+<h3>Specifying a Range</h3>
+<p>If you want your numbers evenly distributed over a range, <code>random()</code> works as-is.</p>
+<pre><code class="language-javascript">random(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>); <span class="hljs-comment">// even distribution between 0 and 10</span>
+random(<span class="hljs-number">10</span>,<span class="hljs-number">15</span>); <span class="hljs-comment">// even distribution between 10 and 15</span>
+</code></pre>
+<p>In some libraries the <code>random</code> function doesn’t take parameters, and just gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:</p>
+<pre><code class="language-javascript">random() * range + start
+random() * <span class="hljs-number">5</span> + <span class="hljs-number">10</span> <span class="hljs-comment">// even distribution between 10 and 15</span>
+</code></pre>
+<h3>Random Integers</h3>
+<p>The <code>random()</code> function returns floating point values, but sometimes you want just whole numbers (integers). The <code>floor()</code> function will round a number down, chopping off the decimal part.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// roll a standard die</span>
+floor(random(<span class="hljs-number">0</span>,<span class="hljs-number">6</span>)) + <span class="hljs-number">1</span>
+<span class="hljs-comment">// or</span>
+floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">7</span>))
+
+<span class="hljs-comment">// this won't quite work. why?</span>
+floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>))
+</code></pre>
+<p>The p5 library also has a <code>round()</code> function that rounds a number to the nearest integer. Using <code>round()</code> instead of <code>floor()</code> in the example above will cause incorrect results: <code>1</code> will get picked half as often as it should, and <code>7</code> will sometimes get picked and should not.</p>
+<h2>Biased Distribution</h2>
+<p>The examples above will produce results evenly distributed across their range.</p>
+<p>Often even distribution isn’t what you really want. Often you want to <strong>bias</strong> the results towards the low-end, high-end or middle. Simple averaging and the <code>min()</code> and <code>max()</code> functions can help with this.</p>
+<h3>Even Distribution: <code>random(1, 11)</code></h3>
+<p><img src="charts/even.png" alt="even-distribution"></p>
+<h3>Low Bias Distribution: <code>min(random(10), random(10))</code></h3>
+<p>Taking the lowest of two or more random numbers will bais the result toward the low-end.
+<img src="charts/low.png" alt="low-distribution"></p>
+<p>The more random numbers you use, the stronger the bias: <code>min(random(10), random(10), random(10), random(10))</code>
+<img src="charts/low-2.png" alt="low-2-distribution"></p>
+<h3>High Bias Distribution: <code>max(random(10), random(10))</code></h3>
+<p><img src="charts/high.png" alt="high-distribution"></p>
+<h3>Middle Bias Distribution: <code>(random(1,11) + random(1,11)) / 2</code></h3>
+<p><img src="charts/middle.png" alt="middle-distribution"></p>
+<h3>Normal Distribution <code>(random(1,11) + random(1,11) + random(1,11)) / 3</code></h3>
+<p>If you generate several random numbers and average them, the result gets close to normal (bell curve) distribution.
+<img src="charts/normal.png" alt="normal-distribution"></p>
+<p>P5 also provides the <a href="http://p5js.org/reference/#/p5/randomGaussian">randomGausian()</a> function for generating numbers with normal distribution. With randomGausian the possible values are not clamped to a range, extreme outliers are just really rare.</p>
+<h3>More Info</h3>
+<ul>
+<li><a href="http://anydice.com/">Anydice</a></li>
+<li><a href="http://anydice.com/articles/three-basic-distributions/">Anydice: Three Basic Distributions</a>,</li>
+<li><a href="http://www.redblobgames.com/articles/probability/damage-rolls.html">Redblob Post</a></li>
+</ul>
+<h2>Dice vs. Decks</h2>
+<p>If you roll a die a few times you might get the same value more than once, and it might take a long time before a particular value pops up.</p>
+<p>If you roll a normal die six times, it is unlikely that you’ll get all six values without repeats (only happens 1.5% of the time).</p>
+<p>Also, it wouldn’t really be odd to not roll any 1’s (happens about 33% of the time). In fact you can be pretty sure that at least one number won’t pop up in six rolls (98.5% sure).</p>
+<p>A deck of cards works differently. When you pull cards from a shuffled deck, you get a value in a random order, but you avoid duplicates, and you can make sure you tour all the values eventually.</p>
+<h3>Dice Visualizer</h3>
+<p><a href="./dice.js" class="p5_example show-lab show-lab-link hidden">dice</a></p>
+<h3>Deck Visualizer</h3>
+<p><a href="./cards.js" class="p5_example show-lab show-lab-link hidden">Deck Visualizer</a></p>
+<h3>Modeling a Deck with an Array</h3>
+<pre><code class="language-javascript"><span class="hljs-comment">// create an array to hold the possible values</span>
+<span class="hljs-keyword">var</span> values = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+
+<span class="hljs-comment">// create a variable to hold the current position in the deck</span>
+<span class="hljs-keyword">var</span> position = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// shuffle the deck first</span>
+    values = shuffle(values);
+    <span class="hljs-built_in">console</span>.log(valueFromDeck());
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">valueFromDeck</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// find the value at the current position in the deck</span>
+    <span class="hljs-keyword">var</span> v = values[position];
+
+    <span class="hljs-comment">// change the position for next time</span>
+    position++;
+
+    <span class="hljs-comment">// if we run out of "cards", shuffle and start over from the top</span>
+    <span class="hljs-keyword">if</span> (position &gt; <span class="hljs-number">9</span>) {
+        values = shuffle(values);
+        position = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-comment">// return the value</span>
+    <span class="hljs-keyword">return</span> v;
+}
+
+</code></pre>
+<h2>Random Choices</h2>
+<p>If you want your code to make a decision at random, you can combine <code>random()</code> with and conditional (<code>if</code>) statement.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// do something only half the time</span>
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.5</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Optional Thing"</span>);
+}
+
+<span class="hljs-comment">// do something only 10% of the time</span>
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.1</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
+}
+
+<span class="hljs-comment">// another way to do something only 10% of the time</span>
+<span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">10</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing"</span>);
+}
+</code></pre>
+<p>With <code>else</code> you can pick between two optional things to do.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// do one thing, or the other. even odds</span>
+<span class="hljs-keyword">if</span> (random() &lt; <span class="hljs-number">.5</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option A"</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Option B"</span>);
+}
+</code></pre>
+<p>With <code>else if</code> you can pick between multiple optional things to do.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> r = random(<span class="hljs-number">100</span>);
+
+<span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">20</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">40</span>){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>); <span class="hljs-comment">// r must be &gt; 20 and &lt; 40</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (Remaining 60%)"</span>);
+}
+</code></pre>
+<p>A common mistake when following this pattern is calling random multiple times. If you are making 1 choice between several options, you only want to call <code>random()</code> once.</p>
+<p><strong>Remember: 1 choice, 1 <code>random()</code></strong>.</p>
+<pre><code class="language-javascript bad"><span class="hljs-comment">// this code doesn't work as expected</span>
+<span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">20</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 1 (20%)"</span>); <span class="hljs-comment">// Actually a 20% chance</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (random(<span class="hljs-number">100</span>) &lt; <span class="hljs-number">40</span>){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Rare Thing 2 (20%)"</span>); <span class="hljs-comment">// Actually a 32% chance</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (Remaining 80%)"</span>); <span class="hljs-comment">// Actually a 48% chance</span>
+}
+</code></pre>
+<h2>Psuedo-random vs. Random</h2>
+<p>If your computer is working right, it is a deterministic system. When the computer is in a particular state and performs an instruction, the resulting state will always be the same. <strong>The results are never random.</strong></p>
+<p>So how can <code>random()</code> produce a random value? Technically, it can’t. It can produce only pseudorandom values. Pseudorandom values appear random if you don’t look very closely, but are created by a deterministic process.</p>
+<p>A common method to create pseudorandom values is a <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator">Linear Congruential Generator</a>.</p>
+<p><a href="./random_lcg.js" class="p5_example show-code show-lab-link hidden">lcg</a></p>
+<p>For our purposes, it is not really important to understand exactly how the generator works. <strong>It is important to understand that the sequence of <code>random()</code> numbers is perfectly predictable, if you know the seed.</strong></p>
+<h3>Setting the Random Seed</h3>
+<p>P5 provides <code>randomSeed()</code> to set the <strong>seed</strong> used by <code>random()</code>. Once you have set the seed, the sequence of values produced by random will always be the same.</p>
+<p><a href="./seed.js" class="p5_example show-lab show-lab-link hidden">randomSeed</a></p>
+<p>Using the seed, you can use random values in your code, but have the same things happen between runs. This can be a useful feature in many programs, and can help with debugging problems.</p>
+<p>Be careful when relying on the seed to get random but repeatable results. There are at least two common ways for things to get messed up.</p>
+<p>First, if your program accepts user input, and that input can influence how many times <code>random()</code> is called, your program can get off sequence.</p>
+<p>Second, if you change your program and add or remove a call to <code>random()</code>, you will alter the sequence.</p>
+<h1>Study Examples</h1>
+<h2>Skyline</h2>
+<p><a href="./skyline.js" class="p5_example show-lab show-lab-link hidden">skyline.js</a></p>
+<h2>Small Multiples</h2>
+<p><a href="./small_mult.js" class="p5_example show-lab show-lab-link hidden">small_mult.js</a></p>
+<h2>Grass</h2>
+<p><a href="./grass.js" class="p5_example show-lab show-lab-link hidden">grass.js</a></p>
+<h2>Brownian Motion</h2>
+<p><a href="./brownian.js" class="p5_example show-lab show-lab-link hidden">brownian.js</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian Motion</a></p>
+<h2>Horizon</h2>
+<p><a href="./horizon.js" class="p5_example show-lab show-lab-link hidden">horizon.js</a></p>
+<h1>Workshop: Hello, World!</h1>
+<h2>Recommended Tools</h2>
+<ul>
+<li>Github Desktop for Mac [<a href="https://desktop.github.com/]">https://desktop.github.com/]</a></li>
+<li>Google Chrome [<a href="https://www.google.com/chrome/browser/desktop/]">https://www.google.com/chrome/browser/desktop/]</a></li>
+<li>Atom [<a href="https://atom.io/]">https://atom.io/]</a>
+<ul>
+<li>Atom Package: jsformat</li>
+<li>Atom Package: linter</li>
+<li>Atom Package: linter-jshint</li>
+<li>Atom Package: atom-live-server</li>
+</ul></li>
+</ul>
+<h2>What Git and Github Are</h2>
+<p><a href="http://git-scm.com/">Git</a> is a version control system. As you work on a project it will grow and change. Git keeps track of the changes you make to the files in your project, keeping a valuable history. With version control, you can review changes to a file over time and you can revert a single file or entire project to an earlier version if (when) something goes wrong. Git also provides powerful tools for sharing your work with others and merging the work of teammates.</p>
+<p><a href="http://www.github.com">Github</a> is a service that hosts software projects that use Git. Github builds on Git, adding features for collaborative coding such as bug tracking and code reviews. Github hosts a huge array of open-source and private projects and libraries.</p>
+<p>Normally, you use the Git software through its command line interface. If you are not comfortable using the command line, you won’t be comfortable using Git in this way. <a href="https://desktop.github.com/">Github Desktop</a> is a simple graphical user interface for Git, with added integration with Github. Github desktop isn’t as powerful as the command line interface, but it can cover the basic workflows we’ll use in class.</p>
+<h2>Getting Started Sketching in p5</h2>
+<p>For the first few weeks we’ll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I’ve created a template project for your sketches.</p>
+<p>We’ll run through these steps to get up and running with the template together in class.</p>
+<ul>
+<li>Starting a New Project
+<ul>
+<li>Create a Github Account / Log In to Github</li>
+<li>Create a Repo on Github</li>
+<li>Clone the Repo to Your Computer, With Github for Mac</li>
+<li>Add/Modify A <code>README.md</code> File</li>
+<li>Commit the Files</li>
+<li>Push Your Commits</li>
+<li>Check <code>github.com</code> to confirm your <code>README.md</code> synced.</li>
+</ul></li>
+</ul>
+<ul>
+<li><p>Use the Class p5 Sketches Template</p>
+<ul>
+<li>Download —<strong>Don’t Fork</strong>— the Template</li>
+<li>Add the Files to Your Project</li>
+<li>Verify the Starter Sketches Work</li>
+<li>Commit and Push</li>
+</ul></li>
+<li><p>Duplicate a template sketch</p></li>
+<li><p>Start Sketching!</p></li>
+</ul>
+<h1>Assignment</h1>
+<h1>Related Links</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Musikalisches_W%C3%BCrfelspiel">Mozart Dice</a></li>
+<li><a href="http://sunsite.univie.ac.at/Mozart/dice/">Mozart Dice 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=nFVmh9WNnDw">Mozart Dice 3</a></li>
+<li><a href="http://pucd2035-e-f15.github.io/class_notes/week_2/class_work.html">Creative Computing Week 2 Random Drawings</a></li>
+</ul>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
