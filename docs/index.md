@@ -1,11 +1,20 @@
 # Computational Form
-## Make Things that Make Things!
+
+
+
+
+Computational Form is a class at [Parsons](http://amt.parsons.edu/) about generative art, parametric design, and procedural generation. In this class we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures.
+
+**We will make things that make things**.
+
+
+
 
 # Resources
 
-- [Syllaubs](syllabus.html)
-- [Class Blog](https://desolate-cliffs-53268.herokuapp.com/)
-- [Class Github](#)
+[Class Sketch Blog](http://sketches.compform.net/) |
+[Class Notes Github](https://github.com/jbakse/compform_notes) |
+[Syllaubs](syllabus.html)
 
 
 # Calendar
