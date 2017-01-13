@@ -6,7 +6,7 @@ var config = {}
 config.publicDirectory = "./docs"
 config.sourceDirectory = "./src"
 config.contentDirectory = "./content"
-config.base_url = "/compform_notes/"
+config.base_url = "/"
 config.gh_pages_base_url = "/comp_form/"
 
 config.markdown = {
