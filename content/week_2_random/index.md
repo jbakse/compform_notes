@@ -2,13 +2,6 @@
 title: Week 2 - Working with Random
 toc: show
 ---
-<style>.bar-chart {border: 1px solid #CCC; 	margin-bottom: 18px;}</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<script src="bar_chart.js"></script>
-
-
-
-
 
 ## Activity: 2D6 vs 1D12
 
