@@ -31,7 +31,8 @@
 <h1>Resources</h1>
 <p><a href="http://sketches.compform.net/">Class Sketch Blog</a> |
 <a href="https://github.com/jbakse/compform_notes">Class Notes Github</a> |
-<a href="syllabus.html">Syllaubs</a></p>
+<a href="syllabus.html">Syllaubs</a> |
+<a href="links.html">Links</a></p>
 <h1>Calendar</h1>
 <table>
 <thead>
@@ -49,7 +50,7 @@
 <tr><td>6</td><td>Mar-03</td><td>Generating Animation</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
 <tr><td>7</td><td>Mar-10</td><td>Processing Pixels</td><td>p5.js</td><td><a href="#">class notes</a></td></tr>
 <tr><td>8</td><td>Mar-17</td><td>Turtle Graphics</td><td>p5.js + custom</td><td><a href="#">class notes</a></td></tr>
-<tr><td> </td><td><em>Mar-24</em></td><td><em>Spring Break</em></td></tr>
+<tr><td> </td><td><em>Mar-24</em></td><td><em>Spring Break</em></td><td> </td><td> </td></tr>
 <tr><td>9</td><td>Mar-31</td><td>Vector Data</td><td>paper.js</td><td><a href="#">class notes</a></td></tr>
 <tr><td>10</td><td>Apr-07</td><td>Generating Text</td><td>js+html</td><td><a href="#">class notes</a></td></tr>
 <tr><td>11</td><td>Apr-14</td><td>Generating Music</td><td>js+custom</td><td><a href="#">class notes</a></td></tr>
@@ -59,8 +60,25 @@
 <tr><td>15</td><td>May-12</td><td>TBD</td><td>TBD</td><td><a href="#">class notes</a></td></tr>
 </tbody>
 </table>
+<script type="text/javascript" src="javascript/p5.min.js"></script>
+<script type="text/javascript" src="backgrounds/rainbow_maze.js"></script>
 <style>
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container {
+    //padding: 15px;
+    //background: rgba(255,255,255,.85);
+}
+td {
+    white-space: nowrap;
+    border: none;
+}
 td:empty {
+    background: transparent;
     border: none;
     height: 20px;
 }

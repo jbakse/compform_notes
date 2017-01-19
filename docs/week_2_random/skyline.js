@@ -3,7 +3,7 @@ var position = 0;
 
 function setup() {
 
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(1200, 200);
 	noLoop();
 
 	noStroke();
@@ -20,14 +20,16 @@ function draw() {
     fill(100);
 
     let x = 0;
-    for (x = 0; x < windowWidth; x+=20) {
+    for (x = 0; x < width; x+=20) {
 
-        let buildingHeight = floor(pickHeight()) * 10;
-        rect(x, windowHeight * .5 - buildingHeight, 20, buildingHeight);
+        let buildingHeight = floor(pickHeight()) * 15;
+        rect(x, height * .9 - buildingHeight, 20, buildingHeight);
     }
 
     fill(150);
-    rect(0, windowHeight*.5, windowWidth, windowHeight*.5);
+    rect(0, height*.9, width, height*.5);
+	noLoop();
+
 }
 
 function pickHeight() {
@@ -58,6 +60,7 @@ function pickHeight() {
     //     random(0, 10)
     // ) * .25;
 
+	// deck
     // return valueFromDeck();
 }
 

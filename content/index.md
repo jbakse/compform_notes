@@ -14,7 +14,8 @@ Computational Form is a class at [Parsons](http://amt.parsons.edu/) about genera
 
 [Class Sketch Blog](http://sketches.compform.net/) |
 [Class Notes Github](https://github.com/jbakse/compform_notes) |
-[Syllaubs](syllabus.html)
+[Syllaubs](syllabus.html) |
+[Links](links.html)
 
 
 # Calendar
@@ -32,7 +33,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 6		| Mar-03	| Generating Animation	| p5.js | [class notes](#)
 7		| Mar-10	| Processing Pixels		| p5.js | [class notes](#)
 8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](#)
-&nbsp;	| *Mar-24*	| *Spring Break*		
+&nbsp;	| *Mar-24*	| *Spring Break*		| &nbsp; | &nbsp;
 9		| Mar-31	| Vector Data			| paper.js | [class notes](#)
 10		| Apr-07	| Generating Text		| js+html | [class notes](#)
 11		| Apr-14	| Generating Music		| js+custom | [class notes](#)
@@ -43,8 +44,27 @@ Week    | Date      | Topic                 | Tool  | Notes
 
 
 
+<script type="text/javascript" src="javascript/p5.min.js"></script>
+<script type="text/javascript" src="backgrounds/rainbow_maze.js"></script>
+
+
 <style>
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.container {
+	//padding: 15px;
+	//background: rgba(255,255,255,.85);
+}
+td {
+	white-space: nowrap;
+	border: none;
+}
 td:empty {
+	background: transparent;
 	border: none;
 	height: 20px;
 }

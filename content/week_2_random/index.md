@@ -175,6 +175,20 @@ function valueFromDeck() {
 
 ```
 
+## Biased Examples
+
+![deck.png](./figures/deck.png)
+
+![low.png](./figures/low.png)
+
+![normal.png](./figures/normal.png)
+
+![unbiased.png](./figures/unbiased.png)
+
+![high.png](./figures/high.png)
+
+
+
 ## Random Choices
 
 If you want your code to make a decision at random, you can combine `random()` with and conditional (`if`) statement.
@@ -332,9 +346,10 @@ We'll run through these steps to get up and running with the template together i
 
 - Start Sketching!
 
-
-
 # Assignment
+
+Sketch! Experiment with procedurally generated images that make use of `random()`. Post your results to the Sketchblog.
+
 
 # Related Links
 
@@ -342,3 +357,5 @@ We'll run through these steps to get up and running with the template together i
 - [Mozart Dice 2](http://sunsite.univie.ac.at/Mozart/dice/)
 - [Mozart Dice 3](https://www.youtube.com/watch?v=nFVmh9WNnDw)
 - [Creative Computing Week 2 Random Drawings](http://pucd2035-e-f15.github.io/class_notes/week_2/class_work.html)
+
+[Today's Plan](plan.html)
