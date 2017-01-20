@@ -295,9 +295,9 @@ Second, if you change your program and add or remove a call to `random()`, you w
 # Workshop: Hello, World!
 
 ## Recommended Tools
-- Github Desktop for Mac [https://desktop.github.com/]
-- Google Chrome [https://www.google.com/chrome/browser/desktop/]
-- Atom [https://atom.io/]
+- [Github Desktop for Mac](https://desktop.github.com/)
+- [Google Chrome](https://www.google.com/chrome/browser/desktop/)
+- [Atom](https://atom.io/)
   - Atom Package: jsformat
   - Atom Package: linter
   - Atom Package: linter-jshint

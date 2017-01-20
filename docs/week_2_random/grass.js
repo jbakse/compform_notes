@@ -1,9 +1,11 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	noLoop();
+
 
 	noStroke();
 	fill(255, 255, 255);
+
+	noLoop();
 }
 
 function draw() {
@@ -12,19 +14,21 @@ function draw() {
 	fill(220, 220, 220);
 	rect(0, height * 0.5, width, height * 0.5);
 
-	
+
 	stroke(220, 220, 220);
 	drawGrass(0, height * 0.5 - 100, width, 100);
 	//stroke(240, 240, 240);
 	drawGrass(0, height * 0.5 - 100, width, 100);
 	//drawGrass(0, height * 0.5 - 100, width, 100);
+
+
 }
 
 function drawGrass(left, top, width, height) {
 
 		// loop from the left to the right, one pixel per step
 		for (var x = left; x < left + width; x++) {
-	
+
 			// x and y are the base of the blade of grass
 			var y = top + height;
 
@@ -47,5 +51,5 @@ function drawGrass(left, top, width, height) {
 			// draw the grass
 			line(x, y, x + bladeLean, y - bladeHeight);
 		}
-	
+
 }

@@ -22,3 +22,6 @@ Mid: Groups are given example outputs (images mostly) asked to list as many poss
 Time    | Activity
 ---     | ---
 3:50    | ?
+
+
+Look at photoshop fileters (or other examples) and discuss what paremeters could be added/taken away.

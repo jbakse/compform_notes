@@ -10,6 +10,8 @@ function setup() {
 	fill(255, 255, 255);
 
     values = shuffle(values);
+
+	noLoop();
 }
 
 function draw() {
@@ -28,7 +30,7 @@ function draw() {
 
     fill(150);
     rect(0, height*.9, width, height*.5);
-	noLoop();
+
 
 }
 
