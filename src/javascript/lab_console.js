@@ -1,28 +1,23 @@
 function setupConsole() {
-    // console.log("setup console");
-	let console_log = null;
-	let console_div = null;
+	var console_log = null;
+	var console_div = null;
 	if (console.log) {
-		console_log = console.log;
-
+        // create a div to hold the onscreen log
         console_div = $("<div class='lab-console'>");
         $("body").append(console_div);
+        
+        // remember the real console log
+		console_log = console.log;
 
-
-
-
-
-		// console.log(console_div);
+        // overwrite console.log with our function
 		console.log = function() {
-            let line = $("<div>");
-            // for (var i = 0; i < arguments.length; i++) {
-            //     let arg = arguments[i];
-            // }
-            let args = [].slice.call(arguments);
-
+            // build a dom line to show the logged info
+            var line = $("<div>");
+            var args = [].slice.call(arguments);
             line.append(args.join(", "));
-
     		console_div.append(line);
+
+            // echo to the real console
 			console_log.apply(this, arguments);
 		};
 

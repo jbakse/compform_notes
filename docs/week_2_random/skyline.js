@@ -21,10 +21,10 @@ function draw() {
 	background(200,200,210);
     fill(100);
 
-    let x = 0;
+    var x = 0;
     for (x = 0; x < width; x+=20) {
 
-        let buildingHeight = floor(pickHeight()) * 15;
+        var buildingHeight = floor(pickHeight()) * 15;
         rect(x, height * .9 - buildingHeight, 20, buildingHeight);
     }
 

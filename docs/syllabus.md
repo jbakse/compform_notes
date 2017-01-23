@@ -21,9 +21,9 @@ toc: show
 | http://justinbakse.com
 
 ## Course Description
-Computer programming is a powerful tool for creating and manipulating form and has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms completely with code. This class will build on existing programming skills by introducing a variety techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with javascript and p5.js, synthesizing audio in javascript, and using OpenSCAD to create models for 3D printing.
+Computer programming is a powerful tool for creating and manipulating form that has long been used to by artists, designers, and composers to explore new aesthetics. In this class, students will continue this tradition of experimentation by creating and processing images, animation, video, sound, and 3D forms completely with code. This class will build on existing programming skills by introducing a variety techniques, programming languages, and tools related to procedural generation. Topics will include: creating raster and vector images with javascript and p5.js, synthesizing audio in javascript, and using OpenSCAD to create models for 3D printing.
 
-In this class we will make things that make things.
+In this class, we will make things that make things.
 
 ## Learning Outcomes
 In this course students should:
@@ -36,16 +36,17 @@ In this course students should:
 - Explore a variety of media
 - Problem solve with other students
 - Build a foundation for using these skill in their future work
+- Develop a habit of playful experimentation through daily sketches
 
 ## Homework
-Homework is the most important part of this class. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. The homework is where you will apply what we discuss discuss in class.
+Homework is the most important part of this class. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. The homework is where you will apply what we discuss in class.
 
-Each week you will create and post 5 sketches to the class sketch log. These sketches should be related to the current weeks theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week, late work will not be accepted.
+Each week you will create and post 5 sketches to the class sketchblog. These sketches should be related to the current week's theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week, late work will not be accepted.
 
-This assignment structure is meant to encourage experimentation and allow flexibility. In particular, this structure is intended to allow students adjust the technical difficulty of the class work to suit their skill level. Please speak with me if you have any concerns related to this.
+The homework focuses on frequent practice, rather than final results. This structure is meant to encourage experimentation and allow flexibility. In particular, this structure is intended to allow students to adjust the technical difficulty of the class work to suit their skill level. Please speak with me if you have any concerns related to this.
 
-## Class Sketch Log
-Students will post their daily sketches to the class sketch blog. While students will retain the intellectual property rights to their work, they should be aware that the sketch blog is public and should be comfortable sharing images of their work publicly. In addition students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to this.
+## Class Sketchblog
+Students will post their daily sketches to the class sketchblog. While students will retain the intellectual property rights to their work, they should be aware that the sketchblog is public and should be comfortable sharing images of their work publicly. In addition, students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to this.
 
 
 ## Course Outline
@@ -53,34 +54,34 @@ The following outlines the main topics to be presented in each class. This may b
 
 Week    | Date      | Topic                 | Tool  | Notes
 ---     | ---       | ---                   | ---   | ---
-**Foundation**		|
+**Foundation**        |
 1       | Jan 27    | Tile Graphics         | Paper | [class notes](#)
-2       | Feb 03    | Random Values       	| p5.js | [class notes](week_2)
-3		| Feb-10	| Parameters			| p5.js | [class notes](#)
-4		| Feb-17	| Noise					| p5.js | [class notes](#)
-5		| Feb-24	| Comp Form Strategies	| p5.js | [class notes](#)
+2       | Feb 03    | Random Values           | p5.js | [class notes](week_2)
+3        | Feb-10    | Parameters            | p5.js | [class notes](#)
+4        | Feb-17    | Noise                    | p5.js | [class notes](#)
+5        | Feb-24    | Comp Form Strategies    | p5.js | [class notes](#)
 |
-**Exploration**		|
-6		| Mar-03	| Generating Animation	| p5.js | [class notes](#)
-7		| Mar-10	| Processing Pixels		| p5.js | [class notes](#)
-8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](#)
-&nbsp;	| *Mar-24*	| *Spring Break*		
-9		| Mar-31	| Vector Data			| paper.js | [class notes](#)
-10		| Apr-07	| Generating Text		| js+html | [class notes](#)
-11		| Apr-14	| Generating Music		| js+custom | [class notes](#)
-12		| Apr-21	| Generating 3D Forms	| OpenSCAD | [class notes](#)
-13		| Apr-28	| Live Video + Sound	| Vuo | [class notes](#)
-14		| May-05	| Interactive Comp Form	| TBD | [class notes](#)
-15		| May-12	| TBD					| TBD | [class notes](#)
+**Exploration**        |
+6        | Mar-03    | Generating Animation    | p5.js | [class notes](#)
+7        | Mar-10    | Processing Pixels        | p5.js | [class notes](#)
+8        | Mar-17    | Turtle Graphics        | p5.js + custom| [class notes](#)
+&nbsp;    | *Mar-24*    | *Spring Break*        
+9        | Mar-31    | Vector Data            | paper.js | [class notes](#)
+10        | Apr-07    | Generating Text        | js+html | [class notes](#)
+11        | Apr-14    | Generating Music        | js+custom | [class notes](#)
+12        | Apr-21    | Generating 3D Forms    | OpenSCAD | [class notes](#)
+13        | Apr-28    | Live Video + Sound    | Vuo | [class notes](#)
+14        | May-05    | Interactive Comp Form    | TBD | [class notes](#)
+15        | May-12    | TBD                    | TBD | [class notes](#)
 
 ## Assessable Tasks
-Students will complete weekly assignments to demonstrate understanding of course material. These assignments will be evaluated based on technical, conceptual, and aesthetic exploration. Student will participation in class lectures, activities, and workshops will also be reflected in their final grade.
+Students will complete weekly assignments to demonstrate an understanding of course material. These assignments will be evaluated based on technical, conceptual, and aesthetic exploration. Student participation in class lectures, activities, and workshops will also be reflected in their final grade.
 
 ### Grading
 - 80% Weekly Sketch Posts
 - 20% In-class Activities
 
-Your weekly posts will be graded using the following rough guide. This assignment structure is meant to encourage experimentation. As a general rule, the number of sketches you post each week will primarily determine your grade for that week. Your weekly grade may be adjusted up or down if your posts demonstrate a particularly high or low amount of exploration. For example if all of your sketches in a given week are of low complexity and very similar, your grade will be reduced.
+Your weekly posts will be graded using the following rough guide. This assignment structure is meant to encourage experimentation. As a general rule, the number of sketches you post each week will primarily determine your grade for that week. Your weekly grade may be adjusted up or down if your posts demonstrate a particularly high or low amount of exploration. For example, if all of your sketches in a given week are of low complexity and very similar, your grade will be reduced.
 
 As a general guideline, spend between 1 and 2 hours per sketch.
 
@@ -93,7 +94,7 @@ As a general guideline, spend between 1 and 2 hours per sketch.
 | A | 4 | 5 Posts, Very Good Creative/Technical Exploration
 | A+ | 5 | 6 Posts, Extra Credit
 
-Note: Working at a steady pace is important for this class, but some flexibility is needed. Posting 6 high quality sketches in a week will earn extra credit point, which will partially offset a slow week.
+Note: Working at a steady pace is important for this class, but some flexibility is needed. Posting 6 high-quality sketches in a week will earn extra credit point, which will partially offset a slow week.
 
 ### Undergraduate Grading
 
@@ -159,7 +160,7 @@ Extra Credit will be given for formal contributions to the class. One way to con
 Each student must have a Github account. We will use Github to turn in and host assignments.
 
 ## Backups
-Each student **must** keep backups of their daily sketches, including source code and images and be prepared to submit or re-submit this work at anytime. Data loss, even if due to a failure of a class resource or third party service will not be accepted as an excuse for missing work.
+Each student **must** keep backups of their daily sketches, including source code and images and be prepared to submit or re-submit this work at any time. Data loss, even if due to a failure of a class resource or third party service will not be accepted as an excuse for missing work.
 
 ## Office Hours
 By appointment. Email to arrange.
@@ -179,11 +180,11 @@ We will spend a good amount of class time working together on coding projects. D
 ## Plagiarism, Code, and Open-Source
 Code reuse is a complex issue in computer programming. Looking at existing code is a key part of the programming process, especially while learning. You often learn best by modifying working examples rather than starting from scratch. We stand on the shoulders of giants; that is a key part of the open-source philosophy.
 
-Copy+paste makes it easy to use other's code without fully understanding it. It is important when using example code that you take the time to read, study, and understand it. In many cases this process can begin with simply retyping code instead of pasting it.
+Copy+paste makes it easy to use other's code without fully understanding it. It is important when using example code that you take the time to read, study, and understand it. In many cases, this process can begin with simply retyping code instead of pasting it.
 
-In a professional environment, the best practice is often to reuse existing code as much as possible. When learning however, it is often best to do as much as possible from scratch.
+In a professional environment, the best practice is often to reuse existing code as much as possible. When learning, however, it is often best to do as much as possible from scratch.
 
-With that in mind, you may use limited amounts of existing code in your homework. However, there is a very important caveat: any code you use, borrow, and/or modify must be labeled as such. If you study code closely but do not directly use any of it, you should still cite the code you studied in your own source. **Every time you use code you didn't write, document your use in your source code with a comment.** If your work uses someone else's code in a substantial way you should also cite the work when you post your work. You must include the name of the author (even if it is me or a student in this class), the source URL, and you must make clear which lines of code are not yours. If you fail to do this, you will fail the class. It is very, very easy to get this right, though, so if you take a moment's time to label your work correctly, you will not have a problem. Be diligent and honest.
+With that in mind, you may use limited amounts of existing code in your homework. However, there is a very important caveat: any code you use, borrow, and/or modify must be labeled as such. If you study code closely but do not directly use any of it, you should still cite the code you studied in your own source. **Every time you use code you didn't write, document your use in your source code with a comment.** If your work uses someone else's code in a substantial way you should also cite the work when you post your work. You must include the name of the author (even if it is me or a student in this class), the source URL, and you must make clear which lines of code are not yours. This policy is not limited to code. If you use other people's work in your assignments, you should cite it. **If you fail to do this, you may fail the class.** It is very, very easy to get this right, though, so if you take a moment's time to label your work correctly, you will not have a problem. Be diligent and honest.
 
 ## Resources
 
@@ -236,14 +237,14 @@ td {
     min-width: 100px;
 }
 td:empty {
-	border: none;
-	height: 20px;
+    border: none;
+    height: 20px;
 }
 th {
-	display: none;
+    display: none;
 }
 em {
-	color: #CCC;
-	font-style: normal;
+    color: #CCC;
+    font-style: normal;
 }
 </style>

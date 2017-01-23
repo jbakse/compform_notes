@@ -58,7 +58,7 @@ function drawBuckets() {
 function mouseClicked() {
 	// pick a number
 	pickedValue = valueFromDeck();
-	console.log("Generated: ", pickedValue);
+	// console.log("Generated: ", pickedValue);
 
 	// increment the bucket that number falls into
 	buckets[floor(pickedValue)] += 1;

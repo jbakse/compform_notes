@@ -27,7 +27,7 @@ From the p5js Homepage:
 
 P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.
 
-If you have never worked with with Processing or p5, you'll need to do some reading and learning on your own. Here are some resources to get you started quickly:
+If you have never worked with Processing or p5, you'll need to do some reading and learning on your own. Here are some resources to get you started quickly:
 
 - [p5.js Website](http://p5js.org/)
 - [Justin's Creative Computing Class Notes](http://pucd2035-e-f15.github.io/class_notes/)
@@ -55,7 +55,7 @@ random(0,10); // even distribution between 0 and 10
 random(10,15); // even distribution between 10 and 15
 ```
 
-In some libraries the `random` function doesn't take parameters, and just gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:
+In some libraries, the `random` function doesn't take parameters and always gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:
 
 ```javascript
 random() * range + start
@@ -90,7 +90,7 @@ Often even distribution isn't what you really want. Often you want to **bias** t
 ![even-distribution](charts/even.png)
 
 ### Low Bias Distribution: `min(random(10), random(10))`
-Taking the lowest of two or more random numbers will bais the result toward the low-end.
+Taking the lowest of two or more random numbers will bias the result toward the low-end.
 ![low-distribution](charts/low.png)
 
 The more random numbers you use, the stronger the bias: `min(random(10), random(10), random(10), random(10))`
@@ -122,7 +122,7 @@ If you roll a die a few times you might get the same value more than once, and i
 
 If you roll a normal die six times, it is unlikely that you'll get all six values without repeats (only happens 1.5% of the time).
 
-Also, it wouldn't really be odd to not roll any 1's (happens about 33% of the time). In fact you can be pretty sure that at least one number won't pop up in six rolls (98.5% sure).
+Also, it wouldn't really be odd to not roll any 1's (happens about 33% of the time). In fact, you can be pretty sure that at least one number won't pop up in six rolls (98.5% sure).
 
 A deck of cards works differently. When you pull cards from a shuffled deck, you get a value in a random order, but you avoid duplicates, and you can make sure you tour all the values eventually.
 
@@ -144,26 +144,26 @@ var values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var position = 0;
 
 function setup() {
-	// shuffle the deck first
-	values = shuffle(values);
-	console.log(valueFromDeck());
+    // shuffle the deck first
+    values = shuffle(values);
+    console.log(valueFromDeck());
 }
 
 function valueFromDeck() {
-	// find the value at the current position in the deck
-	var v = values[position];
+    // find the value at the current position in the deck
+    var v = values[position];
 
-	// change the position for next time
-	position++;
+    // change the position for next time
+    position++;
 
-	// if we run out of "cards", shuffle and start over from the top
-	if (position > 9) {
-		values = shuffle(values);
-		position = 0;
-	}
+    // if we run out of "cards", shuffle and start over from the top
+    if (position > 9) {
+        values = shuffle(values);
+        position = 0;
+    }
 
-	// return the value
-	return v;
+    // return the value
+    return v;
 }
 
 ```
@@ -189,17 +189,17 @@ If you want your code to make a decision at random, you can combine `random()` w
 ```javascript
 // do something only half the time
 if (random() < .5) {
-	console.log("Optional Thing");
+    console.log("Optional Thing");
 }
 
 // do something only 10% of the time
 if (random() < .1) {
-	console.log("Rare Thing");
+    console.log("Rare Thing");
 }
 
 // another way to do something only 10% of the time
 if (random(100) < 10) {
-	console.log("Rare Thing");
+    console.log("Rare Thing");
 }
 ```
 
@@ -208,9 +208,9 @@ With `else` you can pick between two optional things to do.
 ```javascript
 // do one thing, or the other. even odds
 if (random() < .5) {
-	console.log("Option A");
+    console.log("Option A");
 } else {
-	console.log("Option B");
+    console.log("Option B");
 }
 ```
 
@@ -220,11 +220,11 @@ With `else if` you can pick between multiple optional things to do.
 var r = random(100);
 
 if (r < 20) {
-	console.log("Rare Thing 1 (20%)");
+    console.log("Rare Thing 1 (20%)");
 } else if (r < 40){
-	console.log("Rare Thing 2 (20%)"); // r must be > 20 and < 40
+    console.log("Rare Thing 2 (20%)"); // r must be > 20 and < 40
 } else {
-	console.log("Normal Thing (Remaining 60%)");
+    console.log("Normal Thing (Remaining 60%)");
 }
 ```
 
@@ -235,16 +235,16 @@ A common mistake when following this pattern is calling random multiple times. I
 ```javascript bad
 // this code doesn't work as expected
 if (random(100) < 20) {
-	console.log("Rare Thing 1 (20%)"); // Actually a 20% chance
+    console.log("Rare Thing 1 (20%)"); // Actually a 20% chance
 } else if (random(100) < 40){
-	console.log("Rare Thing 2 (20%)"); // Actually a 32% chance
+    console.log("Rare Thing 2 (20%)"); // Actually a 32% chance
 } else {
-	console.log("Normal Thing (Remaining 80%)"); // Actually a 48% chance
+    console.log("Normal Thing (Remaining 80%)"); // Actually a 48% chance
 }
 ```
 
 
-## Psuedo-random vs. Random
+## Pseudo-random vs. Random
 
 If your computer is working right, it is a deterministic system. When the computer is in a particular state and performs an instruction, the resulting state will always be the same. **The results are never random.**
 
@@ -262,7 +262,7 @@ P5 provides `randomSeed()` to set the **seed** used by `random()`. Once you have
 
 <a href="./seed.js" class="p5_example show-lab show-lab-link hidden">randomSeed</a>
 
-Using the seed, you can use random values in your code, but have the same things happen between runs. This can be a useful feature in many programs, and can help with debugging problems.
+Using the seed, you can use random values in your code, but have the same things happen between runs. This can be a useful feature in many programs and can help with debugging problems.
 
 Be careful when relying on the seed to get random but repeatable results. There are at least two common ways for things to get messed up.
 
@@ -315,12 +315,12 @@ Normally, you use the Git software through its command line interface. If you ar
 
 ## Getting Started Sketching in p5
 
-For the first few weeks we'll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I've created a template project for your sketches.
+For the first few weeks, we'll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I've created a template project for your sketches.
 
 We'll run through these steps to get up and running with the template together in class.
 
 - Starting a New Project
-  - Create a Github Account / Log In to Github
+  - Create a Github Account / Log Into Github
   - Create a Repo on Github
   - Clone the Repo to Your Computer, With Github for Mac
   - Add/Modify A `README.md` File

@@ -38,7 +38,7 @@
 <p>p5.js is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web.</p>
 </blockquote>
 <p>P5 is a javascript library for making drawings and animations. It makes getting set up and working faster and provides simple functions for common tasks. It also allows for a more imperative programming style, similar to Processing.</p>
-<p>If you have never worked with with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:</p>
+<p>If you have never worked with Processing or p5, you’ll need to do some reading and learning on your own. Here are some resources to get you started quickly:</p>
 <ul>
 <li><a href="http://p5js.org/">p5.js Website</a></li>
 <li><a href="http://pucd2035-e-f15.github.io/class_notes/">Justin’s Creative Computing Class Notes</a></li>
@@ -54,7 +54,7 @@ Without any parameters, <code>random()</code> generates a random number between 
 <pre><code class="language-javascript">random(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>); <span class="hljs-comment">// even distribution between 0 and 10</span>
 random(<span class="hljs-number">10</span>,<span class="hljs-number">15</span>); <span class="hljs-comment">// even distribution between 10 and 15</span>
 </code></pre>
-<p>In some libraries the <code>random</code> function doesn’t take parameters, and just gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:</p>
+<p>In some libraries, the <code>random</code> function doesn’t take parameters and always gives you a value between 0 and 1. If you want a different range, you can scale and offset the value yourself:</p>
 <pre><code class="language-javascript">random() * range + start
 random() * <span class="hljs-number">5</span> + <span class="hljs-number">10</span> <span class="hljs-comment">// even distribution between 10 and 15</span>
 </code></pre>
@@ -75,7 +75,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <h3>Even Distribution: <code>random(1, 11)</code></h3>
 <p><img src="charts/even.png" alt="even-distribution"></p>
 <h3>Low Bias Distribution: <code>min(random(10), random(10))</code></h3>
-<p>Taking the lowest of two or more random numbers will bais the result toward the low-end.
+<p>Taking the lowest of two or more random numbers will bias the result toward the low-end.
 <img src="charts/low.png" alt="low-distribution"></p>
 <p>The more random numbers you use, the stronger the bias: <code>min(random(10), random(10), random(10), random(10))</code>
 <img src="charts/low-2.png" alt="low-2-distribution"></p>
@@ -96,7 +96,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <h2>Dice vs. Decks</h2>
 <p>If you roll a die a few times you might get the same value more than once, and it might take a long time before a particular value pops up.</p>
 <p>If you roll a normal die six times, it is unlikely that you’ll get all six values without repeats (only happens 1.5% of the time).</p>
-<p>Also, it wouldn’t really be odd to not roll any 1’s (happens about 33% of the time). In fact you can be pretty sure that at least one number won’t pop up in six rolls (98.5% sure).</p>
+<p>Also, it wouldn’t really be odd to not roll any 1’s (happens about 33% of the time). In fact, you can be pretty sure that at least one number won’t pop up in six rolls (98.5% sure).</p>
 <p>A deck of cards works differently. When you pull cards from a shuffled deck, you get a value in a random order, but you avoid duplicates, and you can make sure you tour all the values eventually.</p>
 <h3>Dice Visualizer</h3>
 <p><a href="./dice.js" class="p5_example show-lab show-lab-link hidden">dice</a></p>
@@ -186,7 +186,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Normal Thing (Remaining 80%)"</span>); <span class="hljs-comment">// Actually a 48% chance</span>
 }
 </code></pre>
-<h2>Psuedo-random vs. Random</h2>
+<h2>Pseudo-random vs. Random</h2>
 <p>If your computer is working right, it is a deterministic system. When the computer is in a particular state and performs an instruction, the resulting state will always be the same. <strong>The results are never random.</strong></p>
 <p>So how can <code>random()</code> produce a random value? Technically, it can’t. It can produce only pseudorandom values. Pseudorandom values appear random if you don’t look very closely, but are created by a deterministic process.</p>
 <p>A common method to create pseudorandom values is a <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator">Linear Congruential Generator</a>.</p>
@@ -195,7 +195,7 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <h3>Setting the Random Seed</h3>
 <p>P5 provides <code>randomSeed()</code> to set the <strong>seed</strong> used by <code>random()</code>. Once you have set the seed, the sequence of values produced by random will always be the same.</p>
 <p><a href="./seed.js" class="p5_example show-lab show-lab-link hidden">randomSeed</a></p>
-<p>Using the seed, you can use random values in your code, but have the same things happen between runs. This can be a useful feature in many programs, and can help with debugging problems.</p>
+<p>Using the seed, you can use random values in your code, but have the same things happen between runs. This can be a useful feature in many programs and can help with debugging problems.</p>
 <p>Be careful when relying on the seed to get random but repeatable results. There are at least two common ways for things to get messed up.</p>
 <p>First, if your program accepts user input, and that input can influence how many times <code>random()</code> is called, your program can get off sequence.</p>
 <p>Second, if you change your program and add or remove a call to <code>random()</code>, you will alter the sequence.</p>
@@ -229,12 +229,12 @@ floor(random(<span class="hljs-number">1</span>,<span class="hljs-number">6</spa
 <p><a href="http://www.github.com">Github</a> is a service that hosts software projects that use Git. Github builds on Git, adding features for collaborative coding such as bug tracking and code reviews. Github hosts a huge array of open-source and private projects and libraries.</p>
 <p>Normally, you use the Git software through its command line interface. If you are not comfortable using the command line, you won’t be comfortable using Git in this way. <a href="https://desktop.github.com/">Github Desktop</a> is a simple graphical user interface for Git, with added integration with Github. Github desktop isn’t as powerful as the command line interface, but it can cover the basic workflows we’ll use in class.</p>
 <h2>Getting Started Sketching in p5</h2>
-<p>For the first few weeks we’ll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I’ve created a template project for your sketches.</p>
+<p>For the first few weeks, we’ll be using p5 for our sketches. Rather than create a separate project repo for each sketch, keep your sketches organized on one repo. I’ve created a template project for your sketches.</p>
 <p>We’ll run through these steps to get up and running with the template together in class.</p>
 <ul>
 <li>Starting a New Project
 <ul>
-<li>Create a Github Account / Log In to Github</li>
+<li>Create a Github Account / Log Into Github</li>
 <li>Create a Repo on Github</li>
 <li>Clone the Repo to Your Computer, With Github for Mac</li>
 <li>Add/Modify A <code>README.md</code> File</li>

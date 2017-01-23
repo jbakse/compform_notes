@@ -10,7 +10,7 @@ toc: show
 
 [Draw a Sierpinski Triangle](sierpinski.html)
 
-The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal set. It is infinitely detailed and self similar. There are many, many ways to generate a Sierpinski Triangle. The amazing [sierpinski triangle page to end most sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them.
+The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a fractal set. It is infinitely detailed and self-similar. There are many, many ways to generate a Sierpinski Triangle. The amazing [sierpinski triangle page to end most Sierpinski triangle pages](http://www.oftenpaper.net/sierpinski.htm) details many of them.
 
 
 
@@ -25,7 +25,7 @@ The [Sierpinski Triangle](http://en.wikipedia.org/wiki/Sierpinski_triangle) is a
 
 
 
-This is a class about computational form, algorithmic images, generative art, parametric design, and procedural generation. In this class we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures. **We will make things that make things.**
+This is a class about computational form, algorithmic images, generative art, parametric design, and procedural generation. In this class, we will explore a creative process in which form is made by following defined processes. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures. **We will make things that make things.**
 
 There are many reasons artists and designers employ algorithmic methods, some important ones include:
 
@@ -40,7 +40,7 @@ While we use computer programming throughout this class, it is important to unde
 
 ## Who I am
 
-I am Justin Bakse. I am interaction designer and teacher at Parsons. [This is my site](http://justinbakse.com/). I am personally very interested in computational form, and have used computational methods in a great deal of my work.
+I am Justin Bakse. I am interaction designer and teacher at Parsons. [This is my site](http://justinbakse.com/). I am personally very interested in computational form and have used computational methods in a great deal of my work.
 
 [Research Project Slides](who_i_am.html)
 
@@ -55,7 +55,7 @@ Computational Form is form (image, animation, music) that results from following
 # About this Class
 
 ## Learning Objectives
-In this class we will make things that make things. We will work with a variety of programming languages, tools, and methods to create a wide variety of output: graphics, sounds, videos, animations, even 3D printed objects. The primary goals of this class are to introduce new ways of making and to encourage aesthetic exploration.
+In this class, we will make things that make things. We will work with a variety of programming languages, tools, and methods to create a wide variety of output: graphics, sounds, videos, animations, even 3D printed objects. The primary goals of this class are to introduce new ways of making and to encourage aesthetic exploration.
 
 ![Make Things that Make Things](images/make_things.png)
 
@@ -67,7 +67,7 @@ Along the way we'll use a variety of programming languages and tools:
 - Vuo
 
 We will also explore some interesting programming topics including:
-- psuedo-random numbers
+- pseudo-random numbers
 - Perlin noise
 - proc-gen strategies and tactics
 - Markov chains
@@ -77,13 +77,13 @@ We will also explore some interesting programming topics including:
 
 ## Class Format + Homework
 
-This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic. This emphasis on this class will be on personal exploration, learning to learn, and process rather than outcomes.
+This class focuses on exploration. Each class introduces a new topic or tool, usually with an in-class workshop. Throughout the week you will be expected to create daily sketches/experiments related to that topic. **This emphasis on this class will be on personal exploration, learning to learn, and process rather than outcomes.**
 
 ![This not That](images/this_not_that.png)
 
 
 ## Notes on Daily Sketching
-Your goal each day should be to explore a different aspect of the weekly theme. Ideally, you will spend 1 to 2 hours on and idea, resulting in an image or other artifact. Each day you will work on a different idea, possibly informed by something you did early in the week/class.
+Your goal each day should be to explore a different aspect of the weekly theme. Ideally, you will spend 1 to 2 hours on an idea, resulting in an image or other artifact. Each day you will work on a different idea, possibly informed by something you did early in the week/class.
 
 > So I have to post something **every single day**?
 
@@ -91,7 +91,7 @@ The spirit of the assignment is daily practice, with some flexibility. Five post
 
 > What if I miss a day?
 
-Thats fine, maybe spend more time on another day and post twice.
+That is fine, spend more time on another day and post twice.
 
 > Can I spend, say, 8 hours all on one day? Maybe I'll pull an all-nighter.
 
@@ -119,7 +119,7 @@ Yes. But don't work on one thing the whole week. Sketch a variety of ideas each 
 
 > I can't decide what to work on today.
 
-If you have more than one idea, just pick one at random. Don't change your mind, just run with it. You are only investing an hour two. If you have no ideas, review the class notes, do some Google image searches, be open to *any* idea that pop up. Just run with the first bad idea.
+If you have more than one idea, just pick one at random. Don't change your mind, just run with it. You are only investing an hour or two. If you have no ideas, review the class notes, do some Google image searches, be open to *any* idea that pops up. Just run with the first bad idea.
 
 > I can't get whatever technology we are working on this week to work; my computer is broken; I missed class and I'm lost; I'm just lost this week. What should I do?
 
@@ -137,14 +137,14 @@ Some weeks we'll have time set aside in class to make something, some weeks we w
 
 90 minutes is ideal.
 
-Don't put more than 2 hours in on a sketch. If your sketch takes that long its too complex, or too difficult for your current skill level. Its okay to stop at 2 hours even if your sketch is broken. Post whatever you have, you'll get full marks for the sketch.
+Don't put more than 2 hours in on a sketch. If your sketch takes that long it is too complex, or too difficult for your current skill level. It is okay to stop at 2 hours even if your sketch is broken. Post whatever you have, you'll get full marks for the sketch.
 
 Don't put in less than 45 minutes. Sometimes, you'll make a really nice sketch pretty quickly. If that happens, post it! But keep exploring variations on your idea. If you often get done very quickly, you probably need to work on more challenging sketches.
 
 ## Prerequisites
-In this class we will be exploring and creating projects in a variety of programming tools and languages, most of which will likely be new to you. To be comfortable in this class, you will need a foundation in a procedural programming language such as Javascript or Processing.
+In this class, we will be exploring and creating projects in a variety of programming tools and languages, most of which will likely be new to you. To be comfortable in this class, you will need a foundation in a procedural programming language such as Javascript or Processing.
 
-Coming in to this class, you should:
+Coming into this class, you should:
 
 - be able to create a coded drawing project in Javascript or Processing from scratch or a template.
 - understand the basics of a version control system such as git.
@@ -248,10 +248,10 @@ You can also create a set by considering the corners to be empty or occupied. Co
 - How are these design different from/similar to patterns?
 - What kind of forms does this method lead to naturally? How can this be embraced/avoided?
 - What are the essential elements of this method?
-- How does a tile kit like this compare to building kits like lego blocks.
+- How does a tile kit like this compare to building kits like lego blocks?
 - How does a tile kit compare to a font?
 - How does working within constraints impact creativity?
-- What are the advantages/disadvantaged to working by hand?
+- What are the advantages/disadvantages to working by hand?
 - How would variations on the tile work? Staggered? Triangles? Rectangles?
 - What if each edge/corner had three states instead of two?
 - How could these tiles work in 3 dimensions?
@@ -263,7 +263,7 @@ You can also create a set by considering the corners to be empty or occupied. Co
 # Workshop: Tile Sets
 Create and edge-matched tile kit. Use markers on paper squares. Make up a design that allows rotation, this is faster to draw out than a full set. Once you have made your kit, use it to create a variety of forms. Try building out each letter in the alphabet.
 
-The image below shows which tiles you need to make, and how many to many to make of each.
+The image below shows which tiles you need to make, and how many to make of each.
 ![edge_counts](./tile_workshop/edge_counts.png)
 
 After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class blog.
