@@ -3,7 +3,7 @@
 
 
 
-Computational Form is a class at [Parsons](http://amt.parsons.edu/) explores generative art, parametric design, and procedural generation. In this class, we will investigate a creative process in which form is created by following defined instructions. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures.
+Computational Form is a class at [Parsons](http://amt.parsons.edu/) that explores generative art, parametric design, and procedural generation. In this class, we will investigate a creative process in which form is created by following defined instructions. We will write instructions that a computer will follow to create images, animations, sounds, and sculptures.
 
 **We will make things that make things**.
 
