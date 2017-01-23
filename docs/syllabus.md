@@ -41,12 +41,12 @@ In this course students should:
 ## Homework
 Homework is the most important part of this class. This course involves a new way of thinking and multiple new tools and languages. To learn any language or tool, you must use it. The homework is where you will apply what we discuss in class.
 
-Each week you will create and post 5 sketches to the class sketchblog. These sketches should be related to the current week's theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week, late work will not be accepted.
+Each week you will create and post 5 sketches to the class sketch blog. These sketches should be related to the current week's theme. You are encouraged to also draw on themes from previous weeks. You must make an effort to post work each week, late work will not be accepted.
 
 The homework focuses on frequent practice, rather than final results. This structure is meant to encourage experimentation and allow flexibility. In particular, this structure is intended to allow students to adjust the technical difficulty of the class work to suit their skill level. Please speak with me if you have any concerns related to this.
 
-## Class Sketchblog
-Students will post their daily sketches to the class sketchblog. While students will retain the intellectual property rights to their work, they should be aware that the sketchblog is public and should be comfortable sharing images of their work publicly. In addition, students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to this.
+## Class Sketch Blog
+Students will post their daily sketches to the class sketch blog. While students will retain the intellectual property rights to their work, they should be aware that the sketch blog is public and should be comfortable sharing images of their work publicly. In addition, students are highly encouraged to share the source code to their projects. Please speak with me if you have any concerns related to this.
 
 
 ## Course Outline

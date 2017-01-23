@@ -162,9 +162,9 @@ That said, this class offers a good deal of flexibility. If you are not sure if 
 ## Syllabus Review
 Please review the [syllabus here](../syllabus.html).
 
-## The Class Blog
+## The Class Sketch Blog
 
-Our class blog will host your daily experiments and links to content of interest to the class.
+Our class sketch blog will host your daily experiments and links to content of interest to the class.
 
 
 # Activity: Class Introductions
@@ -266,7 +266,7 @@ Create and edge-matched tile kit. Use markers on paper squares. Make up a design
 The image below shows which tiles you need to make, and how many to make of each.
 ![edge_counts](./tile_workshop/edge_counts.png)
 
-After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class blog.
+After playing with your set, start experimenting however you wish. Before the end of the class take a picture of your work and post it the class sketch blog.
 
 
 
@@ -276,7 +276,7 @@ This is the first assignment and the beginning of your daily posts.
 Daily exercise:
 1. Create a new tile set.
 2. Use the tile set to create a design.
-3. Screengrab or photograph your work and post to the class blog with the hashtag `#tiles`.
+3. Screengrab or photograph your work and post to the class sketch blog with the hashtag `#tiles`.
 
 Explore a different idea every day, if you need some ideas consider using one of the following as a prompt. If you use one of these prompts, include it in your blog post. `#paper`, `#pixels`, `#vectors`, `#typography`, `#self-portrait`, `#3d`, `#make-things-that-make-things`, `#hexagons`, `#triangles`, `#photocopier`, `#big`, `#huge`, `#edge`, `#corner`, `#pattern`, `#trade`, `#teamwork`, `#stamps`, `#scissors`
 
@@ -284,6 +284,8 @@ For more ideas:
 [Brian Eno - Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies),
 [Oblique Strategies Online](http://stoney.sb.org/eno/oblique.html)
 
+## Challenge Prompt (Optional)
+Create a font: design a full alphabet using a single tile set. Post an image that shows your font in use.
 
 # Related Links
 
