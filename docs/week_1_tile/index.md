@@ -240,7 +240,9 @@ You can also create a set by considering the corners to be empty or occupied. Co
 ![corner_form](./tile_workshop/corner_form.png)
 
 
+## Numbering Tiles
 
+![tile_bitmask](./tile_workshop/tile_bitmask.png)
 
 
 ## Consider
