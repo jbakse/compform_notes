@@ -21,7 +21,15 @@ Mid: Groups are given example outputs (images mostly) asked to list as many poss
 
 Time    | Activity
 ---     | ---
-3:50    | ?
+3:50    | Homework Review
+4:10    | Slides
+4:20    | Warm Up: ?
+4:30    | Parameters Lecture
+4:45    | Group: Groups design parameter interfaces, present, discuss
+5:15    | Break
+5:25    | Globals and Sliders Lecture
+5:45    | The Normal Range Lecture
+6:00    | Work Time
 
 
-Look at photoshop fileters (or other examples) and discuss what paremeters could be added/taken away.
+Look at photoshop filters (or other examples) and discuss what parameters could be added/taken away.

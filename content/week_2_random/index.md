@@ -3,21 +3,28 @@ title: Week 2 - Working with Random
 toc: show
 ---
 
-## Activity: 2D6 vs 1D12
 
-[Roll the Dice](dice.html)
 
 
 # Homework Review
+**If your work builds on or includes anyone else's work, make sure you cite it!**
 
-If you see *interesting* work, books, or tools related to the class online. Please do post links to the blog.
+- How does working within constraints impact creativity?
+- How does this method impact design rhythm?
+- What are the advantages/disadvantages to working with this technique by hand?
+- Considering the tile set as a tool, how do tools impact authorship?
+- Which project would have been hardest to anticipate, why?
 
-**Whenever you post work you didn't make yourself include a link to the source, and if possible the artist's name.**
+If you see *interesting* work, books, or tools related to the class, please post links to the blog. Use the description to describe the work and link to the source!
 
 
-# Slides: Progen Images
+# Slides: Proc-gen Images
 
-[Procedurally Generated Imagee](slides.html)
+[Procedurally Generated Image](slides.html)
+
+Consider:
+- Which aspects of each work were influenced by chance?
+- Which aspects were controlled by the artist?
 
 
 # What p5 Is
@@ -34,8 +41,11 @@ If you have never worked with Processing or p5, you'll need to do some reading a
 
 
 
-
 # The Methodical Application of Chance
+
+## Activity: 2d6 vs 1d12 Chart
+Compare the outcomes of rolling 2 6-sided dice to rolling 1 12-sided die.
+[Roll the Dice](dice.html)
 
 ## Generating Random Numbers
 Plain Javascript provides `Math.random()` to generate a random number.
@@ -168,18 +178,6 @@ function valueFromDeck() {
 
 ```
 
-## Biased Examples
-
-![deck.png](./figures/deck.png)
-
-![low.png](./figures/low.png)
-
-![normal.png](./figures/normal.png)
-
-![unbiased.png](./figures/unbiased.png)
-
-![high.png](./figures/high.png)
-
 
 
 ## Random Choices
@@ -244,7 +242,26 @@ if (random(100) < 20) {
 ```
 
 
-## Pseudo-random vs. Random
+## Discussion: Biased Examples
+
+![deck.png](./figures/deck.png)
+
+![low.png](./figures/low.png)
+
+![normal.png](./figures/normal.png)
+
+![unbiased.png](./figures/unbiased.png)
+
+![high.png](./figures/high.png)
+
+
+## Discussion: When to Bias
+
+When would you choose to use different types of bias? Where are these types of biases found in the world?
+
+
+
+# Pseudo-random vs. Random
 
 If your computer is working right, it is a deterministic system. When the computer is in a particular state and performs an instruction, the resulting state will always be the same. **The results are never random.**
 
@@ -342,6 +359,10 @@ We'll run through these steps to get up and running with the template together i
 # Assignment
 
 Sketch! Experiment with procedurally generated images that make use of `random()`. Post your results to the Sketchblog.
+
+
+## Challenge
+Kasimir Malevich, Mark Rothko, Piet Modrian, Anni Albers all worked with basic shapes, color, and natural media. Create a sketch that generates new works in the style of one of these artists. Pay particular attention to the subtleties and textures of your chosen artist's work. How closely can you recreate these subtleties?
 
 
 # Related Links

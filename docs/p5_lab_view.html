@@ -37,6 +37,7 @@
 	<body>
 		<script src="javascript/jquery-2.1.4.min.js"></script>
 		<script src="javascript/lab_console.js"></script>
+
 		<script>
 			function take(source) {
 
@@ -45,12 +46,11 @@
 				var script = $("<script>");
 				script.text(source);
 				$("body").append(script);
-
 				// $.ajaxPrefilter(function (options, originalOptions, jqXHR) { 	options.async = true; });
 
 				$("body").append($("<script src = 'javascript/turtle.js'>"));
 				$("body").append($("<script src = 'javascript/p5.min.js'>"));
-				// $("body").append($("<script src = 'javascript/p5.dom.js'>"));
+				$("body").append($("<script src = 'javascript/p5.dom.js'>"));
 
 			}
 		</script>

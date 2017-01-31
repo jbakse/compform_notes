@@ -25,7 +25,132 @@
 		</div>
 		<!-- title: Week 3 - Parameters -->
 		<div class="container">
-			<p><a href="plan.html">Today’s Plan</a></p>
+			<h1>Homework Review</h1>
+<ul>
+<li>?</li>
+<li>?</li>
+</ul>
+<h1>Slides</h1>
+<p>Parameterized Tools
+<a href="http://www.metaflop.com/modulator/font/pQkUOJOPk8">http://www.metaflop.com/modulator/font/pQkUOJOPk8</a></p>
+<p><a href="http://www.plastaq.com/elsy/">http://www.plastaq.com/elsy/</a></p>
+<p>Photoshop: Gaussian Blur vs Custom</p>
+<p><a href="http://gregschomburg.com/gregfont/">gregschomburg.com: gregfont</a></p>
+<p><a href="https://www.kuva.io/hair-simulation/">Kuva.io: Hair</a>
+<a href="http://edankwan.com/experiments/the-spirit/">edankwan.com: The Spirit</a></p>
+<p><a href="https://jasfar.github.io/wildflowers/">Wildflowers Generator</a>
+<a href="https://threejs.org/examples/#webgl_geometry_teapot">Threejs.org: Teapot</a>
+<a href="https://threejs.org/examples/#webgl_shaders_ocean2">Threejs.org: Ocean 2</a></p>
+<p><a href="plan.html">Today’s Plan</a></p>
+<p>architect</p>
+<h3>Parametric Design</h3>
+<p>Parametric Design is a method of design where form is considered as a system which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider’s height to provide a customized frame.</p>
+<h1>Parameters and Interface Design</h1>
+<h2>Interfaces</h2>
+<p>An <strong>interface</strong> is the common boundary between two systems. Two of the most important interfaces of software systems are <strong>user interfaces</strong>  (UIs) and <strong>application programming interfaces</strong> (APIs).</p>
+<ul>
+<li><p>A UI is the part of a software system that a person uses to control it. The UI accepts user input and provides feedback. The UI is the primary interface in most <em>applications</em>.</p></li>
+<li><p>An API is the part of a software system that is used by programmers to connect the software with other software systems. The API is the primary interface in most <em>libraries</em>.</p></li>
+<li><p>It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.</p></li>
+</ul>
+<h2>Parameters</h2>
+<p>In a software system, parameters are values that control what the system does. Exposing parameters is the core concern of software interface design.</p>
+<h3>What to Expose</h3>
+<ul>
+<li>Which parameters should be exposed?</li>
+<li>Which values should be accepted for each parameter?</li>
+<li>Which parameters are required, which are optional?</li>
+</ul>
+<h4>Ballance</h4>
+<ul>
+<li>Exposing <strong>more</strong> gives your user more control.</li>
+<li>Exposing <strong>less</strong> gives you more control.</li>
+<li>Exposing <strong>more</strong> makes your interface harder to understand.</li>
+<li>Exposing <strong>less</strong> makes your interface easier to understand.</li>
+<li>Exposing <strong>more</strong> allows your users to do more good things.</li>
+<li>Exposing <strong>less</strong> prevents your users from doing bad things.</li>
+</ul>
+<h3>Presenting your Interface</h3>
+<p>Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.</p>
+<ul>
+<li>What UI controls will you use for each parameter?</li>
+<li>What will you label each element?</li>
+<li>How will you group and order the UI controls?</li>
+<li>How will you explain the purpose of each parameter?</li>
+</ul>
+<h3>Keep Your User in Mind</h3>
+<p>The way that you think about your software system is often very different from the way your users think about it.</p>
+<ul>
+<li>Who will be using your software?</li>
+<li>Why will they be using it? What will they be trying to do?</li>
+<li>Do they understand how your software works under the hood? Should they?</li>
+</ul>
+<h1>Activity: Interface Design</h1>
+<p>List required parameters, list optional parameters, list values for each parameter.
+Narrow down to top 3 params.
+Carefully name and describe each param and possible value.</p>
+<p>Machine Types:
+A Car
+A Planet Generator
+A Student Sorter</p>
+<p>Users:
+A Child
+An [Machine Type] Enthusiast
+Someone who has to use your machine, but doesn’t want to.
+An Engineer who will use your machine in a larger project.</p>
+<h1>Globals as Interfaces</h1>
+<p>A quick-and-dirty way to make your comp form sketches “tweakable” is to use global variables for your parameters and group them at the top of the script.</p>
+<ul>
+<li>This is very easy to set up.</li>
+<li>Works particularly well for small one-off sketches that only you will ever use.</li>
+<li>Choose clear variable names that explain the purpose of each parameter.</li>
+<li>Use comments to explain the parameter in more detail, document legal value ranges, and suggest good values.</li>
+<li>Yes, globals are evil. That is part the “dirty” part.</li>
+</ul>
+<p><a href="./slider_square.js" class="p5_example show-lab show-lab-link hidden">random</a></p>
+<h1>p5.js Dom Interfaces</h1>
+<p>The <a href="https://p5js.org/reference/#/libraries/p5.dom">p5 Dom Library</a> provides functions that allow you create html elements and user interface controls. This is a much better choice if you want anyone else to adjust your parameters.</p>
+<ul>
+<li>This is more complicated to set up, but still pretty quick.</li>
+<li>This is a better choice if you want to quickly explore your parameter-space.</li>
+<li>Label your inputs clearly. Consider your interface carefully.</li>
+<li>Your controls can also be made in HTML, used in p5 via <code>select()</code></li>
+<li>You can style your interface with CSS.</li>
+</ul>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> pos_x_slider, pos_y_slider, size_slider;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">640</span>, <span class="hljs-number">360</span>);
+    fill(<span class="hljs-number">100</span>);
+    noStroke();
+    rectMode(CENTER);
+
+    createP(<span class="hljs-string">'Horizontal Position'</span>);
+    pos_x_slider = createSlider(<span class="hljs-number">0</span>, width, width * <span class="hljs-number">.5</span>);
+    createP(<span class="hljs-string">'Vertical Position'</span>);
+    pos_y_slider = createSlider(<span class="hljs-number">0</span>, height, height * <span class="hljs-number">.5</span>);
+    createP(<span class="hljs-string">'Size'</span>);
+    size_slider = createSlider(<span class="hljs-number">10</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>);
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+    background(<span class="hljs-number">250</span>);
+
+    <span class="hljs-keyword">var</span> pos_x = pos_x_slider.value();
+    <span class="hljs-keyword">var</span> pos_y = pos_y_slider.value();
+    <span class="hljs-keyword">var</span> size = size_slider.value();
+
+    rect(pos_x, pos_y, size, size);
+}
+</code></pre>
+<h1>Assignment</h1>
+<p>Keep Sketching! Continue experimenting with procedurally generated images, this time focusing on parametric systems.</p>
+<h1>Challenge</h1>
+<h1>Related Links</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Inner-platform_effect">Inner Platform Effect</a></li>
+</ul>
 
 		</div>
 

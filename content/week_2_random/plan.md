@@ -1,7 +1,7 @@
 # Welcome Music
 
 # Materials
-Dice Charts, Team Generator, Sketch Template
+Dice Charts, Team Generator, Sketch Template Repo
 
 # Learning Objectives
 - How to bias random values
@@ -16,15 +16,21 @@ Dice Charts, Team Generator, Sketch Template
 
 Time    | Activity
 ---     | ---
-3:50    | Music + Dice Game
-4:05    | Homework Review
+3:50    | Homework Review
+	| Assign Planned Teams
+	| Teams: Answer assigned questions using examples from homework. - Present/Discuss
+4:05    | Individual: Tag/Like Homework - Present/Discuss
 4:15    | Slides
-4:25    | Random Numbers Lecture
-4:35    | Team: Which is which?
-4:45    | Team: When would you want non/low/high/middle/normal bias?
-5:05    | Random Choices Lecture
-5:10    | Psuedo-random vs. Random Lecture (On Paper?)
-5:20    | Study Examples
-5:30    | Break
-5:40    | Workshop: Hello, World
-6:00    | Worktime
+	| Discussion: what properties are randomized?
+4:25    | Assign Teams w/ Cards
+4:30    | Team Activity: Dice Charts - Discuss
+4:45    | Random Numbers Lecture
+	| Random Choices Lecture
+4:55    | Team Discussion: Which is which?
+	| Team Discussion: When to use bias?
+5:20    | Break
+5:30    | Psuedo-random vs. Random Lecture
+	| LCG Worksheet
+5:50    | Study Examples
+6:00    | Workshop: Hello, World
+	| Worktime
