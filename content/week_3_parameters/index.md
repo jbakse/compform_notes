@@ -6,7 +6,7 @@ toc: show
 # Homework Review
 
 - ?
-- ?
+
 
 # Slides
 
@@ -16,6 +16,8 @@ http://www.metaflop.com/modulator/font/pQkUOJOPk8
 http://www.plastaq.com/elsy/
 
 Photoshop: Gaussian Blur vs Custom
+
+Substance Painter Cairn Rocks
 
 [gregschomburg.com: gregfont](http://gregschomburg.com/gregfont/)
 
@@ -49,6 +51,7 @@ An **interface** is the common boundary between two systems. Two of the most imp
 
 - It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
 
+- Abstraction, subway
 ## Parameters
 In a software system, parameters are values that control what the system does. Exposing parameters is the core concern of software interface design.
 
@@ -57,7 +60,7 @@ In a software system, parameters are values that control what the system does. E
 - Which values should be accepted for each parameter?
 - Which parameters are required, which are optional?
 
-#### Ballance
+#### Balance
 - Exposing **more** gives your user more control.
 - Exposing **less** gives you more control.
 - Exposing **more** makes your interface harder to understand.
@@ -69,17 +72,21 @@ In a software system, parameters are values that control what the system does. E
 Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.
 
 - What UI controls will you use for each parameter?
-- What will you label each element?
+- What will you label each control?
 - How will you group and order the UI controls?
 - How will you explain the purpose of each parameter?
+
+### Feedback
+Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
+
+In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.
+
 
 ### Keep Your User in Mind
 The way that you think about your software system is often very different from the way your users think about it.
 - Who will be using your software?
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
-
-
 
 
 # Activity: Interface Design
@@ -89,16 +96,20 @@ Narrow down to top 3 params.
 Carefully name and describe each param and possible value.
 
 Machine Types:
-A Car
-A Planet Generator
-A Student Sorter
-
+- A car
+- Planet generator
+- Grocery-shopping bot
+- Internet surveillance system
+- Genetic pet builder
+- Love Potion
 
 Users:
-A Child
-An [Machine Type] Enthusiast
-Someone who has to use your machine, but doesn't want to.
-An Engineer who will use your machine in a larger project.
+- Daily user
+- One-time user
+- A child
+- An [machine type] enthusiast
+- Another machine
+
 
 
 # Globals as Interfaces
