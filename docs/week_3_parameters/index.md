@@ -3,40 +3,25 @@ title: Week 3 - Parameters
 toc: show
 ---
 
+
 # Homework Review
 
-- ?
-- ?
-
-# Slides
-
-Parameterized Tools
-http://www.metaflop.com/modulator/font/pQkUOJOPk8
-
-http://www.plastaq.com/elsy/
-
-Photoshop: Gaussian Blur vs Custom
-
-[gregschomburg.com: gregfont](http://gregschomburg.com/gregfont/)
-
-[Kuva.io: Hair](https://www.kuva.io/hair-simulation/)
-[edankwan.com: The Spirit](http://edankwan.com/experiments/the-spirit/)
-
-[Wildflowers Generator](https://jasfar.github.io/wildflowers/)
-[Threejs.org: Teapot](https://threejs.org/examples/#webgl_geometry_teapot)
-[Threejs.org: Ocean 2](https://threejs.org/examples/#webgl_shaders_ocean2)
-
-[Today's Plan](plan.html)
+- When working with random values does an artist give up control or authorship?
+- Choose a sketch that you believe demonstrates the use of biased random values. What kind of bias do you think was used?
 
 
-architect
+# Slides: Parameters
 
-### Parametric Design
-Parametric Design is a method of design where form is considered as a system which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider's height to provide a customized frame.
+[Parameters](slides.html)
+
+Consider:
+- How did artists use parameters in each work?
 
 
+# A Blue Square
+![bluesquare](images/square.png)
 
-
+Imagine a program that generates images, including the one above. What parameters might such a program accept?
 
 # Parameters and Interface Design
 
@@ -49,15 +34,16 @@ An **interface** is the common boundary between two systems. Two of the most imp
 
 - It is common for software to have both a UI and an API. For example twitter provides a user interface for making and reading tweets and an API for integrating twitter into existing systems.
 
+- Abstraction, subway
 ## Parameters
-In a software system, parameters are values that control what the system does. Exposing parameters is the core concern of software interface design.
+Parameters are factors that control what how a system operates. Exposing parameters allows artists and designers to create systems that can be controlled by others. Choosing which parameters to expose is a core concern of software interface design.
 
 ### What to Expose
 - Which parameters should be exposed?
 - Which values should be accepted for each parameter?
 - Which parameters are required, which are optional?
 
-#### Ballance
+#### Balance
 - Exposing **more** gives your user more control.
 - Exposing **less** gives you more control.
 - Exposing **more** makes your interface harder to understand.
@@ -69,9 +55,17 @@ In a software system, parameters are values that control what the system does. E
 Once you have decided on what to expose via your interface, you must consider how to communicate your interface options to your users.
 
 - What UI controls will you use for each parameter?
-- What will you label each element?
+- What will you label each control?
 - How will you group and order the UI controls?
 - How will you explain the purpose of each parameter?
+
+### Feedback
+Feedback shows users the impact their actions have on the system. Without feedback, systems are very hard to learn and use.
+
+In simple cases, showing users the end result of their choices is often enough. In more complex situations, it is often helpful to provide intermediate feedback. For example, if a system will react slowly to user actions, providing immediate confirmation of user input is important.
+
+### Parameter Space
+A parameter space is the set of all possible combinations of values for the parameters of a system. The parameter space can grow very quickly. A system that has 8 boolean (yes/no) parameters will have 256 possible states. A system with 16 boolean parameters will have 65,536 states. A system that takes just two floating point parameters has 9,223,372,036,854,775,808 (9.2 Quintillion!) states. This is a basically inconceivably large number, but it is quite likely that many of those states would look *samey*.
 
 ### Keep Your User in Mind
 The way that you think about your software system is often very different from the way your users think about it.
@@ -79,26 +73,43 @@ The way that you think about your software system is often very different from t
 - Why will they be using it? What will they be trying to do?
 - Do they understand how your software works under the hood? Should they?
 
+## Parametric Design
+Parametric Design is a design approach where designs are built as systems which can be influenced by provided parameters. For example a parametric bicycle design might consider the rider's height to provide a customized frame.
+
+## Parametricism
+> Parametricism is a style within contemporary avant-garde architecture, promoted as a successor to post-modern architecture and modern architecture.
+
+—[Wikipedia: Parametricism](https://en.wikipedia.org/wiki/Parametricism)
 
 
+# Activity: Fictional Machines
 
-# Activity: Interface Design
-
-List required parameters, list optional parameters, list values for each parameter.
-Narrow down to top 3 params.
-Carefully name and describe each param and possible value.
-
-Machine Types:
-A Car
-A Planet Generator
-A Student Sorter
+Begin designing a user interface for a fictional machine by considering which parameters you would expose.
 
 
-Users:
-A Child
-An [Machine Type] Enthusiast
-Someone who has to use your machine, but doesn't want to.
-An Engineer who will use your machine in a larger project.
+1. Choose a machine from the list below.
+2. Spend 6 minutes brainstorming possible parameters for your machine.
+3. Choose a user from the list below.
+4. Spend 3 minutes deciding which parameters to expose for your user. Choose exactly 3 parameters.
+5. Spend 3 minutes naming your parameters, and defining the allowed values for each.
+6. Present your machine, user, and chosen parameters to the class. You will have 2 minutes to present.
+
+
+**Machine Types**
+- A car
+- Planet generator
+- Grocery-shopping bot
+- Internet surveillance front-end
+- Genetic pet builder
+- Love potion mixer
+
+**Users**
+- Daily user
+- One-time user
+- A child
+- An [machine type] enthusiast
+- Another machine
+
 
 
 # Globals as Interfaces
@@ -159,7 +170,7 @@ function draw() {
 
 # Assignment
 
-Keep Sketching! Continue experimenting with procedurally generated images, this time focusing on parametric systems.
+Keep Sketching! Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches.
 
 # Challenge
 
@@ -169,3 +180,6 @@ Keep Sketching! Continue experimenting with procedurally generated images, this 
 # Related Links
 
 - [Inner Platform Effect](https://en.wikipedia.org/wiki/Inner-platform_effect)
+
+
+[plan.html](Today's Lesson Plan)

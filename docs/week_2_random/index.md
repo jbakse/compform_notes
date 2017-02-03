@@ -9,11 +9,11 @@ toc: show
 # Homework Review
 **If your work builds on or includes anyone else's work, make sure you cite it!**
 
-- How does working within constraints impact creativity?
-- How does this method impact design rhythm?
-- What are the advantages/disadvantages to working with this technique by hand?
+- How does working within constraints support creativity?
 - Considering the tile set as a tool, how do tools impact authorship?
-- Which project would have been hardest to anticipate, why?
+- Do you consider these images to be procedurally generated?
+- Choose a project that presents an interesting direction for design inquiry. Suggest possible variations on this project.
+- Choose a "outlier" project that explores an aspect of tile-sets not well covered by other projects. What is different about your chosen project?
 
 If you see *interesting* work, books, or tools related to the class, please post links to the blog. Use the description to describe the work and link to the source!
 

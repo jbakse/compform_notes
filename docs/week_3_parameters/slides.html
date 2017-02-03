@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Parameter Examples</h1>
+<p>Parameters are factors of a system that are exposed. Exposing parameters allows artists and designers to create systems that can be controlled by others.</p>
+<h3>Zaha Hadid - Heydar Aliyev Center</h3>
+<p><img src="http://images.adsttc.com/media/images/5285/1f2b/e8e4/4e52/4b00/01ab/slideshow/HAC_photo_by_Iwan_Baan_(2).jpg?1384455904" alt="exterior">
+<img src="http://images.adsttc.com/media/images/5285/1f2b/e8e4/4e52/4b00/01ab/slideshow/HAC_photo_by_Iwan_Baan_(2).jpg?1384455904" alt="interior">
+<a href="http://www.archdaily.com/448774/heydar-aliyev-center-zaha-hadid-architects">archdaily.com: Zaha Hadid Architects</a>,
+<a href="http://www.zaha-hadid.com/">Zaha Hadid</a>,
+<a href="https://en.wikipedia.org/wiki/Parametricism">Wikipedia: Parametricism</a></p>
+<h3>Kuva.io - Hair</h3>
+<p><img src="images/hair.png" alt="hair">
+<a href="https://www.kuva.io/hair-simulation/">Kuva.io: Hair</a></p>
+<h3>Makehuman</h3>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/c/c7/Makehuman_1_0_alpha8_rc_screenshot.png" alt="makehuman"></p>
+<h3>Droftarts - Parametric Pulley</h3>
+<p><img src="images/pulley.png" alt="pulley">
+<a href="http://www.thingiverse.com/apps/customizer/run?thing_id=16627&amp;code=65885a90cc68e3e23b0b36718f8b4242">Thigiverse: Parameteric Pulley</a></p>
+<h3>metaflop - modulator</h3>
+<p><img src="images/modulator.png" alt="modulator">
+<a href="http://www.metaflop.com/modulator/font/pQkUOJOPk8">metaflop: modulator</a></p>
+<h3>Greg Schomburg - Gregfont</h3>
+<p><img src="images/gregfont.png" alt="gregfont">
+<a href="http://gregschomburg.com/gregfont/">gregschomburg.com: gregfont</a></p>
+<h3>plastaq - elsy</h3>
+<p><img src="images/elsy.png" alt="elsy">
+<a href="http://www.plastaq.com/elsy/">plastaq: elsy</a></p>
+<h3>Adobe Photoshop - Custom Filter</h3>
+<p><img src="images/psd_custom.png" alt="custom"></p>
+<!--
+### edankwan.com - The Spirit
+[edankwan.com: The Spirit](http://edankwan.com/experiments/the-spirit/)
+<p>Substance Painter Cairn Rocks
+–&gt;</p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
