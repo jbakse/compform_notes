@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Random Bias Recap</h1>
+<table>
+<thead>
+<tr><th>Bias</th><th>Method</th></tr>
+</thead>
+<tbody>
+<tr><td>even</td><td>random()</td></tr>
+<tr><td>low</td><td>min(random(), random())</td></tr>
+<tr><td>high</td><td>max(random(), random())</td></tr>
+<tr><td>middle</td><td>random() + random()</td></tr>
+<tr><td>decks</td><td>vals = [1,2,3,4]; shuffle(vals);</td></tr>
+</tbody>
+</table>
+<h2>The radius of these bubbles</h2>
+<p><img src="http://previews.123rf.com/images/dkidpix/dkidpix1512/dkidpix151200012/50022937-Many-small-champagne-bubbles-in-a-glass-of-champagne-Stock-Photo.jpg" alt="bubbles"></p>
+<h2>The heights of these trees</h2>
+<p><img src="http://i.imgur.com/zIBvJMU.jpg" alt="trees"></p>
+<h2>The heights of these people</h2>
+<p><img src="http://i.huffpost.com/gen/831449/thumbs/o-LONG-LINES-facebook.jpg" alt="people"></p>
+<h2>The number of seeds on each dandelion</h2>
+<p><img src="recap_images/dandelion.jpg" alt="dandelion"></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

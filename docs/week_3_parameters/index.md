@@ -10,6 +10,19 @@ toc: show
 - Choose a sketch that you believe demonstrates the use of biased random values. What kind of bias do you think was used?
 
 
+# Random Strategies Recap
+ [recap](random_bias_recap.html)
+
+
+
+## Objectives
+- Consider interface design as exposing parameters
+- Practice problem analysis and interface design
+- Practice user-centered design concepts
+- Technical: Exposing Parameters as Globals
+- Technical: Exposing Parameters with HTML Controls
+
+
 # Slides: Parameters
 
 [Parameters](slides.html)
@@ -173,6 +186,12 @@ function draw() {
 Keep Sketching! Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches.
 
 # Challenge
+
+Build a face generating tool. This tool will create an image of a face that can be adjusted by the user using sliders and other inputs.
+- Don't use the built in shape drawing commands like `rect` and `ellipse`. Build your face from hand-drawn or photographic images.
+- Make your resulting images look as seamless and cohesive as possible.
+- Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting). 
+
 
 
 
