@@ -3,11 +3,17 @@ title: Week 3 - Parameters
 toc: show
 ---
 
+# Today's Groups
+[Today's Groups](groups.html)
 
 # Homework Review
 
-- When working with random values does an artist give up control or authorship?
+- When working with random values, does an artist give up control or authorship?
 - Choose a sketch that you believe demonstrates the use of biased random values. What kind of bias do you think was used?
+- Can computational generated work feel "natural"?
+- Choose a work that combines procedural and non-procedural elements well. What works about this piece?
+- The challenge is not a competition. But who won?
+- Choose a project that presents an interesting direction for design inquiry. Suggest possible variations on this project.
 
 
 # Random Strategies Recap
@@ -183,16 +189,26 @@ function draw() {
 
 # Assignment
 
-Keep Sketching! Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches.
+Keep Sketching! Continue experimenting with procedurally generated images, this time focusing exposing parameters and exploring the parameter spaces of your sketches. You can mix random and parametric elements, but I suggest doing at least a couple of sketches that are not random at all.
+
+# Special Assignment
+
+Later in this class I will ask you to create special sketches using equipment available to you through The New School. If you havn't used the following equipment before, you should sign up for orientations. Be ready to use this equipment by the sixth week of classes.
+
+- Laser Cutter
+- 3D Printers
+- Large Format (Poster) Printers/Plotters
+- CNC Mills (optional)
+
+**Bonus** Sketches using these tools and posted in the first 5 weeks of class will count as two sketches. Limit one double sketch per week. Limit one double sketch per tool.
+
 
 # Challenge
 
-Build a face generating tool. This tool will create an image of a face that can be adjusted by the user using sliders and other inputs.
+Build a face generating tool. This tool will create an image of a face that can be adjusted by the user with sliders and other inputs.
 - Don't use the built in shape drawing commands like `rect` and `ellipse`. Build your face from hand-drawn or photographic images.
 - Make your resulting images look as seamless and cohesive as possible.
-- Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting). 
-
-
+- Inputs can range from straight-forward (eye color, nose size) to complex (anger, lighting).
 
 
 
