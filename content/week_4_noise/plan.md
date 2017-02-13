@@ -11,6 +11,23 @@ Team Generator, 1D Noise Worksheet
 - Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
 - How to use noise in projects. (Sampling, Input Scaling, Output Scaling)
 
+
+Introduction
+
+Blue Square: Horizontal Position, Vertical, Width, Height, Color (RGB)
+When you use code draw this square you have to provide values.
+Where do those values come from?
+- Hard Coded
+- Random
+- Parameters (From Globals or UI)
+Often in combination: width = 100 + random(-10, 10);
+Random is useful when you want to add some variation.
+[ellipse changing size over time, ellipse changing size over position]
+
+A new (often better) option: Noise.
+Noise is great when you want to add variation over a dimension.
+
+
 Notes
 
 Noise Examples
