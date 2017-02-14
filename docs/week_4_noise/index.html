@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Week 3 - Parameters</title>
+		<title>Week 4 - Noise</title>
 		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
 		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
 
@@ -19,13 +19,148 @@
 		<div class="side-bar">
 			<div class="top-bar">
 				<a href="..">Comp Form</a>
-				<span class="title">Week 3 - Parameters</span>
+				<span class="title">Week 4 - Noise</span>
 			</div>
 			<div class="js-toc"></div>
 		</div>
-		<!-- title: Week 3 - Parameters -->
+		<!-- title: Week 4 - Noise -->
 		<div class="container">
-			<p><a href="plan.html">Today’s Plan</a></p>
+			<h1>Homework Review</h1>
+<ul>
+<li>Random vs Parameters</li>
+<li>Did anyone use the idea of tiles or modularity?</li>
+<li>Who had the widest “apparent” parameter space?</li>
+<li>Challenge Winner?</li>
+</ul>
+<!-- #### Today's Groups -->
+<!-- #### Parameter Recap -->
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>What the <code>noise()</code> function does.</li>
+<li>When and how to use <code>noise()</code></li>
+<li>Qualities of Noise (Frequency, Amplitude, Smoothing, Layering, Dimensions)</li>
+</ul>
+<h1>Noise</h1>
+<p><img src="images/square.png" alt="blue square"></p>
+<p>Consider the code you would write to draw a colored square. Your code would require several values: horizontal position, vertical position, width, height, the RGB values.</p>
+<p>Where do those values come from?</p>
+<table>
+<thead>
+<tr><th>Source</th><th>Purpose</th></tr>
+</thead>
+<tbody>
+<tr><td>Hard Coded</td><td>You want specific control of the value.</td></tr>
+<tr><td>Parameters</td><td>You want to be able to control the value from a larger context.</td></tr>
+<tr><td><code>random()</code></td><td>You want random variation.</td></tr>
+<tr><td><code>noise(x)</code></td><td>You want controlled variation.</td></tr>
+</tbody>
+</table>
+<p>Often you use these in combination:
+<code>width = 100 + random(-10, 10);</code></p>
+<p>Using <code>random()</code> is a good way to add variation to a value. The <code>noise(x)</code> can often offer variation with greater control and consistency.</p>
+<h4>Random()</h4>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure"  src="./sketches/sketch_random/index.html"></iframe>
+</div>
+<h4>Noise(x)</h4>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure"  src="./sketches/sketch_noise/index.html"></iframe>
+</div>
+<h2>Benefits of Noise</h2>
+<h3>Noise is Coherent</h3>
+<p>The <code>noise(x)</code> function returns values sampled from Perlin Noise. Perlin Noise provides random values that are aesthetically arranged (<a href="https://developer.nvidia.com/gpugems/GPUGems/gpugems_ch05.html">band limited and visually isotropic</a>) in space. These values are a useful basis for many applications that require natural-feeling variation.</p>
+<h3>Noise is Repeatable</h3>
+<p>Repeated variation is easy with <code>noise(x)</code>: every time you call <code>noise(x)</code> with a particular argument, you get the same value back. This is often very useful. For example, in an animation you often need variation to be consistent from frame to frame.</p>
+<ul>
+<li><code>random()</code> requires no arguments and returns a different random value every time</li>
+<li><code>noise(x)</code> requires an argument and returns the same random value every time</li>
+<li>This difference takes some getting used to, and learning what to pass in for <code>x</code> takes some practice.</li>
+<li>This difference is a core reason why <code>noise(x)</code> is so useful.</li>
+</ul>
+<h3>Noise is Controllable</h3>
+<p>By controlling what you pass to <code>noise(x)</code>, you can control the frequency of the random values returned. This can be used to control how quickly values vary in space and time. Like <code>random()</code> values, you can scale and shift the values from <code>noise(x)</code> to the range you need. You can also adjust the character of <code>noise(x)</code> using <code>noiseDetail()</code>.</p>
+<h1>1D Noise</h1>
+<div class="sketch" style="width: 100%; height: 300px;">
+<iframe class="figure" height="300" src="./sketches/sketch_1D_noise/index.html"></iframe>
+</div>
+<h2>Activity: Building 1D Noise</h2>
+<ul>
+<li>Review the Linear Congruential Generator worksheet.</li>
+<li>Complete the Linear Congruential Generator (Noise) worksheet.</li>
+<li>Graph the results on the 1D Noise Worksheet.</li>
+</ul>
+<h1>2D + 3D Noise</h1>
+<p><code>noise(x)</code>
+<img src="images/noise_1d.png" alt="noise_1d"></p>
+<p><code>noise(x, y)</code>
+<img src="images/noise_2d.png" alt="noise_2d"></p>
+<p><code>noise(x, y, z)</code>
+<img src="images/noise_3d.png" alt="noise_3d"></p>
+<h1>Qualities of Noise</h1>
+<ul>
+<li>Smoothing</li>
+<li>Layering/Octaves/Detail</li>
+<li>Frequency</li>
+<li>Dimensions</li>
+</ul>
+<h1>Working with Noise</h1>
+<h2>Calling the Noise Function</h2>
+<p>When you call <code>noise(x)</code> you have to pass in an <code>x</code> value. This x value is the location in the Perlin Noise of the value to return. Choose <code>x</code> based on how you want the value to vary. You can pass in <code>frameCount</code> or <code>millis()</code> to get values that change over time.
+<code>noise()</code> actually takes up to three parameters: <code>noise(x,y,z)</code> allowing you to receive values arranged in three dimensions (see below).</p>
+<h2>Controlling the Frequency</h2>
+<p>You can control how quickly returned values will vary over time and space by scaling the value you pass in for <code>x</code>.</p>
+<pre><code>n = <span class="hljs-built_in">noise</span>(<span class="hljs-built_in">frameCount</span>); <span class="hljs-comment">// get a value that changes over time</span>
+n = <span class="hljs-built_in">noise</span>(<span class="hljs-built_in">frameCount</span> * <span class="hljs-number">.1</span>); <span class="hljs-comment">// get a value that changes over time slowly</span>
+n = <span class="hljs-built_in">noise</span>(<span class="hljs-built_in">frameCount</span> * <span class="hljs-number">10</span>); <span class="hljs-comment">// get a value that changes over time quickly</span>
+</code></pre>
+<h2>Controlling the Amplitude and Range</h2>
+<p>The <code>noise(x)</code> function returns values in the range of 0 to 1. Use multiplication and addition to shift this range to the range you need.</p>
+<pre><code>n = noise(frameCount) * <span class="hljs-number">10</span> + <span class="hljs-number">10</span>; <span class="hljs-comment">// values between 10 and 20;</span>
+</code></pre>
+<p>You could also use <code>map()</code>:</p>
+<pre><code>n = noise(frameCount); <span class="hljs-comment">// 0 -&gt; 1</span>
+n = map(n, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">20</span>);  <span class="hljs-comment">// map to 10 -&gt; 20</span>
+</code></pre>
+<h2>Controlling the Detail</h2>
+<p>The <code>noiseDetail()</code>  function allows you to control the “roughness” or “detail” of the noise returned. See: <a href="https://p5js.org/reference/#/p5/noiseDetail">p5 reference</a></p>
+<h2>Controlling the Seed</h2>
+<p>By default, every time you restart your sketch the noise pattern will be different. The <code>noiseSeed()</code> allows you to manually set the noise pattern seed. See: <a href="https://p5js.org/reference/#/p5/noiseSeed">p5 reference</a></p>
+<p><a href="./skyline.js" class="p5_example show-lab show-lab-link hidden">Skyline</a></p>
+<h2>Activity: Coding Challenge</h2>
+<p>TBD</p>
+<h1>Noise Applications</h1>
+<h2>Tron</h2>
+<p><img src="https://www.csee.umbc.edu/~olano/s2001c24/imgs/lightcycles.jpeg" alt="Tron">
+<a href="https://www.csee.umbc.edu/~olano/s2001c24/ch02.html">Ken Perlin on Procedural Textures</a></p>
+<h2>Procedural Textures</h2>
+<p><img src="https://www.clicktorelease.com/blog/vertex-displacement-webgl-glsl-perlin-noise-three-js/add-some-colour-movement.jpg" alt="Fireball">
+<a href="https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js">clicktorelease.com: Fireball</a>
+<img src="http://3.bp.blogspot.com/-aROavndlrvw/T5JZl_-fMwI/AAAAAAAAAgQ/AdJp5pJP5dI/s320/rend6.png" alt="Wood">
+<a href="http://shiny-dynamics.blogspot.com/2012/04/blender-wood-texture-part-2.html">Shiny Dynamics: Blender Wood</a>
+<img src="http://modo.docs.thefoundry.co.uk/modo/701/help/images/shade_render/EmodoTex/marble_noise.png" alt="Marble">
+<a href="http://modo.docs.thefoundry.co.uk/modo/701/help/images/shade_render/EmodoTex/marble_noise.png">Modo: Marble</a></p>
+<h2>Procedural Shapes</h2>
+<p><img src="http://www.thinkboxsoftware.com/storage/krakatoa-support-images/krakatoa15_cloudsmodeling_kcm_density1_render.png" alt="Clouds">
+<a href="http://www.thinkboxsoftware.com/krak-clouds-modelling/">Clouds</a></p>
+<p><img src="http://www.redblobgames.com/maps/terrain-from-noise/images/topdemo-3d.png" alt="Terrain">
+<a href="http://www.redblobgames.com/maps/terrain-from-noise/">Displacement Terrain</a></p>
+<div class="sketch" style="width: 100%; height: 500px; position: relative;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jB0vBmiTr6o" frameborder="0" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.youtube.com/watch?v=jB0vBmiTr6o&amp;t=131s">Elevated 4K!</a></p>
+<h2>Forces</h2>
+<div class="sketch" style="width: 100%; height: 500px; position: relative;">
+<iframe src="https://player.vimeo.com/video/29074357" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/29074357">OpenCL Perlin Particles</a> from <a href="https://vimeo.com/eddietree">Eddie Lee</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</div>
+<p><a href="https://vimeo.com/29074357">Open CL Perlin Particles</a></p>
+<!-- # Noise Examples -->
+<h1>Assignment</h1>
+<p>Keep Sketching! This week, focus on using the <code>noise()</code> function. Feel free to mix in concepts from early weeks as well.</p>
+<h2>Special Assignment</h2>
+<p>Don’t forget to sign up for orientations for the Laser Cutter and 3D printer.</p>
+<h2>Challenge</h2>
+<p>Treasure Map</p>
 
 		</div>
 

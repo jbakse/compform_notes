@@ -26,7 +26,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 1       | Jan 27    | Tile Graphics         | Paper | [class notes](week_1_tile)
 2       | Feb 03    | Random Values       	| p5.js | [class notes](week_2_random)
 3		| Feb-10	| Parameters			| p5.js | [class notes](week_3_parameters)
-4		| Feb-17	| Noise					| p5.js | [class notes](#)
+4		| Feb-17	| Noise					| p5.js | [class notes](week_4_noise)
 5		| Feb-24	| Comp Form Strategies	| p5.js | [class notes](#)
 |
 **Exploration**		|
