@@ -43,8 +43,10 @@ Example Slides and Class Notes: http://compform.net/week_3_parameters/
 Time    | Type          | Activity
 ---     |               | ---
 3:50    | Review/Engage | Homework Review
+                        | Recap
         |               | Jump to this weeks homework, guess today's topics
 4:10    | Engage/Study  | Slides / Discussion
+                        | Blue Square Game
 4:30    | Study         | Parameters Lecture
 4:45    | Activate      | Fictional Machines
 5:15    | Break         | Break
