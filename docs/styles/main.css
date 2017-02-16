@@ -168,6 +168,10 @@ iframe {
   top: 0;
   left: 0; }
 
+iframe.figure {
+  width: 100%;
+  position: relative; }
+
 #compform .js-toc {
   font-size: 16px;
   width: 250px; }

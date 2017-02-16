@@ -12,7 +12,8 @@ Team Generator, 1D Noise Worksheet
 - How to use noise in projects. (Sampling, Input Scaling, Output Scaling)
 
 
-# Introduction: Random vs Noise
+# Introduction
+
 
 Blue Square: Horizontal Position, Vertical, Width, Height, Color (RGB)
 When you use code draw this square you have to provide values.
@@ -22,23 +23,46 @@ Where do those values come from?
 - Parameters (From Globals or UI)
 Often in combination: width = 100 + random(-10, 10);
 Random is useful when you want to add some variation.
-![random() ellipse changing size over time, ellipse changing size over position]
+![random() ellipse changing size over time, ellipse changing size over position, slider for amplitude]
 
 A new (often better) option: Noise.
 Noise is great when you want to add variation over a dimension.
-![noise() ellipse changing size over time, ellipse changing size over position]
+![noise() ellipse changing size over time, ellipse changing size over position, with sliders for amplitude, frequency, layers]
 
 Noise is better:
 - it is [coherent: logically or aesthetically ordered](https://www.merriam-webster.com/dictionary/coherent)
 - it is controllable
     - frequency
     - complexity
-- it is repeatable
+- it is repeatable/stable/deterministic
+    - `random()` is repeatable with `randomSeed()` but this is fragile
+    - `noise(x)` does't care about how many times you call it, order, etc.
 
 - Band Limited + Visually Isotropic
 
-# What Noise Is
-Noise is a collection of random values.
+# Random() vs Noise(x)
+look at the specific call itself. a fundemental wierd (not hard) thing too get used to is that `random()` give you different random numbers every time. `noise(x)` gives you the same 'random' number every time.
+
+# What 1D noise is
+![Show Graph of 1D Noise]
+
+# Building 1D Noise
+- LCG Review
+- LCG Worksheet 2
+- 1D Noise Worksheet
+
+# Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
+
+
+# Working with 1D Noise
+- Size over time
+- A mountain range
+- sampling input scaling, output scaling
+
+
+
+# What Higher Dimension Noise Is
+Noise is a set of random values arranged in space. The `Noise()` function returns the value at a specific location.
 
 1DNoise
 ![A graph of 1DNoise]
@@ -49,66 +73,48 @@ Noise is a collection of random values.
 3DNoise
 ![An image of a stack of B+W 2D Noises]
 
-# What Sampling Is
-Notes
 
 
+# What Noise Looks Like
 
-# What Noise Is
-Its a source of stable, deterministic, coherent "random" variation.
-Show `random()` driven ellipse (size/time).
-Show `noise()` driven ellipse (size/time).
-Show `random()` driven ellipse (size/place).
-Show `noise()` driven ellipse (size/place).
-Use low octives for these demos. Show control over frequency.
-
-Procedural
-
-
+Ken Perlin
  # Noise Examples
 - Perlin Noise
 - Fractal Perlin Noise
+
+Shapes
 - 2D Terrain
 - 3D Terrain with Mesh Displacement
+- 3D Terrain with Marching Cubes
+- Wobbled Teapot or something
+
+Image Textures
 - [Fireball](https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js)
 - [Wood](http://lodev.org/cgtutor/randomnoise.html)
 - Marble
-https://vimeo.com/29074357
+- Clouds
+
+Rough Edges + Texture
+
+Forces
+-[Open CL Perlin Particles](https://vimeo.com/29074357)
+
 [Alex Wolfe: Procedural Portraits](http://alexkwolfe.com/swoon/)
 
 That Demo with the flashing search lights.
 
 
-
-Building 1D Noise
-- LCG Review
-- LCG Worksheet 2
-- 1D Noise Worksheet
-
-Applying 1D Noise
-- Size over time
-- A mountain range
-
-Perlin Noise
-- Brief History
-
-Noise as Raw Material
-Photoshop Demos
-Noise -> Clouds
-Noise -> Wood
-Noise -> Terrain
-Noise -> Rough Edges
+# Noise in Photoshop
 
 
-Noise In Photoshop
--
+# Code Examples using Noise()
+- waveform that changes over time
+- dot pattern with varied size
 
-Image Noise
 
 
-Noise Examples
 
-Links
+# Links
 
 [Pinterest](https://in.pinterest.com/explore/perlin-noise/)
 [Novastructura](http://www.novastructura.net/)
@@ -130,4 +136,16 @@ Open: 1D Noise Worksheet
 
 Time    | Activity
 ---     | ---
-3:50    | ?
+3:50    | Homework Review
+4:10    | Noise Introduction
+        | Random() vs Noise(x)
+        | 1D Noise
+4:30    | Activity: Building 1D Noise
+4:50    | Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
+5:10    | Break
+
+5:20    | Working with 1D Noise
+5:30    | Coding Challenge?
+5:50    | 2D + 3D Noise
+6:10    | Noise Applications
+        | Noise Examples
