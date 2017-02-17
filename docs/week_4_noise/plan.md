@@ -34,5 +34,5 @@ Time    | Type      |Activity
 5:10    |           | Break
 5:20    | study     | Working with Noise
 5:30    | engage    | Coding Challenge?
-6:10    | study     | Noise Applications
+6:10    | study     | Noise Applications (PSD Demo)?
         | study     | Noise Examples
