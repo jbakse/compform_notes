@@ -134,14 +134,19 @@ n = map(n, 0, 1, 10, 20);  // map to 10 -> 20
 
 The `noiseDetail()`  function allows you to control the "roughness" or "detail" of the noise returned. See: [p5 reference](https://p5js.org/reference/#/p5/noiseDetail)
 
+
 ## Controlling the Seed
 By default, every time you restart your sketch the noise pattern will be different. The `noiseSeed()` allows you to manually set the noise pattern seed. See: [p5 reference](https://p5js.org/reference/#/p5/noiseSeed)
 
+
+## Study Examples
+
+<a href="./study_2D.js" class="p5_example show-lab show-lab-link hidden">Study 2D</a>
+
+<a href="./grass.js" class="p5_example show-lab show-lab-link hidden">Study Grass</a>
+
 <a href="./skyline.js" class="p5_example show-lab show-lab-link hidden">Skyline</a>
 
-## Activity: Coding Challenge
-
-TBD
 
 
 
@@ -191,3 +196,16 @@ Don't forget to sign up for orientations for the Laser Cutter and 3D printer.
 
 ## Challenge
 Treasure Map
+
+
+# Miscellaneous Links
+
+- [Pinterest: Perlin Noise](https://in.pinterest.com/explore/perlin-noise/)
+- [Novastructura](http://www.novastructura.net/)
+- [Book of Shaders: Noise](https://thebookofshaders.com/11/)
+- [Shiffman 2DNoise](https://www.youtube.com/watch?v=ikwNrFvnL3g)
+- [Dev.mag How to use Perlin Noise in your Games](http://devmag.org.za/2009/04/25/perlin-noise/)
+- [Perlin on his Award](http://mrl.nyu.edu/~perlin/doc/oscar.html)
+- [Inear](http://www.inear.se/2010/04/ridged-perlin-noise/)
+- [Simplex Noise](https://cmaher.github.io/posts/working-with-simplex-noise/)
+- [GPU Gems Improved Perlin Noise](http://http.developer.nvidia.com/GPUGems/gpugems_ch05.html)
