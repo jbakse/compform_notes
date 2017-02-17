@@ -6,12 +6,19 @@ toc: show
 
 # Homework Review
 
-- Random vs Parameters
-- Did anyone use the idea of tiles or modularity?
+- Choose a work that did something unexpected with parameters. Discuss.
+- Choose a work that you 1) like and 2) don't know how how it was made. Describe what you see.
+- Choose a work that combined elements from a previous week with parameters. Discuss.
 - Who had the widest "apparent" parameter space?
-- Challenge Winner?
+- The challenge is still not a competition, but who won?
 
-<!-- #### Today's Groups -->
+#### Today's Groups
+- Jonathan, Sanie
+- Jennifer, Talia
+- Danielle, Sachi, Kim
+- Amber, Dorothy, Gabriel
+- Bateel, Jane, Enayet
+
 
 
 <!-- #### Parameter Recap -->
@@ -142,8 +149,10 @@ By default, every time you restart your sketch the noise pattern will be differe
 ## Study Examples
 
 <a href="./study_2D.js" class="p5_example show-lab show-lab-link hidden">Study 2D</a>
+[JSBin](https://jsbin.com/hecibem/edit?js,output)
 
 <a href="./grass.js" class="p5_example show-lab show-lab-link hidden">Study Grass</a>
+[JSBin](https://jsbin.com/jupihot/3/edit?js,output)
 
 <a href="./skyline.js" class="p5_example show-lab show-lab-link hidden">Skyline</a>
 

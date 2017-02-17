@@ -1,6 +1,6 @@
 
-
-
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+//https://jsbin.com/jupihot/edit?js,output
 
 function setup() {
 	createCanvas(600, 600);
@@ -64,6 +64,6 @@ function draw() {
 		}
 	}
 
-	
+
 
 }
