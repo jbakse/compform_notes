@@ -25,4 +25,19 @@
 
 Time    | Activity
 ---     | ---
-3:50    | ?
+3:50    | Homework Review
+4:10    | Noise Introduction
+	| Random() vs Noise(x)
+	| 1D Noise
+4:30    | Activity: Building 1D Noise
+4:50    | Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
+5:10    | Break
+
+5:20    | Working with 1D Noise
+5:30    | Coding Challenge?
+5:50    | 2D + 3D Noise
+6:10    | Noise Applications
+	| Noise Examples
+
+
+http://devmag.org.za/2009/05/03/poisson-disk-sampling/
