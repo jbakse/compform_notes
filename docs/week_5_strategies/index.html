@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Week 3 - Parameters</title>
+		<title>Week 4 - Noise</title>
 		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
 		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
 
@@ -19,13 +19,184 @@
 		<div class="side-bar">
 			<div class="top-bar">
 				<a href="..">Comp Form</a>
-				<span class="title">Week 3 - Parameters</span>
+				<span class="title">Week 4 - Noise</span>
 			</div>
 			<div class="js-toc"></div>
 		</div>
-		<!-- title: Week 3 - Parameters -->
+		<!-- title: Week 4 - Noise -->
 		<div class="container">
-			<p><a href="plan.html">Today’s Plan</a></p>
+			<h1>Homework Review</h1>
+<ul>
+<li>Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss.</li>
+<li>Choose a work that combined elements from a previous week with noise. Discuss.</li>
+<li>The challenge is still not a competition, but who won?</li>
+<li>Choose a work that you 1) like and 2) don’t know how how it was made. Describe what you see.
+TBD</li>
+</ul>
+<h4>Today’s Groups</h4>
+<p>TBD</p>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Practice analyzing form.</li>
+<li>Introduce and practice strategizing procedural generation systems.</li>
+<li>Introduce some common methods for aesthetically arranging points on a plane.</li>
+<li>Introduce common considerations when creating procedural generation systems.</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<p>This is the last week of the “Foundation” unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now thinking strategically.</p>
+<p>This week I encourage you to build a more complex sketch, posting work in progress as you go.</p>
+<h2>Reading + Viewing Assignment</h2>
+<p><a href="http://pcgbook.com/">Procedural Content Generation in Games</a> is a collection of research in the field of procedural game content. It covers many interesting topics including dungeon+maze generation, fractals, L-systems, generating rules/mechanics, and mixing proc-gen and human-authored content.</p>
+<p><strong>Read:</strong> <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCG Book, Chapter 1</a></p>
+<p><a href="https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw">Game Maker’s Toolkit</a> is a Youtube channel that features high-quality video essays on game design.</p>
+<p><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=Uqk5Zf0tw3o">GMT: Spelunky</a></p>
+<p>If you want to play Spelunky, the original version (not the HD Remake) is free.</p>
+<p><strong>Play (Optional):</strong> <a href="http://spelunkyworld.com/original.html">PC</a>, <a href="https://forums.tigsource.com/index.php?topic=28467.0">Mac</a></p>
+<h2>Special Assignment</h2>
+<p>Don’t forget to sign up for orientations for the Laser Cutter and 3D printer.</p>
+<p><strong>You must complete orientations for the Laser Cutter and 3D Printer before spring break!</strong></p>
+<h2>Challenge: Hand Off</h2>
+<ul>
+<li>Part 1: Create a sketch. Post the output. Hand the code to someone else.</li>
+<li>Part 2: Receive code from someone else. Modify it. Post the output.</li>
+</ul>
+<h1>Computational Form Strategies</h1>
+<p>So far we’ve been looking at low-level, tactical topics like how to use <code>random()</code> and <code>noise()</code>. Achieving specific, complex results requires looking at problems from at a higher level. You must first have a clear understanding of the effect you would like to achieve, and then begin to plan a series of steps to reach your goal.</p>
+<p>How might you make something like this?</p>
+<p><img src="images/tighten_relax.png" alt="tighten_relax.png"></p>
+<p>As you work in computational form. You will find than many problems involve the techniques composed in different ways. Hopefully you are already seeing that the techniques we have already discussed are common building-blocks that can be used to create a wide array of forms. This trend will continue as we explore other tools and media.</p>
+<p>There are many techniques that are widely used in math, physics, or game programming that provide further building-blocks: brownian motion, noise sampling, L-systems, neural nets, turtles, Markov chains, poisson-disc sampling, particle systems, fractals, metaballs.</p>
+<h1>Placing Points on a Square</h1>
+<p>Today, we will be looking at a single problem domain: placing points on a square. There are countless strategies we might use to place the points depending on the look we want to achieve.</p>
+<p><img src="pp2.png" alt="pp2.png"></p>
+<p>Study each example above:</p>
+<ul>
+<li>How does each example compare to the others?</li>
+<li>What characteristics could be used to group similar examples?</li>
+<li>What kind of plan might you try to achieve each example?</li>
+</ul>
+<p>There are many techniques one may use when scattering points. The examples above were made by composing the following few techniques in different ways.</p>
+<h2>Random Placement</h2>
+<p>Place each point at a random location on the square.</p>
+<pre><code><span class="hljs-comment">// psudeocode</span>
+...
+x = <span class="hljs-built_in">random</span>() * <span class="hljs-built_in">width</span>;
+y = <span class="hljs-built_in">random</span>() * <span class="hljs-built_in">height</span>;
+...
+</code></pre>
+<h2>Noise Placement</h2>
+<p>Place each point at a location determined by a noise lookup.</p>
+<ul>
+<li>Because noise is center biased, the results will center biased.</li>
+<li>This technique allows you some control over the proximity of successive points.</li>
+</ul>
+<pre><code><span class="hljs-comment">// psudeocode</span>
+...
+x = noise(i * frequency, <span class="hljs-number">0</span>) * w;
+y = noise(i * frequency, <span class="hljs-number">1000</span>) * h;
+...
+</code></pre>
+<h2>Grid Placement</h2>
+<p>Place points in the center points of grid squares. One way to do this is a nested loop.</p>
+<pre><code>// psudeocode
+...
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">row</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">row</span> &lt; grid_rows; <span class="hljs-built_in">row</span>++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">col</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">col</span> &lt; grid_cols; <span class="hljs-built_in">col</span>++) {
+        x = (<span class="hljs-built_in">row</span> + .<span class="hljs-number">5</span>) / grid_size * w;
+        y = (<span class="hljs-built_in">col</span> + .<span class="hljs-number">5</span>) / grid_size * h;
+        ...
+    }
+}
+...
+</code></pre>
+<h2>Cull Placement</h2>
+<p>Place points randomly, but reject a point if it is too close to an existing point and/or too far from all existing points.</p>
+<p><img src="place_cull_explained.png" alt="place_cull_explained"></p>
+<h2>Tile Placement</h2>
+<p>Create hand-made (or generated) arrangements of points. Copy these arrangements onto different locations on the square.</p>
+<ul>
+<li>Use this technique or one like it to combine hand-made and procedural design.</li>
+</ul>
+<p><img src="tile_explained.png" alt="tile_explained"></p>
+<h2>Random Displacement</h2>
+<p>Given a set of points, offset the location of each point a random amount.</p>
+<pre><code><span class="hljs-comment">// psudeocode</span>
+...
+x = x + <span class="hljs-built_in">random</span>() * <span class="hljs-built_in">width</span>;
+y = y + <span class="hljs-built_in">random</span>() * <span class="hljs-built_in">height</span>;
+...
+</code></pre>
+<h2>Noise Displacement</h2>
+<p>Displace each point at by an amount determined by a noise lookup.</p>
+<ul>
+<li>This technique allows for nice control over the frequency of displacement.</li>
+<li>Can be used to create wave-like effects.</li>
+</ul>
+<pre><code><span class="hljs-comment">// psudeocode</span>
+...
+x = x + noise(i * frequency, <span class="hljs-number">0</span>) * w;
+y = x + noise(i * frequency, <span class="hljs-number">1000</span>) * h;
+...
+</code></pre>
+<h2>Relaxation Displacement</h2>
+<p>Find pairs of points that are near each other. Move them towards or away from each other a small amount. This technique is often applied several times with small movements this avoids the problem of pushing a point away from one, but then into another.</p>
+<ul>
+<li>This technique can be used to push points apart to some minimum distance.</li>
+<li>This technique can also be used to pull points together if they are near each other.</li>
+</ul>
+<p><img src="relax_explained.png" alt="relax_explained"></p>
+<h2>Noise Culling</h2>
+<p>Sample noise based on the location of the point. Use the sampled value to determine if the point should be culled (discarded).</p>
+<ul>
+<li>This technique leaves points in the light (or dark) areas of the noise.</li>
+</ul>
+<p><img src="noise_cull_explained.png" alt="noise_cull_explained"></p>
+<h1>Properties of PCG System</h1>
+<p>When designing a procedural generation system there are several properties to consider. The following properties are borrowed from <a href="http://pcgbook.com/wp-content/uploads/chapter01.pdf">PCGBook: Chapter 1</a></p>
+<h2>Speed</h2>
+<ul>
+<li>How fast does your program need to run?</li>
+<li>Is it okay if takes a very long time to complete?</li>
+<li>Many times a faster running program is harder to code and understand.</li>
+<li>A frame of VR content needs to be rendered in under 10ms, and a short pre-rendered animation may take days to render.</li>
+</ul>
+<h2>Reliability</h2>
+<ul>
+<li>Does your program need to produce a good result every time?</li>
+<li>Are results shown directly to your audience, or will you have the opportunity to edit?</li>
+</ul>
+<h2>Controllability</h2>
+<ul>
+<li>Does your program expose any user parameters?</li>
+<li>Do you want explore the parameter space manually?</li>
+<li>Do you want to have tight control over the results or should everything work automatically?</li>
+</ul>
+<h2>Expressivity and Diversity</h2>
+<ul>
+<li>How much apparent range does your system have?</li>
+<li>Does everything look same-y?</li>
+<li>Is it okay for your output to be completely wild or does it need to satisfy some constraints?</li>
+<li>If you are exposing parameters, do they allow for meaningful control?</li>
+</ul>
+<h2>Creativity and Believability</h2>
+<ul>
+<li>Do you want your results to look natural or hand-made?</li>
+<li>Is it okay for them to look &quot;computer-y&quot;?</li>
+<li>If your system is generating variations on something that already exists, how closely do you want to copy the original?</li>
+</ul>
+<h2>Repeatability</h2>
+<ul>
+<li>Do you need the ability to generate the same result more than once?</li>
+</ul>
+<h1>Miscellaneous Links</h1>
+<ul>
+<li><a href="http://davideprati.com/">Palm Generator</a></li>
+<li><a href="https://bl.ocks.org/mbostock/19168c663618b7f07158">bl.ocks.org Poison-Disc</a></li>
+<li><a href="https://bl.ocks.org/mbostock/dbb02448b0f93e4c82c3">bl.ocks.org Poisson-Disc II</a></li>
+<li><a href="http://devmag.org.za/2009/05/03/poisson-disk-sampling/">Devmag.org Poisson Disk</a></li>
+<li><a href="https://www.jasondavies.com/maps/random-points/">Points on a Sphere</a></li>
+</ul>
 
 		</div>
 

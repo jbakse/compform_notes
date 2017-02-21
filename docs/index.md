@@ -27,7 +27,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 2       | Feb 03    | Random Values       	| p5.js | [class notes](week_2_random)
 3		| Feb-10	| Parameters			| p5.js | [class notes](week_3_parameters)
 4		| Feb-17	| Noise					| p5.js | [class notes](week_4_noise)
-5		| Feb-24	| Comp Form Strategies	| p5.js | [class notes](#)
+5		| Feb-24	| Comp Form Strategies	| p5.js | [class notes](week_5_strategies)
 |
 **Exploration**		|
 6		| Mar-03	| Generating Animation	| p5.js | [class notes](#)

@@ -4,40 +4,28 @@
 ?
 
 # Learning Objectives
-- Explore some higher-level strategies useful to comp form
-- Scattering Points Case Studies
-    - Random
-    - Grid+Random
-    - Grid+Random+Noise
-    - Pre-place rule
-    - Post Relaxing
-    - Generate and Test -> Solution finding, genentic algos.
-    - mixed authorship
-- Desirable Properties of a PCG solution (http://pcgbook.com/wp-content/uploads/chapter01.pdf)
-    - Speed
-    - Reliability
-    - Controllability
-    - Expressivity and Diversity
-    - Creativity and Believability
+- Practice analyzing form.
+- Practice strategizing procedural generation systems.
+- Introduce some common methods for aesthetically arranging points on a plane.
+- Introduce common considerations when creating procedural generation systems.
+
+# Vocabulary
+- Analyzing
+- Design Pattern
+- Stochastic
+- Deterministic
+- Generate and Test
 
 
 # Schedule
 
-Time    | Activity
----     | ---
-3:50    | Homework Review
-4:10    | Noise Introduction
-	| Random() vs Noise(x)
-	| 1D Noise
-4:30    | Activity: Building 1D Noise
-4:50    | Qualities of Noise (Smoothing, Layering, Frequency, Energy, Dimensions)
-5:10    | Break
-
-5:20    | Working with 1D Noise
-5:30    | Coding Challenge?
-5:50    | 2D + 3D Noise
-6:10    | Noise Applications
-	| Noise Examples
-
-
-http://devmag.org.za/2009/05/03/poisson-disk-sampling/
+Time    | Type      |Activity
+---     | ---       |---
+3:50    | review    | Homework Review
+4:10    | study     | CompForm Strategies Introduction
+4:20    | engage    | Analyzing Point Placements
+4:50    | study     | Point Placement Strategies
+5:10    | engage    | Matching Point Placements to Strategies
+5:30    | break     | break
+5:40    | study     | Procedural System Qualities (PCGBook)
+6:00    | ?
