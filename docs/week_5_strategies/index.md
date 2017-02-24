@@ -211,6 +211,8 @@ Sample noise based on the location of the point. Use the sampled value to determ
 
 ![noise_cull_explained](noise_cull_explained.png)
 
+# Point Placing Demo
+[Point Placing Demo](https://jsbin.com/telipu/edit?js,output)
 
 # Properties of PCG System
 When designing a procedural generation system there are several properties to consider. The following properties are borrowed from [PCGBook: Chapter 1](http://pcgbook.com/wp-content/uploads/chapter01.pdf)
