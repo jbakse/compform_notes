@@ -1,33 +1,70 @@
 ---
-title: Week 4 - Noise
+title: Week 5 - Strategies
 toc: show
 ---
+
+#### Today's Groups
+
+Group 	| Members
+---		| ---
+A		| Danielle, Amber, Sanie
+B		| Talia, Bateel, Jane, Sachi
+C		| Jennifer, Jonathan, Dorothy
+D		| Enayet, Kim, Gabriel
 
 
 # Homework Review
 
-- Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss.
-- Choose a work that combined elements from a previous week with noise. Discuss.
-- The challenge is still not a competition, but who won?
-- Choose a work that you 1) like and 2) don't know how how it was made. Describe what you see.
-TBD
+- A: Choose a work that combined elements from a previous week with noise. Discuss.
+- B: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.
+- C: Perlin Noise is often used to simulate natural forms. Choose a work that demonstrates this. Discuss.
+- D: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.
 
-#### Today's Groups
-TBD
 
 
 # Today's Learning Objectives
 - Practice analyzing form.
-- Introduce and practice strategizing procedural generation systems.
+- Introduce and practice strategizing/planning procedural generation systems.
 - Introduce some common methods for aesthetically arranging points on a plane.
 - Introduce common considerations when creating procedural generation systems.
 
 # Assignment
-Keep Sketching!
+
+- **This week the challenge is required.**
+- **This week we also have a required reading.**
 
 This is the last week of the "Foundation" unit. Look back at the topics covered so far: tile systems, using random, user parameters, using noise, and now thinking strategically.
 
-This week I encourage you to build a more complex sketch, posting work in progress as you go.
+Begin by completing the challenge for this week.  Completing this week's challenge will result in two posts.
+
+Keep Sketching! For the remaining three posts, I encourage you to build a more complex sketch than usual. Post work in progress as you go.
+
+## Challenge: A->B->X
+Two of your sketches this week should be based on the challenges below.
+
+For each of the challenge:
+- **Analyze** the challenge, clearly describe what the sketch does.
+- **Strategize** how you would achieve the same effect.
+- **Study** the provided starting code.
+- **Recreate** the challenge as closely as you can. You may use the starting code, or start from scratch.
+- **Extend** the example to create a unique sketch. Try to make something no one else will.
+- **Post** your finished sketch.
+
+
+### Part One: Dot Challenge
+<div class="sketch" style="width: 100%; height: 400px;">
+<iframe class="figure" height="400" src="./dot_challenge/index.html"></iframe>
+</div>
+
+[Dot Challenge Starting Code](https://jsbin.com/daherew/edit?js,output)
+
+
+### Part Two: Line Challenge
+<div class="sketch" style="width: 100%; height: 400px;">
+<iframe class="figure" height="400" src="./line_challenge/index.html"></iframe>
+</div>
+
+[Line Challenge Starting Code](https://jsbin.com/feyenob/2/edit?js,output)
 
 
 ## Reading + Viewing Assignment
@@ -49,9 +86,6 @@ Don't forget to sign up for orientations for the Laser Cutter and 3D printer.
 
 **You must complete orientations for the Laser Cutter and 3D Printer before spring break!**
 
-## Challenge: Hand Off
-- Part 1: Create a sketch. Post the output. Hand the code to someone else.
-- Part 2: Receive code from someone else. Modify it. Post the output.
 
 
 # Computational Form Strategies
