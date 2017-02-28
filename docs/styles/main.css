@@ -80,7 +80,7 @@ em,
 i {
   font-style: italic; }
 
-img {
+img, video {
   width: 100%;
   display: block; }
 
@@ -107,8 +107,11 @@ ul ol,
 ul ul {
   padding-left: 20px; }
 
-li {
+ul li {
   list-style: disc; }
+
+ol li {
+  list-style: decimal; }
 
 .btn {
   border: 1px solid red;
@@ -124,6 +127,11 @@ code {
   color: #990000;
   background-color: #EEE;
   border-radius: 4px; }
+
+h1 code,
+h2 code,
+h3 code {
+  font-size: inherit; }
 
 pre {
   display: block;

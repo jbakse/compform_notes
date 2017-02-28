@@ -30,7 +30,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 5		| Feb-24	| Comp Form Strategies	| p5.js | [class notes](week_5_strategies)
 |
 **Exploration**		|
-6		| Mar-03	| Generating Animation	| p5.js | [class notes](#)
+6		| Mar-03	| Generating Animation	| p5.js | [class notes](week_6_animation)
 7		| Mar-10	| Processing Pixels		| p5.js | [class notes](#)
 8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](#)
 &nbsp;	| *Mar-24*	| *Spring Break*		| &nbsp; | &nbsp;

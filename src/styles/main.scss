@@ -124,7 +124,8 @@ i {
 //////////////////////////////
 // images
 
-img {
+img,
+video {
 	width: 100%;
 	// margin-bottom: 18px;
 	display: block;
@@ -164,8 +165,12 @@ ul ul {
 	padding-left: 20px;
 }
 
-li {
+ul li {
 	list-style: disc;
+}
+
+ol li {
+	list-style: decimal;
 }
 
 //////////////////////////////
@@ -191,6 +196,12 @@ code {
 	background-color: $light-color;
 	border-radius: 4px;
 
+}
+
+h1 code,
+h2 code,
+h3 code {
+	font-size: inherit;
 }
 
 pre {

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 6 - Animation</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 6 - Animation</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 6 - Animation -->
+		<div class="container">
+			<p><a href="plan.html">Today’s Plan</a></p>
+<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.</li>
+<li>B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Real-time vs Pre-rendered</li>
+<li>Time sources for Real-time and Pre-rendered animations</li>
+<li>Periodic Functions + Time + Keeping a Beat</li>
+<li>Exporting and Stitching frames</li>
+</ul>
+<h1>Assignment</h1>
+<h2>Challenge: Three Second Comp Form Bumper</h2>
+<h1>Real-time vs Pre-rendered</h1>
+<p>When talking about rendering animation:</p>
+<ul>
+<li>Real-time <strong>doesn’t</strong> mean fast.</li>
+<li>Real-time <strong>does</strong> mean created at the time it is used.</li>
+<li>Real-time has multiple meanings. So, fine, sometimes it does mean fast.</li>
+</ul>
+<p>The most important aspect of real-time animation is that the frames displayed are generated as they are being displayed. For animation to appear smooth, frame rates must be relatively high. Typical animation frame rates are 24 or 30 fps. To achieve those rates, each frame of animation must be draw in about 30-40 milliseconds. VR applications target 90 fps, leaving only about 10 milliseconds to draw the scene.</p>
+<p>In exchange for limiting how much time can be spent rendering each frame, we gain a huge benefit. Real-time animation can to information—including user input—not known ahead of time. This allows animation to be interactive.</p>
+<p>However, limiting the time spent rendering each frame often means compromising on the quality or complexity of the animation. Pre-rendering provides its own huge benefit: pre-rendered animations can take as long as they need to render things. This allows for frames with very high quality and complexity.</p>
+<h1>Clocks for Real-time vs Pre-rendered</h1>
+<h2>Using <code>millis()</code></h2>
+<p>In real-time rendering it is common that the time between frames might vary. Some frames are simple and render faster, some are more complex and render relatively slowly. Some systems will simply wait a bit before showing a simple frame, to ensure that frames are displayed at an even rate. This doesn’t always work out. Sometimes a frame take too long, misses the deadline, and leads to dropping frames.</p>
+<p>Because you can not count of the frame rate being steady, it is best to measure time using a real-time clock source. The <code>millis()</code> function returns the number of milliseconds since the sketch started. <a href="https://p5js.org/reference/#/p5/millis">p5 reference</a></p>
+<p><a href="./sketches/millis.js" class="p5_example show-lab show-lab-link hidden">Millis</a></p>
+<p>Try changing the frame rate in the example above to 5 or 10. The animation becomes far less smooth, but the rate at which the ellipse bobs and changes color is unchanged.</p>
+<h2>Using <code>frameCount</code></h2>
+<p>If you are pre-rendering your animation, you don’t care how long each frame takes. You know that the frames will be played back at a steady pace. For pre-rendered animation base time on the current frame. The <code>frameCount</code> variable holds the current frame being drawn. <a href="https://p5js.org/reference/#/p5/frameRate">p5 reference</a></p>
+<p><a href="./sketches/frameCount.js" class="p5_example show-lab show-lab-link hidden">Millis</a></p>
+<p>Try changing the frame rate in the example above to 5 or 10. The ellipse bobs and changes colors much more slowly now, but every frame needed for smooth playback is rendered.</p>
+<h1>Deterministic Variation</h1>
+<p>If you use <code>random()</code> to create variation and you want that variation to be consistent between frames, you will need to use <code>random()</code> seed or switch to another strategy to create variation like using <code>noise()</code>.</p>
+<h1>Keeping a Beat</h1>
+<p>When pre-rendering your animation you will often want to be able to convert the current frame number to the playback time. You can use <code>floor()</code> and modulo <code>%</code> for this.</p>
+<h2>Using Modulo <code>%</code></h2>
+<pre><code><span class="hljs-attribute">var targetFrameRate</span> = 30;
+<span class="hljs-attribute">var secondPart</span> = floor(frameCount/targetFrameRate);
+<span class="hljs-attribute">var framePart</span> = frameCount % targetFrameRate;
+</code></pre>
+<p>You can also use Modulo to keep track of other rhythms.</p>
+<pre><code><span class="hljs-comment">// for a 30fps animation, beat will be 0 every 2 seconds.</span>
+<span class="hljs-keyword">var</span> beat = frameCount % <span class="hljs-number">60</span>;
+</code></pre>
+<p><a href="./sketches/modulo.js" class="p5_example show-lab show-lab-link hidden">Modulo</a></p>
+<p>Also note that the times above are related to the expected playback speed, even though p5 is rendering the animation faster than that.</p>
+<h2>Using Sine <code>sin()</code></h2>
+<p>The <code>sin()</code> function will give you a nice, periodic function that sweeps from -1 to 1 and back down. It is useful for <em>so many things</em>. For example, it is great at creating smooth changes over time.</p>
+<pre><code><span class="hljs-comment">// generate a sine wave with a period of one second</span>
+var s = <span class="hljs-built_in">sin</span>(<span class="hljs-built_in">frameCount</span>/targetFrameRate*<span class="hljs-number">2</span>*<span class="hljs-literal">PI</span>);
+</code></pre>
+<p><a href="./sketches/sin.js" class="p5_example show-lab show-lab-link hidden">Sine</a></p>
+<h1>Exporting Frames from p5</h1>
+<p>The <code>save()</code> function will create and download an image of the current frame of the sketch. This will trigger an avalanche of downloads. <strong>It is a good idea to empty out your downloads folder</strong> to make things easier to manage.</p>
+<p><a href="./sketches/save_frames.js" class="p5_example show-lab show-lab-link hidden">Save Frames</a></p>
+<h1>Stitching Frames</h1>
+<p>There are many applications that can take a sequence of frames and stitch them into a movie. <a href="https://support.apple.com/kb/DL923?locale=en_US">Quicktime 7</a> works well. <a href="https://www.ffmpeg.org/">FFmpeg</a> is a powerful command line utility for this and other video tasks. FFmpeg is a good choice for automated/back-end workflows. After Effects is a good choice if you are going to use the animation as part of a larger animated composition.</p>
+<p>You can even do it with photoshop:</p>
+<ol>
+<li>Open Photoshop.</li>
+<li>Choose <code>File</code> &gt; <code>Open</code>.</li>
+<li>Click on the first file of your sequence.</li>
+<li>Check <code>Image Sequence</code>.</li>
+<li>From the Timeline dropdown menu choose <code>Render Video...</code>.</li>
+<li>Adjust export settings.</li>
+<li>Click <code>Render</code></li>
+</ol>
+<video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
+<video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
+<h1>Miscellaneous Links</h1>
+<p><a href="https://www.youtube.com/watch?v=fDyreCOa5co">Fluctuating Rocks</a></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
