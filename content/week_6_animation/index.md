@@ -9,13 +9,6 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| Danielle, Amber, Sanie
-B		| Talia, Bateel, Jane, Sachi
-C		| Jennifer, Jonathan, Dorothy
-D		| Enayet, Kim, Gabriel
-
-Group 	| Members
----		| ---
 A		| Bateel, Jonathan, Enayet, Sanie
 B		| Danielle, Jane, Kim
 C		| Sachi, Dorothy, Gabriel
@@ -33,6 +26,7 @@ D		| Jennifer, Amber, Talia
 - Time sources for Real-time and Pre-rendered animations
 - Periodic Functions + Time + Keeping a Beat
 - Exporting and Stitching frames
+- 🔥**Bonus**🔥 The Transformation Stack
 
 # Assignment
 
