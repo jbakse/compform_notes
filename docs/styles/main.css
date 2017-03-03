@@ -80,7 +80,8 @@ em,
 i {
   font-style: italic; }
 
-img, video {
+img,
+video {
   width: 100%;
   display: block; }
 

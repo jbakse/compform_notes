@@ -9,12 +9,24 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| ?
+A		| Danielle, Amber, Sanie
+B		| Talia, Bateel, Jane, Sachi
+C		| Jennifer, Jonathan, Dorothy
+D		| Enayet, Kim, Gabriel
 
+Group 	| Members
+---		| ---
+A		| Bateel, Jonathan, Enayet, Sanie
+B		| Danielle, Jane, Kim
+C		| Sachi, Dorothy, Gabriel
+D		| Jennifer, Amber, Talia
 
 # Homework Review
-- A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.
-- B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.
+
+- A: Choose your favorite take on the dot or line challenge. Discuss.
+- B: Choose a 😍. Discuss.
+- C: Choose a 🤓. Discuss.
+- D: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.
 
 # Today's Learning Objectives
 - Real-time vs Pre-rendered
@@ -24,7 +36,38 @@ A		| ?
 
 # Assignment
 
+Keep Sketching!
+
+Post 5 sketches that explore using code to create smooth, pre-rendered animations.
+
+You may work on one idea over multiple sketches, but: post work-in-progress as you go and don't work on at least three different ideas this week.
+
 ## Challenge: Three Second Comp Form Bumper
+
+Create a three second bumper for Computational Form.
+
+- Should be exactly 3 seconds. 90 frames @ 30fps
+- Should have a clear progression: beginning, middle, end.
+- Should feature either the text "Compform" or "Computational Form"
+- Consider including the three-triangle Sierpinski icon
+- Consider including music or sound
+- Consider submitting multiple takes on this challenge
+
+Reference:
+[My MTV](https://vimeo.com/51716890)
+[MTV Fantastic Four](https://vimeo.com/151623595)
+[Pub](https://vimeo.com/91392344)
+[Much](https://vimeo.com/17663706)
+[Nick](https://vimeo.com/71789191)
+
+
+# Quick Gallery
+
+- [Two Minute Papers: Digital Creatures](https://www.youtube.com/watch?v=LmYKfU5O_NA)
+- [Fluctuating Rocks](https://www.youtube.com/watch?v=fDyreCOa5co)
+- [Houdini Customer Reel](https://vimeo.com/175730831)
+- [Marcin Ignac](https://vimeo.com/marcinignac)
+- [Bagatelle I](https://vimeo.com/20239515)
 
 # Real-time vs Pre-rendered
 
@@ -119,8 +162,3 @@ You can even do it with photoshop:
 
 <video src="videos/render.mp4" poster="videos/render_0030.jpg" controls></video>
 <video src="videos/render_color.mp4" poster="videos/render_color_0030.jpg" controls></video>
-
-
-
-# Miscellaneous Links
-[Fluctuating Rocks](https://www.youtube.com/watch?v=fDyreCOa5co)
