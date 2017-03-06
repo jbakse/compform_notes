@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 7 - Pixels</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 7 - Pixels</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 7 - Pixels -->
+		<div class="container">
+			<p><a href="plan.html">Today’s Plan</a></p>
+<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.</li>
+<li>B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>How to read and write pixel values (p5)</li>
+<li>Common Applications: Image Generation, Image Processing, Image Inputs</li>
+<li>Pixel Layout (p5) and accessing the <code>pixel[]</code> data directly.</li>
+</ul>
+<h1>Reading</h1>
+<ul>
+<li>Review each sample sketch featured on this site.</li>
+<li>Look up any functions you are not familiar with in the [p5.js reference](<a href="http://p5js.org/reference">http://p5js.org/reference</a></li>
+</ul>
+<h1>Assignment</h1>
+<p>Sketch! Explore working with images pixels.</p>
+<p>Post at least one sketch for each of the following:</p>
+<ul>
+<li>Generate an image from scratch: pixel by pixel. Don’t call any high level drawing function like <code>ellipse()</code> or <code>rect()</code>.</li>
+<li>Load an image and process its pixels.</li>
+<li>Use an image as an input source to control a drawing.</li>
+</ul>
+<p>This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.</p>
+<h2>Optional Challenge: Ouroboros</h2>
+<p>Create code that processes an image. Feed the result back into your code. Repeat. What happens after several generations? Post your source image, the result after one generation, and the result after several generations.</p>
+<h1>Working With Pixel Data in p5</h1>
+<h2>A Basic Example</h2>
+<p><a href="./sketches/basic_pixels.js" class="p5_example show-lab show-lab-link hidden">basic_pixels</a></p>
+<p>Let’s look at the example above in depth:</p>
+<p><strong>Line 8</strong> uses <code>createImage()</code> to create a new, empty image in memory. We can draw this image just like an image lowed from a <code>.jpg</code> or <code>.gif</code>.</p>
+<p><strong>Line 9</strong> uses <code>loadPixels()</code> to tell p5 that we want to access the pixels of the image for reading or writing. You must call <code>loadPixels()</code> before using <code>set()</code>, <code>get()</code>, or the <code>pixels[]</code> array.</p>
+<p><strong>Lines 11 + 12</strong> sets up a nested loop. The inner content of the loop will be run once for every pixel.</p>
+<p><strong>Line 13</strong> uses the <code>color()</code> function to create a color value, which is assigned to <code>c</code>. Color values hold the R, G, B, and A values of a color. The color function takes into account the current <code>colorMode()</code>.</p>
+<p><strong>Line 14</strong> uses <code>set()</code> to set the color of the pixel at <code>x, y</code>.</p>
+<p><strong>Line 18</strong> uses <code>updatePixels()</code> to tell p5 we are done accessing the pixels of the image.</p>
+<p><strong>Line 20</strong> uses <code>noSmooth()</code> to tells p5 not to try to smooth the image when we scale it. This is like telling photoshop to use ‘nearest neighbor’ when scaling an image.</p>
+<p><strong>Line 21</strong> draws the image, filling the canvas so we can clearly see each pixel.</p>
+<h2>A Gradient Example</h2>
+<p><a href="./sketches/basic_pixels_2.js" class="p5_example show-lab show-lab-link hidden">basic_pixels_2</a></p>
+<p>This example has the same structure as the first one, but draws a gradient pixel-by-pixel.</p>
+<h2>A Third Example</h2>
+<p><a href="./sketches/basic_pixels_3.js" class="p5_example show-lab show-lab-link hidden">basic_pixels_3</a></p>
+<p>The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.</p>
+<h1>In-class Challenges</h1>
+<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order.</p>
+<h1>Modify the Basic Example</h1>
+<ul>
+<li>Change the image resolution to <code>20x20</code></li>
+<li>Change the image resolution to <code>500x500</code></li>
+<li>Change the image resolution back to <code>10x10</code></li>
+<li>Make each pixel a random shade of blue.</li>
+<li>Make each pixel a random shade of gray.</li>
+</ul>
+<h1>Modify the Gradient Example</h1>
+<ul>
+<li>Make a horizontal black to blue gradient.</li>
+<li>Make a vertical black to green gradient.</li>
+<li>Make a horizontal white to blue gradient.</li>
+<li>Make a vertical rainbow gradient. Tip: <code>colorMode()</code></li>
+</ul>
+<h1>Modify the Third Example</h1>
+<ul>
+<li>Change the image resolution to <code>50x50</code></li>
+<li>Instead of drawing single pixels, draw little <code>+</code> marks at random locations.</li>
+<li>Make each <code>+</code> a random color.</li>
+</ul>
+<h1>Challenging Challenges</h1>
+<ul>
+<li>Color each pixel with <code>noise()</code> to visualize its values.</li>
+<li>Make a radial gradient from black to red.</li>
+<li>Create a diagonal gradient.</li>
+<li>Use <code>sin()</code> to create a repeating black to red to black color wave.</li>
+<li>Create a <code>128x128</code> image and set the blue value of each pixel to <code>(y&amp;x) * 16</code></li>
+</ul>
+<h2>The Canvas + Pixel Density</h2>
+<p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
+<p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue all together.</p>
+<h2>Helper functions</h2>
+<p><code>getRed(img, x, y)</code>
+<code>getGreen(img, x, y)</code>
+<code>getBlue(img, x, y)</code>
+<code>getAlpha(img, x, y)</code>
+<code>getColor(img, x, y)</code></p>
+<p><code>setRed(img, x, y)</code>
+<code>setGreen(img, x, y)</code>
+<code>setBlue(img, x, y)</code>
+<code>setAlpha(img, x, y)</code>
+<code>setColor(img, x, y)</code></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
