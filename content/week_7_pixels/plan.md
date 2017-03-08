@@ -25,3 +25,11 @@
 Time    | Type      |Activity
 ---     | ---       |---
 3:50    | review    | Homework Review
+4:20    | study     | Homework Intro
+4:30    | warmup    | Examples
+4:50    | study     | Writing Pixels
+5:00    | activate  | Challenge
+5:30    | break     | break
+5:40    | study     | Reading Pixels
+5:50    | activate  | Challenge
+6:20    | review    | Review

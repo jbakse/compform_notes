@@ -8,8 +8,8 @@ function draw() {
 	img = createImage(10, 10);
 	img.loadPixels();
 
-	for (var y = 0; y < img.width; y++) {
-		for (var x = 0; x < img.height; x++) {
+	for (var y = 0; y < img.height; y++) {
+		for (var x = 0; x < img.width; x++) {
 			var c = color(y * 25, x * 25, 0);
 			img.set(x, y, c);
 		}
