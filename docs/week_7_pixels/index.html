@@ -49,7 +49,7 @@
 <h1>Reading</h1>
 <ul>
 <li>Review each sample sketch featured on this site.</li>
-<li>Look up any functions you are not familiar with in the [p5.js reference](<a href="http://p5js.org/reference">http://p5js.org/reference</a></li>
+<li>Look up any functions you are not familiar with in the <a href="http://p5js.org/reference">p5.js reference</a></li>
 </ul>
 <h1>Assignment</h1>
 <p>Sketch! Explore working with images pixels.</p>
@@ -80,51 +80,119 @@
 <h2>A Third Example</h2>
 <p><a href="./sketches/basic_pixels_3.js" class="p5_example show-lab show-lab-link hidden">basic_pixels_3</a></p>
 <p>The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.</p>
-<h1>In-class Challenges</h1>
-<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order.</p>
-<h1>Modify the Basic Example</h1>
-<ul>
+<h1>In-class Challenge</h1>
+<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
+<table>
+<thead>
+<tr><th>Time</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>First 13 in 20 Minutes</td><td>Good</td></tr>
+<tr><td>All in 20 Minutes</td><td>Great</td></tr>
+<tr><td>All in 15 Minutes</td><td>Tops!</td></tr>
+<tr><td>All in 10 Minutes</td><td>Hot Dang!</td></tr>
+</tbody>
+</table>
+<h2>Modify the Basic Example</h2>
+<ol>
 <li>Change the image resolution to <code>20x20</code></li>
 <li>Change the image resolution to <code>500x500</code></li>
 <li>Change the image resolution back to <code>10x10</code></li>
 <li>Make each pixel a random shade of blue.</li>
 <li>Make each pixel a random shade of gray.</li>
-</ul>
-<h1>Modify the Gradient Example</h1>
-<ul>
+</ol>
+<h2>Modify the Gradient Example</h2>
+<ol start="6">
 <li>Make a horizontal black to blue gradient.</li>
-<li>Make a vertical black to green gradient.</li>
+<li>Make a vertical green to black gradient.</li>
 <li>Make a horizontal white to blue gradient.</li>
 <li>Make a vertical rainbow gradient. Tip: <code>colorMode()</code></li>
-</ul>
-<h1>Modify the Third Example</h1>
-<ul>
-<li>Change the image resolution to <code>50x50</code></li>
+<li>Create an inset square with a gradient, surrounded by randomly colored pixels.</li>
+</ol>
+<h2>Modify the Third Example</h2>
+<ol start="11">
+<li>Change the image resolution to <code>50x50</code>, adjust scatter to fill.</li>
 <li>Instead of drawing single pixels, draw little <code>+</code> marks at random locations.</li>
 <li>Make each <code>+</code> a random color.</li>
-</ul>
-<h1>Challenging Challenges</h1>
-<ul>
+</ol>
+<h2>Challenging Challenges</h2>
+<ol start="14">
 <li>Color each pixel with <code>noise()</code> to visualize its values.</li>
-<li>Make a radial gradient from black to red.</li>
+<li>Make a radial gradient from black to red. Tip: <code>dist()</code></li>
 <li>Create a diagonal gradient.</li>
 <li>Use <code>sin()</code> to create a repeating black to red to black color wave.</li>
 <li>Create a <code>128x128</code> image and set the blue value of each pixel to <code>(y&amp;x) * 16</code></li>
-</ul>
-<h2>The Canvas + Pixel Density</h2>
+</ol>
+<h1>Reading Pixel Data</h1>
+<p><img src="sketches/world.png" style="image-rendering: pixelated;"></p>
+<h2>Read Pixels Example 1</h2>
+<p><a href="./sketches/read_pixels.js" class="p5_example show-lab show-lab-link hidden">read_pixels</a></p>
+<p>Let’s look at the example above in depth:</p>
+<p>First we need to load an image to read pixel data from.</p>
+<p><strong>Line 3</strong> declares a variable to hold our image.</p>
+<p><strong>Line 5</strong> begins the <code>preload()</code> function. Use this function to load assets.</p>
+<p><strong>Line 6</strong> loads the image.</p>
+<p>With our image in hand we can process the pixels.</p>
+<p><strong>Lines 18 + 19</strong> sets up a loop like in the writing examples above.</p>
+<p><strong>Line 20</strong> uses <code>get()</code> to load the color data of the current pixel. <code>get()</code> returns an array like <code>[255, 0, 0, 255]</code>. That would be a red, fully alpha’d color.</p>
+<p><strong>Lines 22, 23, 24</strong> accesses the red, blue, and green parts of the color.</p>
+<p><strong>Line 25</strong> codereates the new color for the pixel by multiplying the current color values with a random 0-1 value.</p>
+<p><strong>Line 27</strong> updates the pixel in the image data.</p>
+<p><strong>Line 28</strong> uses <code>updatePixels()</code> to tell the image there has been an update. We didn’t need to do this in every pass through the loop when we were just setting pixels, but here we mix set and get and it appears this is now needed. This <strong>might</strong> be a bug in p5.js.</p>
+<h2>Read Pixels Example 2</h2>
+<p><a href="./sketches/read_pixels_2.js" class="p5_example show-lab show-lab-link hidden">read_pixels_2</a></p>
+<h2>Image as Input Example</h2>
+<p><a href="./sketches/read_pixels_3.js" class="p5_example show-lab show-lab-link hidden">read_pixels_3</a></p>
+<h1>In-class Challenge 2</h1>
+<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
+<table>
+<thead>
+<tr><th>Time</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>First 12 in 20 Minutes</td><td>Good</td></tr>
+<tr><td>All in 20 Minutes</td><td>Great</td></tr>
+<tr><td>All in 15 Minutes</td><td>Tops!</td></tr>
+<tr><td>All in 10 Minutes</td><td>Hot Dang!</td></tr>
+</tbody>
+</table>
+<h2>Modify Example 1</h2>
+<ol>
+<li>Colorize the white pixels with a vertical black to red gradient.</li>
+<li>Colorize the black pixels with a vertical black to green gradient.</li>
+<li>Feed the program you made above a grayscale or color image (under 100x100). You’ll have to do this in your own editor, you’ll need a local server.</li>
+</ol>
+<h2>Modify Example 2</h2>
+<ol start="4">
+<li>Change the color comparison to <code>&gt;</code>.</li>
+<li>Change the color comparison to <code>!=</code>.</li>
+<li>Change <code>out_color</code> to an average of the two color samples.</li>
+<li>Feed the program you made above a grayscale or color image (under 100x100).</li>
+</ol>
+<h2>Modify Example 3</h2>
+<ol start="8">
+<li>Invert the drawing, so that circles appear where the input pixels are black.</li>
+<li>Feed the program you made above a grayscale or color image (under 100x100).</li>
+<li>Make the circles scale in proporiton to the ligtness</li>
+</ol>
+<h2>Challenging Challenges</h2>
+<ol start="13">
+<li>Color each pixel with <code>noise()</code> to visualize its values.</li>
+<li>Make a radial gradient from black to red. Tip: <code>dist()</code></li>
+<li>Create a diagonal gradient.</li>
+<li>Use <code>sin()</code> to create a repeating black to red to black color wave.</li>
+<li>Create a <code>128x128</code> image and set the blue value of each pixel to <code>(y&amp;x) * 16</code></li>
+</ol>
+<h1>The Canvas + Pixel Density</h1>
 <p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
 <p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue all together.</p>
-<h2>Helper functions</h2>
-<p><code>getRed(img, x, y)</code>
-<code>getGreen(img, x, y)</code>
-<code>getBlue(img, x, y)</code>
-<code>getAlpha(img, x, y)</code>
-<code>getColor(img, x, y)</code></p>
-<p><code>setRed(img, x, y)</code>
-<code>setGreen(img, x, y)</code>
-<code>setBlue(img, x, y)</code>
-<code>setAlpha(img, x, y)</code>
-<code>setColor(img, x, y)</code></p>
+<h1>Performance</h1>
+<h1>Study Example</h1>
+<p><img src="./sketches/cf.png" alt="cf.png">
+<a href="./sketches/grass.js" class="p5_example show-lab show-lab-link hidden">grass</a></p>
+<h2>Misc Links</h2>
+<p><a href="https://vimeo.com/61154654">Reaction Diffusion in Photoshop</a>
+<a href="http://store.steampowered.com/app/427520/">Factorio</a></p>
 
 		</div>
 
