@@ -95,6 +95,7 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 - Make a vertical black to green gradient.
 - Make a horizontal white to blue gradient.
 - Make a vertical rainbow gradient. Tip: `colorMode()`
+- Create an inset square with a gradient, surrounded by randomly colored pixels.
 
 # Modify the Third Example
 - Change the image resolution to `50x50`
@@ -107,9 +108,6 @@ Explore using p5's pixel manipulation functions by modifying the scripts above. 
 - Create a diagonal gradient.
 - Use `sin()` to create a repeating black to red to black color wave.
 - Create a `128x128` image and set the blue value of each pixel to `(y&x) * 16`
-
-
-
 
 
 ## The Canvas + Pixel Density
@@ -137,3 +135,8 @@ The examples on this page work with the pixels of images instead of the canvas t
 `setBlue(img, x, y)`
 `setAlpha(img, x, y)`
 `setColor(img, x, y)`
+
+
+## Misc Links
+[Reaction Diffusion in Photoshop](https://vimeo.com/61154654)
+[Factorio](http://store.steampowered.com/app/427520/)
