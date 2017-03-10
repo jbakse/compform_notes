@@ -21,6 +21,7 @@ F       | Kim, Gabriel
 - Exploring sketches that take a long time to render is good!
 - If you sketches ran in real-time, you didn't ask them to do enough.
 - Jonathan + Dorothy ran into a bug.
+- Keep your resolutions down. Videos should be < 1280x720. Images should be < 1920 x 1080.
 
 ### Study Tips (from me)
 - Don't expect to leave a class understanding the topics introduced. Expect to have gaps in your understanding. Learning is mostly a pull process, understanding comes from applying concepts through practice. My primary goal in class is to introduce material and make it clear what you need to learn. You need to learn it in the space between classes.
@@ -43,11 +44,12 @@ F       | Kim, Gabriel
 # Homework Review
 
 1. 😍 🤓 😂
-2. Look at the work you and your partner created this week. Choose 1 sketch of your partners that is interesting and deserves more polish.
-    1. Write down the primary strength of piece. Be specific.
+2. Look at the work you and your partner created this week. Choose 1 sketch of your partner's that is interesting and deserves more polish.
+    1. Write down the primary strength of the piece. Be specific.
     2. Write down the primary weakness of the piece. Be specific.
-    3. Write down 5 suggestions for how to polish the sketch.
+    3. Write down 5 suggestions for how to polish the sketch. Be specific and clear.
 
+Be prepared to present your assessment and suggestions to the class. You will have 30 seconds.
 
 
 # Pixel Processing Examples
