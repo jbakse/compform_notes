@@ -28,8 +28,8 @@ Time    | Type      |Activity
 4:20    | study     | Homework Intro
 4:30    | warmup    | Examples
 4:50    | study     | Writing Pixels
-5:00    | activate  | Challenge
+5:00    | activate  | Challenge I
 5:30    | break     | break
 5:40    | study     | Reading Pixels
-5:50    | activate  | Challenge
-6:20    | review    | Review
+5:50    | activate  | Challenge II
+5:00    | review    | Pixel Density, Performance, Grass

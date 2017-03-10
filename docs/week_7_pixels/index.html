@@ -25,23 +25,61 @@
 		</div>
 		<!-- title: Week 7 - Pixels -->
 		<div class="container">
-			<p><a href="plan.html">Today’s Plan</a></p>
-<h4>Today’s Groups</h4>
+			<h4>Today’s Groups</h4>
 <table>
 <thead>
 <tr><th>Group</th><th>Members</th></tr>
 </thead>
 <tbody>
-<tr><td>A</td><td>?</td></tr>
+<tr><td>A</td><td>Talia, Jane</td></tr>
+<tr><td>B</td><td>Dorothy, Sachi</td></tr>
+<tr><td>C</td><td>Jonathan, Bateel</td></tr>
+<tr><td>D</td><td>Amber, Sanie</td></tr>
+<tr><td>E</td><td>Jennifer, Danielle</td></tr>
+<tr><td>F</td><td>Kim, Gabriel</td></tr>
 </tbody>
 </table>
-<h1>Homework Review</h1>
+<h1>Thoughts</h1>
 <ul>
-<li>A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.</li>
-<li>B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.</li>
+<li>Render times <em>are</em> long.</li>
+<li>Exploring sketches that take a long time to render is good!</li>
+<li>If you sketches ran in real-time, you didn’t ask them to do enough.</li>
+<li>Jonathan + Dorothy ran into a bug.</li>
 </ul>
+<h3>Study Tips (from me)</h3>
+<ul>
+<li>Don’t expect to leave a class understanding the topics introduced. Expect to have gaps in your understanding. Learning is mostly a pull process, understanding comes from applying concepts through practice. My primary goal in class is to introduce material and make it clear what you need to learn. You need to learn it in the space between classes.</li>
+<li>Review the class notes one or two days after the lecture.</li>
+<li>In particular, <strong>read</strong> the code. Make sure you understand it fully, line-by-line.</li>
+<li>Start your assignment (make your first sketch) one or two days after the lecture. Look for concepts you don’t understand. This will give you more time for both self-study and seeking help.</li>
+<li>Use your first sketches to practice and learn the concepts introduced each week.</li>
+<li>User your later sketches to explore the possibilities of the concepts.</li>
+<li>Team up. I encourage you to team up and work on a sketch in a pair.</li>
+<li>Incorporate your strengths. Do you paint or illustrate? Make music? Love working type? Bring those skills to your work. This will make both <em>your work</em> and <em>your skills</em> stronger.</li>
+</ul>
+<h3>Studty Tips (from you)</h3>
+<ul>
+<li><strong>Plan</strong> What is your goal for the sketch? Name the thing to learn, explore, show. Make a sketch for your sketch. <em>Dorothy 9:52</em></li>
+<li><strong>Program</strong> Get in, get your hands dirty. <em>Dorothy 2:20</em></li>
+<li><strong>Polish</strong> Color, Size, Composition, Sound, Background, Overlay, Type, Context <em>Sachi 1:55, Talia 11:47, Jane 2:34</em></li>
+<li><strong>Test/Reflect</strong> What’s good? What’s not? What’s interesting? What can you take into the next sketch? <em>Amber 2:24, Sachi 11:26, Talia Maps</em></li>
+<li><strong>Repeat</strong> Build on your successes. Build on your failures.</li>
+</ul>
+<h1>Homework Review</h1>
+<ol>
+<li>😍 🤓 😂</li>
+<li>Look at the work you and your partner created this week. Choose 1 sketch of your partners that is interesting and deserves more polish.
+<ol>
+<li>Write down the primary strength of piece. Be specific.</li>
+<li>Write down the primary weakness of the piece. Be specific.</li>
+<li>Write down 5 suggestions for how to polish the sketch.</li>
+</ol></li>
+</ol>
+<h1>Pixel Processing Examples</h1>
+<p><a href="http://psam3060-d-s16.github.io/class_notes/week_3/slides.html">Pixel Processing Examples</a></p>
 <h1>Today’s Learning Objectives</h1>
 <ul>
+<li>Plan, Program, Polish, Test/Reflect, Repeat</li>
 <li>How to read and write pixel values (p5)</li>
 <li>Common Applications: Image Generation, Image Processing, Image Inputs</li>
 <li>Pixel Layout (p5) and accessing the <code>pixel[]</code> data directly.</li>
@@ -53,16 +91,16 @@
 </ul>
 <h1>Assignment</h1>
 <p>Sketch! Explore working with images pixels.</p>
-<p>Post at least one sketch for each of the following:</p>
+<p>Post <em>at least one</em> sketch <em>for each</em> of the following:</p>
 <ul>
 <li>Generate an image from scratch: pixel by pixel. Don’t call any high level drawing function like <code>ellipse()</code> or <code>rect()</code>.</li>
-<li>Load an image and process its pixels.</li>
-<li>Use an image as an input source to control a drawing.</li>
+<li>Load an image and process its pixels. Show the result.</li>
+<li>Use an image as an input source to control a drawing. Don’t show the original image, just the output.</li>
 </ul>
 <p>This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.</p>
 <h2>Optional Challenge: Ouroboros</h2>
-<p>Create code that processes an image. Feed the result back into your code. Repeat. What happens after several generations? Post your source image, the result after one generation, and the result after several generations.</p>
-<h1>Working With Pixel Data in p5</h1>
+<p>Create code that processes an image. Feed the result back into your code. Repeat. What happens after several generations? Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.</p>
+<h1>Writing Pixel Data</h1>
 <h2>A Basic Example</h2>
 <p><a href="./sketches/basic_pixels.js" class="p5_example show-lab show-lab-link hidden">basic_pixels</a></p>
 <p>Let’s look at the example above in depth:</p>
@@ -87,10 +125,10 @@
 <tr><th>Time</th><th>Comment</th></tr>
 </thead>
 <tbody>
-<tr><td>First 13 in 20 Minutes</td><td>Good</td></tr>
-<tr><td>All in 20 Minutes</td><td>Great</td></tr>
-<tr><td>All in 15 Minutes</td><td>Tops!</td></tr>
-<tr><td>All in 10 Minutes</td><td>Hot Dang!</td></tr>
+<tr><td>&lt; 13 in 20 Minutes</td><td>You need to put in some extra work to strengthen your programming understanding.</td></tr>
+<tr><td>13 in 20 Minutes</td><td>Good.</td></tr>
+<tr><td>All in 20 Minutes</td><td>Great.</td></tr>
+<tr><td>All in 15 Minutes</td><td>Hot Dang!</td></tr>
 </tbody>
 </table>
 <h2>Modify the Basic Example</h2>
@@ -143,6 +181,7 @@
 <p><a href="./sketches/read_pixels_2.js" class="p5_example show-lab show-lab-link hidden">read_pixels_2</a></p>
 <h2>Image as Input Example</h2>
 <p><a href="./sketches/read_pixels_3.js" class="p5_example show-lab show-lab-link hidden">read_pixels_3</a></p>
+<p><img src="sketches/world_100.png" style="image-rendering: pixelated;"></p>
 <h1>In-class Challenge 2</h1>
 <p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
 <table>
@@ -150,10 +189,10 @@
 <tr><th>Time</th><th>Comment</th></tr>
 </thead>
 <tbody>
-<tr><td>First 12 in 20 Minutes</td><td>Good</td></tr>
-<tr><td>All in 20 Minutes</td><td>Great</td></tr>
-<tr><td>All in 15 Minutes</td><td>Tops!</td></tr>
-<tr><td>All in 10 Minutes</td><td>Hot Dang!</td></tr>
+<tr><td>&lt; 10 in 20 Minutes</td><td>You need to put in some extra work to strengthen your programming understanding.</td></tr>
+<tr><td>10 in 20 Minutes</td><td>Good.</td></tr>
+<tr><td>All in 20 Minutes</td><td>Great.</td></tr>
+<tr><td>All in 15 Minutes</td><td>Hot Dang!</td></tr>
 </tbody>
 </table>
 <h2>Modify Example 1</h2>
@@ -167,32 +206,54 @@
 <li>Change the color comparison to <code>&gt;</code>.</li>
 <li>Change the color comparison to <code>!=</code>.</li>
 <li>Change <code>out_color</code> to an average of the two color samples.</li>
-<li>Feed the program you made above a grayscale or color image (under 100x100).</li>
+<li>Feed the program you made above the grayscale earth image above.</li>
 </ol>
 <h2>Modify Example 3</h2>
 <ol start="8">
 <li>Invert the drawing, so that circles appear where the input pixels are black.</li>
-<li>Feed the program you made above a grayscale or color image (under 100x100).</li>
-<li>Make the circles scale in proporiton to the ligtness</li>
+<li>Feed the program you made above the grayscale earth image above.</li>
+<li>Use lightness to drive the circle sizes.</li>
 </ol>
 <h2>Challenging Challenges</h2>
-<ol start="13">
-<li>Color each pixel with <code>noise()</code> to visualize its values.</li>
-<li>Make a radial gradient from black to red. Tip: <code>dist()</code></li>
-<li>Create a diagonal gradient.</li>
-<li>Use <code>sin()</code> to create a repeating black to red to black color wave.</li>
-<li>Create a <code>128x128</code> image and set the blue value of each pixel to <code>(y&amp;x) * 16</code></li>
+<ol start="11">
+<li>Start with the original Example 2 code, without your changes. Set <code>out_color</code> to the average of <code>this_color</code> and <code>below_color</code>.</li>
+<li>Change <code>worldImage.set(x, y, out_color);</code> to <code>worldImage.set(x, y+1, out_color);</code>.</li>
+<li>Remove the conditional statement (keep its contents).</li>
 </ol>
 <h1>The Canvas + Pixel Density</h1>
 <p>When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call <code>pixelDensity(1)</code> to disable this feature. If you don’t, you’ll need to take into account the density when calculating a position in the <code>pixels[]</code> array.</p>
 <p>The examples on this page work with the pixels of images instead of the canvas to avoid this issue all together.</p>
 <h1>Performance</h1>
+<p>The built-in p5 <code>someImage.get(x, y)</code> function gets the RGBA values of a pixel in an image. As noted in the <a href="https://p5js.org/reference/#/p5/get">reference</a>, the get call is slower than accessing the values in the <code>.pixels</code> array directly. In fact, <code>get()</code> can be 1000s of times slower. You can use the following function to grab the pixel values more quickly.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// find the RGBA values of the pixel at x, y in the img.pixels array</span>
+<span class="hljs-comment">// use instead of p5s built in .get(x,y), for much better performance (more than 1000x better in many cases)</span>
+<span class="hljs-comment">// see: http://p5js.org/reference/#/p5/pixels[]</span>
+<span class="hljs-comment">// we don't need to worry about screen pixel density here, because we are not reading from the screen</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getQuick</span>(<span class="hljs-params">img, x, y</span>) </span>{
+
+    <span class="hljs-keyword">var</span> i = (y * <span class="hljs-number">640</span> + x) * <span class="hljs-number">4</span>;
+    <span class="hljs-keyword">return</span> [
+        testImage.pixels[i],
+        testImage.pixels[i+<span class="hljs-number">1</span>],
+        testImage.pixels[i+<span class="hljs-number">2</span>],
+        testImage.pixels[i+<span class="hljs-number">3</span>],
+    ];
+}
+</code></pre>
+<p>Copy the <code>getQuick()</code> function above into your sketch. You can then replace a built in p5 <code>get</code> call with a call to <code>getQuick</code>:</p>
+<pre><code class="language-javascript">c = img.get(x, y);
+</code></pre>
+<p>becomes</p>
+<pre><code class="language-javascript">c = getQuick(img, x, y);
+</code></pre>
 <h1>Study Example</h1>
 <p><img src="./sketches/cf.png" alt="cf.png">
 <a href="./sketches/grass.js" class="p5_example show-lab show-lab-link hidden">grass</a></p>
 <h2>Misc Links</h2>
-<p><a href="https://vimeo.com/61154654">Reaction Diffusion in Photoshop</a>
-<a href="http://store.steampowered.com/app/427520/">Factorio</a></p>
+<p><a href="https://vimeo.com/61154654">Reaction Diffusion in Photoshop</a>,
+<a href="http://store.steampowered.com/app/427520/">Factorio</a>,
+<a href="http://brianmacintosh.com/iconmachine/">Icon Machine</a></p>
 
 		</div>
 

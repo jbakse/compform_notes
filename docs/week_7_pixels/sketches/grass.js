@@ -1,6 +1,4 @@
-// draws some grass
-
-
+// draws some grass, drive density with image
 var testImage;
 
 function preload() {
@@ -24,9 +22,6 @@ function draw() {
 	// set drawing styles
 	stroke(255, 0, 0);
 	fill(255, 255, 255);
-
-
-	// image(testImage, 0, 0);
 	stroke(0, 200, 100, 80);
 
 	var start = millis();
@@ -35,11 +30,14 @@ function draw() {
 	for (x = 0; x < 640; x++) {
 		for (y = 0; y < 320; y++) {
 
-			//var pixelRed = testImage.pixels[(y * 640 + x) * 4];
+
+			// even quicker...
+			// var pixelRed = testImage.pixels[(y * 640 + x) * 4];
 
 			var pixelRed = red(getQuick(testImage, x, y));
 
 			// pick a random value and compare it pixelRed
+			// for example:
 			// if pixelRed is 0, we'll never draw
 			// if pixelRed is 255, we'll always draw
 			// if pixelRed is 127, we'll draw 50% of the time
@@ -58,8 +56,11 @@ function draw() {
 
 function grass(x, y) {
 
-	var bladeHeight = min(random(1, 20), random(1, 20), random(1, 20),
-		random(1, 20), random(1, 20), random(1, 20));
+	var bladeHeight = min(
+		random(1, 20), random(1, 20), random(1, 20),
+		random(1, 20), random(1, 20), random(1, 20)
+	);
+
 	bladeHeight = bladeHeight * 3;
 
 	var bladeLean = random(-1, 1);

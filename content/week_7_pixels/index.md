@@ -3,20 +3,61 @@ title: Week 7 - Pixels
 toc: show
 ---
 
-[Today's Plan](plan.html)
-
 #### Today's Groups
 
 Group 	| Members
 ---		| ---
-A		| ?
+A		| Talia, Jane
+B		| Dorothy, Sachi
+C		| Jonathan, Bateel
+D       | Amber, Sanie
+E		| Jennifer, Danielle
+F       | Kim, Gabriel
+
+
+# Thoughts
+
+- Render times _are_ long.
+- Exploring sketches that take a long time to render is good!
+- If you sketches ran in real-time, you didn't ask them to do enough.
+- Jonathan + Dorothy ran into a bug.
+
+### Study Tips (from me)
+- Don't expect to leave a class understanding the topics introduced. Expect to have gaps in your understanding. Learning is mostly a pull process, understanding comes from applying concepts through practice. My primary goal in class is to introduce material and make it clear what you need to learn. You need to learn it in the space between classes.
+- Review the class notes one or two days after the lecture.
+- In particular, **read** the code. Make sure you understand it fully, line-by-line.
+- Start your assignment (make your first sketch) one or two days after the lecture. Look for concepts you don't understand. This will give you more time for both self-study and seeking help.
+- Use your first sketches to practice and learn the concepts introduced each week.
+- User your later sketches to explore the possibilities of the concepts.
+- Team up. I encourage you to team up and work on a sketch in a pair.
+- Incorporate your strengths. Do you paint or illustrate? Make music? Love working type? Bring those skills to your work. This will make both *your work* and *your skills* stronger.
+
+### Studty Tips (from you)
+- **Plan** What is your goal for the sketch? Name the thing to learn, explore, show. Make a sketch for your sketch. *Dorothy 9:52*
+- **Program** Get in, get your hands dirty. *Dorothy 2:20*
+- **Polish** Color, Size, Composition, Sound, Background, Overlay, Type, Context *Sachi 1:55, Talia 11:47, Jane 2:34*
+- **Test/Reflect** What's good? What's not? What's interesting? What can you take into the next sketch? *Amber 2:24, Sachi 11:26, Talia Maps*
+- **Repeat** Build on your successes. Build on your failures.
 
 
 # Homework Review
-- A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.
-- B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.
+
+1. 😍 🤓 😂
+2. Look at the work you and your partner created this week. Choose 1 sketch of your partners that is interesting and deserves more polish.
+    1. Write down the primary strength of piece. Be specific.
+    2. Write down the primary weakness of the piece. Be specific.
+    3. Write down 5 suggestions for how to polish the sketch.
+
+
+
+# Pixel Processing Examples
+[Pixel Processing Examples](http://psam3060-d-s16.github.io/class_notes/week_3/slides.html)
+
+
+
 
 # Today's Learning Objectives
+- Plan, Program, Polish, Test/Reflect, Repeat
 - How to read and write pixel values (p5)
 - Common Applications: Image Generation, Image Processing, Image Inputs
 - Pixel Layout (p5) and accessing the `pixel[]` data directly.
@@ -28,19 +69,19 @@ A		| ?
 # Assignment
 Sketch! Explore working with images pixels.
 
-Post at least one sketch for each of the following:
+Post *at least one* sketch *for each* of the following:
 - Generate an image from scratch: pixel by pixel. Don't call any high level drawing function like `ellipse()` or `rect()`.
-- Load an image and process its pixels.
-- Use an image as an input source to control a drawing.
+- Load an image and process its pixels. Show the result.
+- Use an image as an input source to control a drawing. Don't show the original image, just the output.
 
 This week, most of your posts should be still images. You might also consider creating animations. Since p5 pixel access is slow, this technique will pair well with pre-rendering.
 
 
 ## Optional Challenge: Ouroboros
-Create code that processes an image. Feed the result back into your code. Repeat. What happens after several generations? Post your source image, the result after one generation, and the result after several generations.
+Create code that processes an image. Feed the result back into your code. Repeat. What happens after several generations? Post your source image, the result after one generation, and the result after several generations. Alternately, capture 90 generations as frames and post as a video.
 
 
-# Working With Pixel Data in p5
+# Writing Pixel Data
 
 ## A Basic Example
 
@@ -79,16 +120,19 @@ This example has the same structure as the first one, but draws a gradient pixel
 The first two examples use a nested loop to set a value for every pixel in the image. This pattern often used in pixel generating and processing scripts, but not always. This example places red pixels at random places on the image.
 
 
+
+
 # In-class Challenge
 
 Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don't skip any.
 
 Time | Comment
 --- | ---
-First 13 in 20 Minutes | Good
-All in 20 Minutes   | Great
-All in 15 Minutes   | Tops!
-All in 10 Minutes | Hot Dang!
+< 13 in 20 Minutes | You need to put in some extra work to strengthen your programming understanding.
+13 in 20 Minutes | Good.
+All in 20 Minutes   | Great.
+All in 15 Minutes   | Hot Dang!
+
 
 
 
@@ -160,16 +204,19 @@ With our image in hand we can process the pixels.
 <a href="./sketches/read_pixels_3.js" class="p5_example show-lab show-lab-link hidden">read_pixels_3</a>
 
 
+<img src="sketches/world_100.png" style="image-rendering: pixelated;">
+
+
 # In-class Challenge 2
 
 Explore using p5's pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don't skip any.
 
 Time | Comment
 --- | ---
-First 12 in 20 Minutes | Good
-All in 20 Minutes   | Great
-All in 15 Minutes   | Tops!
-All in 10 Minutes | Hot Dang!
+< 10 in 20 Minutes | You need to put in some extra work to strengthen your programming understanding.
+10 in 20 Minutes | Good.
+All in 20 Minutes   | Great.
+All in 15 Minutes   | Hot Dang!
 
 ## Modify Example 1
 1. Colorize the white pixels with a vertical black to red gradient.
@@ -180,20 +227,17 @@ All in 10 Minutes | Hot Dang!
 4. Change the color comparison to `>`.
 5. Change the color comparison to `!=`.
 6. Change `out_color` to an average of the two color samples.
-7. Feed the program you made above a grayscale or color image (under 100x100).
+7. Feed the program you made above the grayscale earth image above.
 
 ## Modify Example 3
 8. Invert the drawing, so that circles appear where the input pixels are black.
-9. Feed the program you made above a grayscale or color image (under 100x100).
-10. Make the circles scale in proporiton to the ligtness
+9. Feed the program you made above the grayscale earth image above.
+10. Use lightness to drive the circle sizes.
 
 ## Challenging Challenges
-13. Color each pixel with `noise()` to visualize its values.
-14. Make a radial gradient from black to red. Tip: `dist()`
-15. Create a diagonal gradient.
-16. Use `sin()` to create a repeating black to red to black color wave.
-17. Create a `128x128` image and set the blue value of each pixel to `(y&x) * 16`
-
+11. Start with the original Example 2 code, without your changes. Set `out_color` to the average of `this_color` and `below_color`.
+12. Change `worldImage.set(x, y, out_color);` to `worldImage.set(x, y+1, out_color);`.
+13. Remove the conditional statement (keep its contents).
 
 # The Canvas + Pixel Density
 When accessing the pixel data of the canvas itself, you need to consider the pixel density p5 is using. By default p5 will create a 2x resolution canvas when running on a high-dpi (retina) display. You can call `pixelDensity(1)` to disable this feature. If you don't, you'll need to take into account the density when calculating a position in the `pixels[]` array.
@@ -202,7 +246,37 @@ The examples on this page work with the pixels of images instead of the canvas t
 
 # Performance
 
+The built-in p5 `someImage.get(x, y)` function gets the RGBA values of a pixel in an image. As noted in the [reference](https://p5js.org/reference/#/p5/get), the get call is slower than accessing the values in the `.pixels` array directly. In fact, `get()` can be 1000s of times slower. You can use the following function to grab the pixel values more quickly.
 
+```javascript
+// find the RGBA values of the pixel at x, y in the img.pixels array
+// use instead of p5s built in .get(x,y), for much better performance (more than 1000x better in many cases)
+// see: http://p5js.org/reference/#/p5/pixels[]
+// we don't need to worry about screen pixel density here, because we are not reading from the screen
+
+function getQuick(img, x, y) {
+
+	var i = (y * 640 + x) * 4;
+	return [
+		testImage.pixels[i],
+		testImage.pixels[i+1],
+		testImage.pixels[i+2],
+		testImage.pixels[i+3],
+	];
+}
+```
+
+Copy the `getQuick()` function above into your sketch. You can then replace a built in p5 `get` call with a call to `getQuick`:
+
+```javascript
+c = img.get(x, y);
+```
+
+becomes
+
+```javascript
+c = getQuick(img, x, y);
+```
 
 
 
@@ -212,5 +286,6 @@ The examples on this page work with the pixels of images instead of the canvas t
 
 
 ## Misc Links
-[Reaction Diffusion in Photoshop](https://vimeo.com/61154654)
-[Factorio](http://store.steampowered.com/app/427520/)
+[Reaction Diffusion in Photoshop](https://vimeo.com/61154654),
+[Factorio](http://store.steampowered.com/app/427520/),
+[Icon Machine](http://brianmacintosh.com/iconmachine/)
