@@ -32,4 +32,4 @@ Time    | Type      |Activity
 5:30    | break     | break
 5:40    | study     | Reading Pixels
 5:50    | activate  | Challenge II
-5:00    | review    | Pixel Density, Performance, Grass
+6:20    | review    | Pixel Density, Performance, Grass
