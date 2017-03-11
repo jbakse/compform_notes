@@ -258,7 +258,7 @@ The built-in p5 `someImage.get(x, y)` function gets the RGBA values of a pixel i
 
 function getQuick(img, x, y) {
 
-	var i = (y * 640 + x) * 4;
+	var i = (y * img.width + x) * 4;
 	return [
 		testImage.pixels[i],
 		testImage.pixels[i+1],
