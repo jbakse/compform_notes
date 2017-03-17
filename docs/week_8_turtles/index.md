@@ -9,14 +9,16 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| ?
-
+A		| Enayet, Danielle, Jane
+B		| Talia, Sanie, Amber
+C		| Jonathan, Sachi, Dorothy, Gabriel
+D		| Bateel, Jennifer, Kim
 
 # Homework Review
 - A: Most Polished: Last week we discussed how spending a few minutes polishing or framing the sketch can help make it feel more like a complete visual idea. Choose a project that demonstrates this and discuss.
-- B: Choose a project you think deserves a 🤓. Discuss.
-- C: Choose a project you think deserves a 😂. Discuss.
-- D: Choose a project you think deserves a 😍. Discuss.
+- B: Part of the homework from last week was to create a sketch that generates an image pixel by pixel. Choose a work that does this and discuss.
+- C: Part of the homework from last week was to create a sketch that processes an image pixel by pixle. Choose a work that does this and discuss.
+- D: Part of the homework from last week was to create a sketch that uses image as input. Choose a work that does this and discuss.
 
 
 # Today's Learning Objectives
@@ -27,8 +29,19 @@ A		| ?
 # Assignment
 Keep Sketching!
 
-## Challenge:
-TBD
+Suggestions:
+- Make a crazy sprialgraph looking thing. Get that out of the way.
+- Use a thick, transparent line. Explore building up layers. Recolor in Photoshop with a Gradient Map.
+- Create a pre-rendered animation.
+
+## Challenge: Animal Face
+Using turtle graphics, create an intricate portrait of an animal. Begin by choosing an animal. Look a photo references of your animal and note interesting details, textures, patterns, and features. How can you translate those details into your sketch. Create you sketch primarily using turtle graphics techniques.
+
+
+
+
+
+
 
 # Logo and Turtle Graphics
 
