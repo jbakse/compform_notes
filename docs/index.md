@@ -32,7 +32,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 **Exploration**		|
 6		| Mar-03	| Generating Animation	| p5.js | [class notes](week_6_animation)
 7		| Mar-10	| Processing Pixels		| p5.js | [class notes](week_7_pixels)
-8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](#)
+8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](week_8_turtles)
 &nbsp;	| *Mar-24*	| *Spring Break*		| &nbsp; | &nbsp;
 9		| Mar-31	| Vector Data			| paper.js | [class notes](#)
 10		| Apr-07	| Generating Text		| js+html | [class notes](#)

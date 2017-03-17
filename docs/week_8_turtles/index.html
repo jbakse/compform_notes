@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 8 - Turtle Graphics</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 8 - Turtle Graphics</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 8 - Turtle Graphics -->
+		<div class="container">
+			<p><a href="plan.html">Today’s Plan</a></p>
+<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: Most Polished: Last week we discussed how spending a few minutes polishing or framing the sketch can help make it feel more like a complete visual idea. Choose a project that demonstrates this and discuss.</li>
+<li>B: Choose a project you think deserves a 🤓. Discuss.</li>
+<li>C: Choose a project you think deserves a 😂. Discuss.</li>
+<li>D: Choose a project you think deserves a 😍. Discuss.</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Background on Logo + Turtles</li>
+<li>Basic Turtle Commands</li>
+<li>Using Turtles to Draw</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<h2>Challenge:</h2>
+<p>TBD</p>
+<h1>Logo and Turtle Graphics</h1>
+<p>Logo is a computer programming language, created in 1967 at the (now) MIT Media Lab to explore how programming can help children learn critical thinking and problem solving. One of the creators of Logo, Seymour Papert, wrote the book <a href="https://www.amazon.com/Mindstorms-Children-Computers-Powerful-Ideas/dp/0465046746/ref=asap_bc?ie=UTF8">Mindstorms</a> which discusses logo and its goals.</p>
+<p>One of the ideas introduced in Logo was &quot;turtle graphics&quot;. In Logo one can issue commands like <code>left</code> to turn and <code>forward</code> to move. These commands are carried out by a robotic or on-screen &quot;turtle&quot;. The turtle can draw a line, tracing its path and producing interesting drawings.</p>
+<p>Logo’s use of turtles allows students make a strong association between what happens in the program and how they move their own bodies in the real world. Papert called this “body-syntonic” learning.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=IhEovwWiniY">Seymour Paper on Learning with Toys</a></li>
+<li><a href="https://www.youtube.com/watch?v=5dZMgdqy7zY">Seymour Papert and Students</a></li>
+<li><a href="https://www.youtube.com/watch?v=xMzojQFyMo0">Seymour Papert and Students (longer cut)</a></li>
+<li><a href="https://youtu.be/ZG9cYhekB8A?t=4m25s">Seymour Papert on Logo 4:25 - 6:40</a></li>
+<li><a href="http://el.media.mit.edu/logo-foundation/what_is_logo/history.html">Logo History</a></li>
+</ul>
+<h1>Our Simple Turtle</h1>
+<p>I’ve created a basic implementation of a turtle for you to use this week.</p>
+<p>Grab <a href="turtle/turtle.html">the code here</a>.</p>
+<h2>Comp Form Turtle API</h2>
+<p><code>myTurtle = new Turtle(x, y)</code></p>
+<p>turtle constructor, creates a turtle object
+takes optional x, y starting coordinates (default is center of sketch)</p>
+<p><code>myTurtle.moveForward(distance)</code></p>
+<p>moves the turtle along its current bearing, drawing a line if pen is down</p>
+<p><code>myTurtle.moveBackward(distance)</code></p>
+<p>moves the turtle backward from its current bearing, drawing a line if pen is down</p>
+<p><code>myTurtle.moveTo(x, y)</code></p>
+<p>instantly transports the turtle to the provided x, y location, drawing a line if pen is down</p>
+<p><code>myTurtle.turnRight(angleDegrees)</code></p>
+<p>rotates the turtle’s bearing clockwise by the provided angle in degrees</p>
+<p><code>myTurtle.turnLeft(angleDegrees)</code></p>
+<p>rotates the turtle’s bearing counter-clockwise by the provided angle in degrees</p>
+<p><code>myTurtle.turnTo(angleDegrees)</code></p>
+<p>changes the turtle’s bearing to the provided angle in degrees</p>
+<p><code>myTurtle.penUp()</code></p>
+<p>tells the turtle to move without drawing</p>
+<p><code>myTurtle.penDown()</code></p>
+<p>tells the turtle to draw a line when it moves</p>
+<p><code>myTurtle.image(image, width, height)</code></p>
+<p>draws and image centered on the turtle’s current location and aligned with the turtle’s rotation</p>
+<p><code>myTurtle.pushState()</code></p>
+<p>records the turtle’s current state (position, bearing, etc.) to a stack so that changes can be undone easily</p>
+<p><code>myTurtle.popState()</code></p>
+<p>restores the turtle’s state to the top recorded state on the stack</p>
+<h1>Turtle Examples</h1>
+<h2>Turtle Square Example</h2>
+<p><a href="./sketches/turtle_square.js" class="p5_example show-lab show-lab-link hidden">turtle_square</a></p>
+<h2>Turtle Triangle Example</h2>
+<p><a href="./sketches/turtle_triangle.js" class="p5_example show-lab show-lab-link hidden">turtle_triangle</a></p>
+<h2>Turtle Multiple Triangles Example</h2>
+<p><a href="./sketches/turtle_triangles.js" class="p5_example show-lab show-lab-link hidden">turtle_triangles</a></p>
+<h2>Turtle Spiralgraph Example</h2>
+<p><a href="./sketches/turtle_spiralgraph.js" class="p5_example show-lab show-lab-link hidden">turtle_spiralgraph</a></p>
+<h1>In-class Challenge</h1>
+<p>Explore using p5’s pixel manipulation functions by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
+<h2></h2>
+<h3>Modify the Triangle Example</h3>
+<ol>
+<li>Draw a Pentagon.</li>
+<li>Draw an Octagon.</li>
+<li>Draw a Circle.</li>
+<li>Draw a Circle with a dashed line. Tip: <code>penUp() + penDown()</code></li>
+</ol>
+<h3>Modify the Multiple Triangles Example</h3>
+<ol start="5">
+<li>Draw each triangle with different colors.</li>
+<li>Change the triangle function to draw squares.</li>
+<li>Remove the <code>.moveTo()</code> commands.</li>
+<li>Change the <code>.turnTo()</code> commands to <code>turnLeft(60)</code>.</li>
+</ol>
+<p>Style Tip: If you change what a function does, you should change its name as well. Did you change the function name in 6?</p>
+<h3>Modify the Spiralgraph Example</h3>
+<ol start="9">
+<li>Change the <code>moveForward()</code> parameter to <code>i * 3</code>.</li>
+<li>Center the result of 11.</li>
+<li>Comment out the <code>noLoop()</code></li>
+<li>Change the <code>turnRight()</code> parameter to <code>175 + frameCount</code>.</li>
+</ol>
+<h3>Challenging Challenges</h3>
+<ol start="13">
+<li>Start with the original Triangle Example. Change it to draw a Spiral.</li>
+<li>Draw two spirals. One Red, one Blue. They should spiral inside each other.</li>
+<li>Using a loop, draw 10 concentric triangles.</li>
+<li>Draw this:
+<img src="challenge_1.png" alt="challenge_1.png"></li>
+</ol>
+<h3>Challenge Self Assessment</h3>
+<p>After you work with Turtle Graphics this week, you should have a solid grasp on the basics. Consider redoing the challenges above to see how solid your understanding is.</p>
+<table>
+<thead>
+<tr><th>Time</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td>&lt; 12 in 20 minutes</td><td>You need to put in some extra work to strengthen your programming understanding.</td></tr>
+<tr><td>12 in 20 minutes</td><td>Good.</td></tr>
+<tr><td>16 in 30 minutes</td><td>Great.</td></tr>
+<tr><td>16 in 20 minutes</td><td>Hot Dang!</td></tr>
+</tbody>
+</table>
+<h1>Study Examples</h1>
+<h2>Turtle + Images</h2>
+<p><a href="./sketches/turtle_image.js" class="p5_example show-lab show-lab-link hidden">turtle_image</a></p>
+<h2>Turtle Push + Pop</h2>
+<p><a href="./sketches/turtle_push.js" class="p5_example show-lab show-lab-link hidden">turtle_push</a></p>
+<h2>Turtle Recursive Tree</h2>
+<p><a href="./sketches/turtle_tree.js" class="p5_example show-lab show-lab-link hidden">turtle_tree</a></p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

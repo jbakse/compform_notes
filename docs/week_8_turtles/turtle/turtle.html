@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title"></span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title:  -->
+		<div class="container">
+			<h1>Turtle.js</h1>
+<p>The following is a basic implementation of a graphics turtle. This implementation is written in Javascript and uses the p5.js library.</p>
+<p>To use this code, you’ll need to include it in your sketch.</p>
+<p>If you are working with the compfrom_sketch_template project (see week 2 notes), you can download this sketch <a href="sketch_turtle.zip">sketch_turtle.zip</a> and place it in your sketches folder</p>
+<p><strong>Or</strong>, if you are creating your own project from scratch.</p>
+<ol>
+<li>Create a file called <code>turtle.js</code> in the same folder as your <code>index.html</code> and <code>sketch.js</code></li>
+<li>Copy/paste the code listed at the bottom of the page into your new file.</li>
+<li>In <code>index.html</code> add the following line just before the <code>script</code> tag that includes your <code>sketch.js</code> script.</li>
+</ol>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">language</span>=<span class="hljs-string">"javascript"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"turtle.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code><span class="hljs-comment">// Turtle</span>
+<span class="hljs-comment">// Basic turtle graphics implementation:</span>
+<span class="hljs-comment">// https://en.wikipedia.org/wiki/Turtle_graphics</span>
+<span class="hljs-comment">// For more info on Javascript OOP:</span>
+<span class="hljs-comment">// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// The turtle's coordinate system uses pixels for distance and degrees for rotations</span>
+<span class="hljs-comment">// 0 degrees is straight right (east); positive degrees are clockwise</span>
+
+<span class="hljs-comment">// Turtle constructor</span>
+<span class="hljs-comment">// takes optional x, y starting coordinates (default is center of sketch)</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Turtle</span></span>(x, y) {
+  <span class="hljs-comment">// assign default values to x and y if they were not passed</span>
+  <span class="hljs-keyword">if</span> (typeof x === <span class="hljs-string">"undefined"</span>) {
+    x = width * <span class="hljs-number">0.5</span>;
+  }
+  <span class="hljs-keyword">if</span> (typeof y === <span class="hljs-string">"undefined"</span>) {
+    y = height * <span class="hljs-number">0.5</span>;
+  }
+  <span class="hljs-built_in">this</span>.x = x;
+  <span class="hljs-built_in">this</span>.y = y;
+  <span class="hljs-built_in">this</span>.bearingRadians = <span class="hljs-number">0</span>;
+  <span class="hljs-built_in">this</span>.isPenDown = <span class="hljs-literal">true</span>;
+  <span class="hljs-built_in">this</span>._stateStack = [];
+}
+
+<span class="hljs-comment">// moveTo instantly transports the turtle to the provided x, y location, drawing a line if pen is down</span>
+Turtle.prototype.moveTo = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(<span class="hljs-keyword">new</span><span class="hljs-type">X</span>, <span class="hljs-keyword">new</span><span class="hljs-type">Y</span>) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isPenDown) {
+    line(<span class="hljs-built_in">this</span>.x, <span class="hljs-built_in">this</span>.y, <span class="hljs-keyword">new</span><span class="hljs-type">X</span>, <span class="hljs-keyword">new</span><span class="hljs-type">Y</span>);
+  }
+  <span class="hljs-built_in">this</span>.x = <span class="hljs-keyword">new</span><span class="hljs-type">X</span>;
+  <span class="hljs-built_in">this</span>.y = <span class="hljs-keyword">new</span><span class="hljs-type">Y</span>;
+};
+
+<span class="hljs-comment">// moveForward moves the turtle along its current bearing, drawing a line if pen is down</span>
+Turtle.prototype.moveForward = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(distance) {
+  <span class="hljs-keyword">var</span> <span class="hljs-keyword">new</span><span class="hljs-type">X</span> = <span class="hljs-built_in">this</span>.x + cos(<span class="hljs-built_in">this</span>.bearingRadians) * distance;
+  <span class="hljs-keyword">var</span> <span class="hljs-keyword">new</span><span class="hljs-type">Y</span> = <span class="hljs-built_in">this</span>.y + sin(<span class="hljs-built_in">this</span>.bearingRadians) * distance;
+  <span class="hljs-built_in">this</span>.moveTo(<span class="hljs-keyword">new</span><span class="hljs-type">X</span>, <span class="hljs-keyword">new</span><span class="hljs-type">Y</span>);
+};
+
+<span class="hljs-comment">// moveBackward moves the turtle backward from its current bearing, drawing a line if pen is down</span>
+Turtle.prototype.moveBackward = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(distance) {
+  <span class="hljs-built_in">this</span>.moveForward(-distance);
+};
+
+<span class="hljs-comment">// turnTo changes the turtle's bearing to the provided angle in degrees</span>
+Turtle.prototype.turnTo = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(angleDegrees) {
+  <span class="hljs-built_in">this</span>.bearingRadians = radians(angleDegrees);
+};
+
+<span class="hljs-comment">// turnRight rotates the turtle's bearing clockwise by the provided angle in degrees</span>
+Turtle.prototype.turnRight = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(amountDegrees) {
+  <span class="hljs-built_in">this</span>.bearingRadians += radians(amountDegrees);
+};
+
+<span class="hljs-comment">// turnLeft rotates the turtle's bearing counter-clockwise by the provided angle in degrees</span>
+Turtle.prototype.turnLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(amountDegrees) {
+  <span class="hljs-built_in">this</span>.bearingRadians -= radians(amountDegrees);
+};
+
+<span class="hljs-comment">// penUp tells the turtle to move without drawing</span>
+Turtle.prototype.penUp = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>() {
+  <span class="hljs-built_in">this</span>.isPenDown = <span class="hljs-literal">false</span>;
+};
+
+<span class="hljs-comment">// penDown tells the turtle to draw a line when it moves</span>
+Turtle.prototype.penDown = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>() {
+  <span class="hljs-built_in">this</span>.isPenDown = <span class="hljs-literal">true</span>;
+};
+
+<span class="hljs-comment">// pushState records the turtle's current state (position, bearing, etc.) to a stack so that changes can be undone easily</span>
+Turtle.prototype.pushState = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>() {
+  <span class="hljs-built_in">this</span>._stateStack.push({
+    x: <span class="hljs-type">this</span>.x,
+    y: <span class="hljs-type">this</span>.y,
+    bearingRadians: <span class="hljs-type">this</span>.bearingRadians,
+    isPenDown: <span class="hljs-type">this</span>.isPenDown
+  });
+};
+
+<span class="hljs-comment">// popState restores the turtle's state to the top recorded state on the stack</span>
+Turtle.prototype.popState = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>() {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._stateStack.length === <span class="hljs-number">0</span>) {
+    console.error(
+      <span class="hljs-string">"Turtle: No states left on stack. Make sure your calls to .pushState and .popState are ballanced."</span>
+    );
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">var</span> state = <span class="hljs-built_in">this</span>._stateStack.pop();
+  <span class="hljs-built_in">this</span>.x = state.x;
+  <span class="hljs-built_in">this</span>.y = state.y;
+  <span class="hljs-built_in">this</span>.bearingRadians = state.bearingRadians;
+  <span class="hljs-built_in">this</span>.isPenDown = state.isPenDown;
+};
+
+<span class="hljs-comment">// image draws and image centered on the turtle's current location and alligned with the turtle's rotation (forward = up)</span>
+Turtle.prototype.image = <span class="hljs-function"><span class="hljs-keyword">function</span> </span>(i, w, h) {
+  <span class="hljs-comment">// w, h are optional parameters to this function and to p5's image</span>
+  <span class="hljs-comment">// p5's image function will draw the image at its "normal" size if w and h are undefined</span>
+
+  push();
+  translate(<span class="hljs-built_in">this</span>.x, <span class="hljs-built_in">this</span>.y);
+  rotate(<span class="hljs-built_in">this</span>.bearingRadians + PI * <span class="hljs-number">0.5</span>);
+  imageMode(CENTER);
+  image(i, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, w, h);
+  pop();
+};
+</code></pre>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

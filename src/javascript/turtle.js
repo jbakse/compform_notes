@@ -95,14 +95,14 @@ Turtle.prototype.popState = function () {
   this.isPenDown = state.isPenDown;
 };
 
-// image draws and image centered on the turtle's current location and alligned with the turtle's rotation
+// image draws and image centered on the turtle's current location and alligned with the turtle's rotation (forward = up)
 Turtle.prototype.image = function (i, w, h) {
   // w, h are optional parameters to this function and to p5's image
   // p5's image function will draw the image at its "normal" size if w and h are undefined
 
   push();
   translate(this.x, this.y);
-  rotate(this.bearingRadians - PI * 0.5);
+  rotate(this.bearingRadians + PI * 0.5);
   imageMode(CENTER);
   image(i, 0, 0, w, h);
   pop();
