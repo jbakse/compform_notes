@@ -35,7 +35,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 8		| Mar-17	| Turtle Graphics		| p5.js + custom| [class notes](week_8_turtles)
 &nbsp;	| *Mar-24*	| *Spring Break*		| &nbsp; | &nbsp;
 9		| Apr-28	| Live Video + Sound	| Vuo | [class notes](week_9_vuo)
-10		| Mar-31	| Vector Data			| paper.js | [class notes](#)
+10		| Mar-31	| Vector Data			| paper.js | [class notes](week_10_vector)
 11		| Apr-07	| Generating Text		| js+html | [class notes](#)
 12		| Apr-14	| Generating Music		| js+custom | [class notes](#)
 13		| Apr-21	| Generating 3D Forms	| OpenSCAD | [class notes](#)

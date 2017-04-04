@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 10 - Vector Drawing</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 10 - Vector Drawing</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 10 - Vector Drawing -->
+		<div class="container">
+			<p><a href="plan.html">Today’s Plan</a></p>
+<h1>Today’s Groups</h1>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+<tr><td>B</td><td>?</td></tr>
+<tr><td>C</td><td>?</td></tr>
+<tr><td>D</td><td>?</td></tr>
+<tr><td>E</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: Spirograph</li>
+<li>B: Paradigm Shift (Turtles)</li>
+<li>C: Node Based Programming</li>
+<li>D: Visualizer Challenge</li>
+<li>E: Animal Challenge</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Vector vs Raster Data</li>
+<li>Intro to <a href="http://paperjs.org/">Paper.js</a></li>
+<li>Creating Vector Data w/ Paper.js</li>
+<li>Exporting Vector Data w/ Paper.js</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<p>Explore using Paper.js. Focus this week on creating vector-based images. I highly encourage you to use a hybrid workflow this week: starting with code in paper.js but finishing with manual work in Illustrator.</p>
+<p><strong>Required: Choose One</strong></p>
+<p>Option 1: Expand one of your sketches into a poster. Your poster must be printed in color at 24&quot;x24&quot; or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.</p>
+<p>Option 2: Expand one of your sketches into a laser cut artifact. This can be anything you like as along as it combines generative vector data and laser cutting/etching.</p>
+<p>For either option, create two sketch posts. The first post will show the vector data created by your code. The second post should show photo documentation of your final poster/laser-cut. <strong>Complete both posts before our next class, and bring your poster/laser-cut to class.</strong></p>
+<h2>Challenge</h2>
+<p>TBD</p>
+<h1>Paper.js</h1>
+<blockquote>
+<p><a href="http://paperjs.org/">Paper.js</a> is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas.  It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
+— <a href="http://paperjs.org/about/">About Paper.js</a></p>
+</blockquote>
+<ul>
+<li><a href="http://paperjs.org/features/">Paper.js: Features</a></li>
+<li><a href="http://paperjs.org/examples/">Paper.js: Examples</a></li>
+<li><a href="http://paperjs.org/tutorials/">Paper.js: Tutorials</a></li>
+<li><a href="https://github.com/paperjs/paper.js">Paper.js on Github</a></li>
+<li><a href="http://paperjs.org/download/">Download</a></li>
+</ul>
+<p>PaperScript is an extension of JavaScript with a few added features that make working with Paper.js less verbose. Specifically PaperScript offers <em>operator overloading</em> allowing you to use the mathematic operators (<code>+ - * / %</code>) on Paper.js <code>Point</code> and <code>Size</code> objects.</p>
+<pre><code><span class="hljs-built_in">var</span> pointA = <span class="hljs-built_in">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>);
+<span class="hljs-built_in">var</span> pointB = <span class="hljs-built_in">new</span> Point(<span class="hljs-number">15</span>, <span class="hljs-number">20</span>);
+<span class="hljs-built_in">var</span> <span class="hljs-built_in">sum</span>;
+
+// legal <span class="hljs-keyword">in</span> PaperScript, <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> Javascript
+<span class="hljs-built_in">sum</span> = pointA + pointB;
+
+// legal <span class="hljs-keyword">in</span> Javascript
+<span class="hljs-built_in">sum</span> = pointA.add(pointB);
+</code></pre>
+<h2>Basic Example</h2>
+<div class="sketch" style="width: 100%; height: 520px;">
+<iframe class="figure" height="520" src="./basic_example/index.html"></iframe>
+</div>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> center = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">250</span>, <span class="hljs-number">250</span>);
+
+<span class="hljs-keyword">var</span> path = <span class="hljs-keyword">new</span> Path();
+path.strokeColor = <span class="hljs-string">'red'</span>;
+path.moveTo(center + [<span class="hljs-number">-100</span>, <span class="hljs-number">-100</span>]);
+path.lineTo(center + [<span class="hljs-number">100</span>, <span class="hljs-number">100</span>]);
+
+path = <span class="hljs-keyword">new</span> Path(); <span class="hljs-comment">// what happens if you revove this?</span>
+path.strokeColor = <span class="hljs-string">'green'</span>; <span class="hljs-comment">// what happens if you remove this? what happens if you move it after moveTo/lineTo</span>
+path.moveTo(center + [<span class="hljs-number">100</span>, <span class="hljs-number">-100</span>]);
+path.lineTo(center + [<span class="hljs-number">-100</span>, <span class="hljs-number">100</span>]);
+</code></pre>
+<h2>Basic Example 2</h2>
+<div class="sketch" style="width: 100%; height: 520px;">
+<iframe class="figure" height="520" src="./basic_example_2/index.html"></iframe>
+</div>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> center = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">250</span>, <span class="hljs-number">250</span>);
+
+<span class="hljs-keyword">var</span> rectangle1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-keyword">new</span> Size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>));
+<span class="hljs-keyword">var</span> path1 = <span class="hljs-keyword">new</span> Path.Rectangle(rectangle1);
+path1.strokeColor = <span class="hljs-string">'red'</span>;
+path1.rotate(<span class="hljs-number">45</span>);
+
+<span class="hljs-keyword">var</span> rectangle2 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>), <span class="hljs-keyword">new</span> Size(<span class="hljs-number">250</span>, <span class="hljs-number">300</span>));
+<span class="hljs-keyword">var</span> path2 = <span class="hljs-keyword">new</span> Path.Rectangle(rectangle2);
+path2.strokeColor = <span class="hljs-string">'green'</span>;
+
+<span class="hljs-keyword">var</span> comboPath = path1.subtract(path2);
+comboPath.style = {
+    <span class="hljs-attr">strokeColor</span>: <span class="hljs-string">'black'</span>,
+    <span class="hljs-attr">fillColor</span>: <span class="hljs-string">'#ccf'</span>,
+    <span class="hljs-attr">strokeWidth</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">dashArray</span>: [<span class="hljs-number">10</span>, <span class="hljs-number">4</span>],
+    <span class="hljs-attr">shadowColor</span>: <span class="hljs-keyword">new</span> Color(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">.5</span>),
+    <span class="hljs-attr">shadowBlur</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-attr">shadowOffset</span>: <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>),
+}
+</code></pre>
+<h2>Exporting SVG</h2>
+<p><a href="http://www.mikechambers.com/blog/2014/07/01/saving-svg-content-from-paper.js/">Mike Chambers: Saving an SVG File from Paper.js</a></p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downloadAsSVG</span>(<span class="hljs-params">fileName</span>) </span>{
+
+   <span class="hljs-keyword">if</span>(!fileName) {
+       fileName = <span class="hljs-string">"output.svg"</span>
+   }
+
+   <span class="hljs-keyword">var</span> url = <span class="hljs-string">"data:image/svg+xml;utf8,"</span> + <span class="hljs-built_in">encodeURIComponent</span>(paper.project.exportSVG({<span class="hljs-attr">asString</span>:<span class="hljs-literal">true</span>}));
+
+   <span class="hljs-keyword">var</span> link = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"a"</span>);
+   link.download = fileName;
+   link.href = url;
+   link.click();
+}
+</code></pre>
+<h1>In Class Challenge</h1>
+<h1>In-class Challenge 2</h1>
+<p>Explore using paper.js by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
+<p>Start by downloading the files for the examples above.</p>
+<h2>Modify Example 1</h2>
+<ol>
+<li>Make both lines 8 pixels wide and blue.</li>
+<li>Set the <code>.strokeCap</code> of the lines to <code>'round'</code></li>
+<li>Make 50 lines with random start and end points using a for loop.</li>
+<li>Make the lines 5 pixels wide and green.</li>
+<li>Give each line a random width and color.</li>
+</ol>
+<h2>Modify Example 2</h2>
+<ol start="6">
+<li>Make the green square 500 pixels wide.</li>
+<li>Change the function that creates comboPath from <code>subtract</code> to <code>unite</code></li>
+<li>Change it again to <code>intersect</code></li>
+<li>Change the green square to an ellipse.</li>
+<li>Remove the green and red shape, leaving only the compound shape. Tip: <code>.remove()</code></li>
+</ol>
+<h2>Challenging Challenges</h2>
+<ol start="11">
+<li>Starting from scratch, draw a very simple stick figure.</li>
+<li>Create a compound shape from three shapes using the boolean operations(<code>unite</code>, <code>intersect</code>, <code>subtract</code>, etc). Tip: You’ll need to do this in two steps.</li>
+<li>Create the drawing below.</li>
+</ol>
+<div class="sketch" style="width: 100%; height: 520px;">
+<iframe class="figure" height="520" src="./challenge/index.html"></iframe>
+</div>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

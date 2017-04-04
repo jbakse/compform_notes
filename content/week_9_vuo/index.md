@@ -1,5 +1,5 @@
 ---
-title: Week X - X
+title: Week 9 - Vuo
 toc: show
 ---
 
@@ -107,6 +107,19 @@ Create a Vuo sketch that creates a "music visualization", an animation driven by
 - Stimulated in photo-sensitive sensors in a digital camera.
 - By a magnet in your microphone.
 - By radio waves hitting an antenna.
+
+## Light
+
+[EM Spectrum](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/675px-EM_Spectrum_Properties_edit.svg.png)
+
+
+[Eye Frequency Response](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/540px-Cone-fundamentals-with-srgb-spectrum.svg.png)
+
+## Sound
+
+
+
+
 
 
 

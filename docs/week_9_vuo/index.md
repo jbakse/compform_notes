@@ -1,5 +1,5 @@
 ---
-title: Week X - X
+title: Week 9 - Vuo
 toc: show
 ---
 
@@ -108,16 +108,30 @@ Create a Vuo sketch that creates a "music visualization", an animation driven by
 - By a magnet in your microphone.
 - By radio waves hitting an antenna.
 
+## Light
+
+[EM Spectrum](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/675px-EM_Spectrum_Properties_edit.svg.png)
+
+
+[Eye Frequency Response](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/540px-Cone-fundamentals-with-srgb-spectrum.svg.png)
+
+## Sound
+
+
+
 
 
 
 
 # Vuo and Node Based Programming
-
 - No syntax errors
-- Visual Organization of Project
-- Visualy Complex
+- Visually represents data flow
+- Allows the system to be naturally restricted in a way that allows underlying system to optimize performance.
 
+- Visually Complex
+- Some things feel tedious to build
+- Requires shift in perspective
+- Doesn't play as well with version control
 
 
 ## Other Node Based Programming Tools
@@ -127,23 +141,26 @@ Create a Vuo sketch that creates a "music visualization", an animation driven by
 - Max/MSP
 
 
-# In-Class Challenge
+# In-Class Study
 - Install Vuo
 - Open the Vuo manual
 - Read Chapter 1: Introduction
 - Read the Table of Contents **DO IT**
-- Read every menu item in Vuo **DO IT**
 - Complete Chapter 2: Quick Start
+- With your quick start composition open, read every menu item in Vuo **DO IT**
+- Read the name of every example **DO IT**
 - Read Section 5.5
 - Watch [Protocols: Part 1](https://vuo.org/node/748) and [Protocols: Part 2](https://vuo.org/node/837)
 - Watch [Displaying Images](https://vuo.org/node/79)
 - Create an Image Generator
 - Study These Examples:
-  -
+  - Image Generator: GenerateCheckerboardImage
+  - Image Generator: RippleImageGradients
+  - Image Generator: SpinKaleidoscope
+  - Image: Display Image
+  - Noise: Color Squares Randomly
 
 
-- Copy This 1:
-- Copy This 2:
 
 # Resources
 [Vuo Tutorials](https://vuo.org/tutorials)
