@@ -16,16 +16,28 @@ D		| ?
 E		| ?
 
 
-# Homework Review
-- A: Spirograph
-- B: Paradigm Shift (Turtles)
-- C: Node Based Programming
-- D: Visualizer Challenge
-- E: Animal Challenge
+# Homework Review Part 1
+- A: Turtle graphics are a great fit for "Spirograph" forms. Choose your favorite sketch that features a Spirograph form and discuss its core strengths.
+- B: Paradigm Shift (Turtles): Working with a turtle shift the approach to coordinates and drawing. Choose a work that demonstrates this and discuss.
+- C: Node-based Programming: Choose a work created with a node-based tool that stands out from the sketches in previous weeks. Discuss the relationship between the tool and result.
+- D: Visualizer Challenge: Choose your favorite response to the Visualizer Challenge. Discuss its strengths.
+- E: Animal Challenge:  Choose your favorite response to the Animal Challenge. Discuss its strengths.
+
+# Homework Review Part 2
+Sanie -> Talia -> Dorothy -> Amber -> Jennifer -> Bateel -> Jonathan -> Danielle -> Sachi -> Enayet -> Gabriel -> Jane -> Kim -> Sanie
+
+Find your name on the list above, choose a sketch created by the person after you on the list.
+
+- In one sentence describe the sketch as to someone who hasn't seen it.
+- In one sentence describe the most successful feature of the sketch.
+- In one sentence describe the weakest feature.
+- In one sentence suggest a "polishing move."
+
 
 # Today's Learning Objectives
 
 - Vector vs Raster Data
+- Boolean Operations on Vector Shapes
 - Intro to [Paper.js](http://paperjs.org/)
 - Creating Vector Data w/ Paper.js
 - Exporting Vector Data w/ Paper.js
@@ -44,15 +56,11 @@ Option 2: Expand one of your sketches into a laser cut artifact. This can be any
 
 For either option, create two sketch posts. The first post will show the vector data created by your code. The second post should show photo documentation of your final poster/laser-cut. **Complete both posts before our next class, and bring your poster/laser-cut to class.**
 
-## Challenge
-
-TBD
 
 # Paper.js
 
 > [Paper.js](http://paperjs.org/) is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas.  It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
 — [About Paper.js](http://paperjs.org/about/)
-
 
 - [Paper.js: Features](http://paperjs.org/features/)
 - [Paper.js: Examples](http://paperjs.org/examples/)
@@ -60,6 +68,10 @@ TBD
 - [Paper.js on Github](https://github.com/paperjs/paper.js)
 - [Download](http://paperjs.org/download/)
 
+## Object Oriented API
+In contrast to p5.js, Paper.js provides an object oriented API. Shapes in p5 are drawn immediately onto the canvas and can not be manipulated once drawn. In Paper.js shapes are represented by Javascript objects arranged in a scene graph. You can modify properties of the shapes after you create them. You can even modify shapes after they are drawn to move them and create animation.
+
+## PaperScript
 PaperScript is an extension of JavaScript with a few added features that make working with Paper.js less verbose. Specifically PaperScript offers *operator overloading* allowing you to use the mathematic operators (`+ - * / %`) on Paper.js `Point` and `Size` objects.
 
 ```
@@ -93,9 +105,9 @@ path.moveTo(center + [100, -100]);
 path.lineTo(center + [-100, 100]);
 ```
 
-## Basic Example 2
+## Boolean Example
 <div class="sketch" style="width: 100%; height: 520px;">
-<iframe class="figure" height="520" src="./basic_example_2/index.html"></iframe>
+<iframe class="figure" height="520" src="./boolean_example/index.html"></iframe>
 </div>
 
 ```javascript
@@ -149,25 +161,30 @@ Explore using paper.js by modifying the scripts above. Work through the followin
 
 Start by downloading the files for the examples above.
 
-## Modify Example 1
+[Paper.js Example Files](paperjs_examples.zip)
+
+## Modify the Basic Example
 1. Make both lines 8 pixels wide and blue.
 2. Set the `.strokeCap` of the lines to `'round'`
 3. Make 50 lines with random start and end points using a for loop.
 4. Make the lines 5 pixels wide and green.
 5. Give each line a random width and color.
 
-## Modify Example 2
+## Modify the Boolean Example
 6. Make the green square 500 pixels wide.
 7. Change the function that creates comboPath from `subtract` to `unite`
 8. Change it again to `intersect`
 9. Change the green square to an ellipse.
 10. Remove the green and red shape, leaving only the compound shape. Tip: `.remove()`
 
+## Exporting SVG
+11. Add the `downloadAsSVG()` function to your code, export your drawing.
+12. Open your `.svg` in Adobe Illustrator, experiment with applying effects in Illustrator.
 
 ## Challenging Challenges
-11. Starting from scratch, draw a very simple stick figure.
-12. Create a compound shape from three shapes using the boolean operations(`unite`, `intersect`, `subtract`, etc). Tip: You'll need to do this in two steps.
-13. Create the drawing below.
+13. Starting from scratch, draw a very simple stick figure.
+14. Create a compound shape from three shapes using the boolean operations(`unite`, `intersect`, `subtract`, etc). Tip: You'll need to do this in two steps.
+15. Create the drawing below.
 
 
 <div class="sketch" style="width: 100%; height: 520px;">

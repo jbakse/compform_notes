@@ -39,17 +39,27 @@
 <tr><td>E</td><td>?</td></tr>
 </tbody>
 </table>
-<h1>Homework Review</h1>
+<h1>Homework Review Part 1</h1>
 <ul>
-<li>A: Spirograph</li>
-<li>B: Paradigm Shift (Turtles)</li>
-<li>C: Node Based Programming</li>
-<li>D: Visualizer Challenge</li>
-<li>E: Animal Challenge</li>
+<li>A: Turtle graphics are a great fit for “Spirograph” forms. Choose your favorite sketch that features a Spirograph form and discuss its core strengths.</li>
+<li>B: Paradigm Shift (Turtles): Working with a turtle shift the approach to coordinates and drawing. Choose a work that demonstrates this and discuss.</li>
+<li>C: Node-based Programming: Choose a work created with a node-based tool that stands out from the sketches in previous weeks. Discuss the relationship between the tool and result.</li>
+<li>D: Visualizer Challenge: Choose your favorite response to the Visualizer Challenge. Discuss its strengths.</li>
+<li>E: Animal Challenge:  Choose your favorite response to the Animal Challenge. Discuss its strengths.</li>
+</ul>
+<h1>Homework Review Part 2</h1>
+<p>Sanie -&gt; Talia -&gt; Dorothy -&gt; Amber -&gt; Jennifer -&gt; Bateel -&gt; Jonathan -&gt; Danielle -&gt; Sachi -&gt; Enayet -&gt; Gabriel -&gt; Jane -&gt; Kim -&gt; Sanie</p>
+<p>Find your name on the list above, choose a sketch created by the person after you on the list.</p>
+<ul>
+<li>In one sentence describe the sketch as to someone who hasn’t seen it.</li>
+<li>In one sentence describe the most successful feature of the sketch.</li>
+<li>In one sentence describe the weakest feature.</li>
+<li>In one sentence suggest a “polishing move.”</li>
 </ul>
 <h1>Today’s Learning Objectives</h1>
 <ul>
 <li>Vector vs Raster Data</li>
+<li>Boolean Operations on Vector Shapes</li>
 <li>Intro to <a href="http://paperjs.org/">Paper.js</a></li>
 <li>Creating Vector Data w/ Paper.js</li>
 <li>Exporting Vector Data w/ Paper.js</li>
@@ -61,8 +71,6 @@
 <p>Option 1: Expand one of your sketches into a poster. Your poster must be printed in color at 24&quot;x24&quot; or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.</p>
 <p>Option 2: Expand one of your sketches into a laser cut artifact. This can be anything you like as along as it combines generative vector data and laser cutting/etching.</p>
 <p>For either option, create two sketch posts. The first post will show the vector data created by your code. The second post should show photo documentation of your final poster/laser-cut. <strong>Complete both posts before our next class, and bring your poster/laser-cut to class.</strong></p>
-<h2>Challenge</h2>
-<p>TBD</p>
 <h1>Paper.js</h1>
 <blockquote>
 <p><a href="http://paperjs.org/">Paper.js</a> is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas.  It offers a clean Scene Graph / Document Object Model and a lot of powerful functionality to create and work with vector graphics and bezier curves, all neatly wrapped up in a well designed, consistent and clean programming interface.
@@ -75,6 +83,9 @@
 <li><a href="https://github.com/paperjs/paper.js">Paper.js on Github</a></li>
 <li><a href="http://paperjs.org/download/">Download</a></li>
 </ul>
+<h2>Object Oriented API</h2>
+<p>In contrast to p5.js, Paper.js provides an object oriented API. Shapes in p5 are drawn immediately onto the canvas and can not be manipulated once drawn. In Paper.js shapes are represented by Javascript objects arranged in a scene graph. You can modify properties of the shapes after you create them. You can even modify shapes after they are drawn to move them and create animation.</p>
+<h2>PaperScript</h2>
 <p>PaperScript is an extension of JavaScript with a few added features that make working with Paper.js less verbose. Specifically PaperScript offers <em>operator overloading</em> allowing you to use the mathematic operators (<code>+ - * / %</code>) on Paper.js <code>Point</code> and <code>Size</code> objects.</p>
 <pre><code><span class="hljs-built_in">var</span> pointA = <span class="hljs-built_in">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>);
 <span class="hljs-built_in">var</span> pointB = <span class="hljs-built_in">new</span> Point(<span class="hljs-number">15</span>, <span class="hljs-number">20</span>);
@@ -102,9 +113,9 @@ path.strokeColor = <span class="hljs-string">'green'</span>; <span class="hljs-c
 path.moveTo(center + [<span class="hljs-number">100</span>, <span class="hljs-number">-100</span>]);
 path.lineTo(center + [<span class="hljs-number">-100</span>, <span class="hljs-number">100</span>]);
 </code></pre>
-<h2>Basic Example 2</h2>
+<h2>Boolean Example</h2>
 <div class="sketch" style="width: 100%; height: 520px;">
-<iframe class="figure" height="520" src="./basic_example_2/index.html"></iframe>
+<iframe class="figure" height="520" src="./boolean_example/index.html"></iframe>
 </div>
 <pre><code class="language-javascript"><span class="hljs-keyword">var</span> center = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">250</span>, <span class="hljs-number">250</span>);
 
@@ -148,7 +159,8 @@ comboPath.style = {
 <h1>In-class Challenge 2</h1>
 <p>Explore using paper.js by modifying the scripts above. Work through the following challenges in order. Don’t skip any.</p>
 <p>Start by downloading the files for the examples above.</p>
-<h2>Modify Example 1</h2>
+<p><a href="paperjs_examples.zip">Paper.js Example Files</a></p>
+<h2>Modify the Basic Example</h2>
 <ol>
 <li>Make both lines 8 pixels wide and blue.</li>
 <li>Set the <code>.strokeCap</code> of the lines to <code>'round'</code></li>
@@ -156,7 +168,7 @@ comboPath.style = {
 <li>Make the lines 5 pixels wide and green.</li>
 <li>Give each line a random width and color.</li>
 </ol>
-<h2>Modify Example 2</h2>
+<h2>Modify the Boolean Example</h2>
 <ol start="6">
 <li>Make the green square 500 pixels wide.</li>
 <li>Change the function that creates comboPath from <code>subtract</code> to <code>unite</code></li>
@@ -164,8 +176,13 @@ comboPath.style = {
 <li>Change the green square to an ellipse.</li>
 <li>Remove the green and red shape, leaving only the compound shape. Tip: <code>.remove()</code></li>
 </ol>
-<h2>Challenging Challenges</h2>
+<h2>Exporting SVG</h2>
 <ol start="11">
+<li>Add the <code>downloadAsSVG()</code> function to your code, export your drawing.</li>
+<li>Open your <code>.svg</code> in Adobe Illustrator, experiment with applying effects in Illustrator.</li>
+</ol>
+<h2>Challenging Challenges</h2>
+<ol start="13">
 <li>Starting from scratch, draw a very simple stick figure.</li>
 <li>Create a compound shape from three shapes using the boolean operations(<code>unite</code>, <code>intersect</code>, <code>subtract</code>, etc). Tip: You’ll need to do this in two steps.</li>
 <li>Create the drawing below.</li>
