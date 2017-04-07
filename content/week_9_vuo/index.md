@@ -214,16 +214,17 @@ Even two perfect microphones, recordings, and speakers can do a pretty good job 
 - Max/MSP
 
 
+
 # In-Class Study
 - Install Vuo
 - Open the Vuo manual
 - Read Chapter 1: Introduction
 - Read the Table of Contents **DO IT**
 - Complete Chapter 2: Quick Start
-- With your quick start composition open, read every menu item in Vuo **DO IT**
-- Read the name of every example **DO IT**
+- With your quick start composition open, read every menu item in Vuo **DO THIS TOO**
+- Read the name of every example **IT IS WORTH IT**
 - Read Section 5.5
-- Watch [Protocols: Part 1](https://vuo.org/node/748) and [Protocols: Part 2](https://vuo.org/node/837)
+- Watch [Protocols: Part 1](https://vuo.org/node/748)
 - Watch [Displaying Images](https://vuo.org/node/79)
 - Create an Image Generator
 - Study These Examples:
