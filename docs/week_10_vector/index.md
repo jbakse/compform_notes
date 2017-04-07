@@ -3,6 +3,7 @@ title: Week 10 - Vector Drawing
 toc: show
 ---
 
+[Lady Gaga Midi](https://freemidi.org/artist-1586-lady-gaga)
 
 # Today's Groups
 
@@ -191,6 +192,11 @@ Start by downloading the files for the examples above.
 1. Make both lines 8 pixels wide and blue.
 2. Set the `.strokeCap` of the lines to `'round'`
 3. Make 50 lines with random start and end points using a for loop.
+```
+// pick random value from 0 to 500
+var x = Math.random() * 500;
+```
+
 4. Make the lines 5 pixels wide and green.
 5. Give each line a random width and color.
 
