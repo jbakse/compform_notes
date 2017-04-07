@@ -3,7 +3,6 @@ title: Week 10 - Vector Drawing
 toc: show
 ---
 
-[Today's Plan](plan.html)
 
 # Today's Groups
 
