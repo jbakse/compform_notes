@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 11 - Text</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 11 - Text</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 11 - Text -->
+		<div class="container">
+			<div style="font-size: 200px;">Open Your Javascript Console!</div>
+<h1>Today’s Groups</h1>
+<p><a href="./pairs.js" class="p5_example show-lab show-lab-link hidden">pairs</a></p>
+<h1>Homework Review</h1>
+<ul>
+<li>In one sentence describe the sketch as to someone who hasn’t seen it.</li>
+<li>In one sentence describe the most successful feature of the sketch.</li>
+<li>In one sentence describe the weakest feature.</li>
+<li>In one sentence suggest a “polishing move.”</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Study a few functions from jQuery and Underscore</li>
+<li>Generating text with Markov Chains</li>
+<li>Implementing a “Mad Lib” template</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<p>This week you are posting text! Focus on the words themselves, but also consider how the presentation of the words will impact meaning.</p>
+<h2>Challenge:</h2>
+<p>[TBD]</p>
+<h1>Examples of Comp Text</h1>
+<ul>
+<li><a href="https://www.reddit.com/r/SubredditSimulator/">Subreddit Simulator</a></li>
+<li><a href="https://www.nytimes.com/2015/12/23/business/media/personalizing-books-via-robot.html?_r=0">NYT: The little girl/boy who lost her/his name.</a></li>
+<li><a href="https://www.nytimes.com/interactive/2015/05/03/upshot/the-best-and-worst-places-to-grow-up-how-your-area-compares.html">NYT: The Best and Worst Places to Grow Up</a></li>
+<li><a href="https://www.reddit.com/r/proceduralgeneration/comments/4bhohq/more_animal_fun/">More Animal Fun…</a></li>
+<li><a href="http://www.madlibs.com/">Mad Libs</a></li>
+<li><a href="https://github.com/NaNoGenMo/2016">NaNoGenMo 2016</a></li>
+</ul>
+<h1>Mad Libs</h1>
+<p><a href="https://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a></p>
+<p>Activity: TBD</p>
+<h1>Markov Chains</h1>
+<p><a href="https://en.wikipedia.org/wiki/Markov_chain">Markov Chains</a></p>
+<p>Activity: TBD</p>
+<h1>jQuery</h1>
+<blockquote>
+<p><a href="http://jquery.com/">jQuery</a> is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+</blockquote>
+<p>jQuery is great for finding and manipulating elements in HTML.</p>
+<h2>Using jQuery</h2>
+<p>The main function in jQuery is, wait for it… <code>jQuery()</code>. This function can also be accessed using the abbreviated name <code>$()</code>.</p>
+<p>This function actually does a few different things depending on what you pass it. One of the most important things it does is “select” elements in your HTML document.</p>
+<p>To select items, pass <code>jQuery()</code> a css selector that describes what you want:</p>
+<pre><code class="language-javascript">target = jQuery(<span class="hljs-string">"body"</span>);
+target = jQuery(<span class="hljs-string">"div.fancy"</span>);
+target = jQuery(<span class="hljs-string">"#author"</span>);
+target = $(<span class="hljs-string">"#author"</span>);
+</code></pre>
+<p>Once selected, you can use jQuery to manipulate your selected item(s):</p>
+<pre><code class="language-javascript">target.text(<span class="hljs-string">"hello"</span>);
+target.append( <span class="hljs-string">"&lt;p&gt;Test&lt;/p&gt;"</span> );
+target.remove();
+target.addClass(<span class="hljs-string">"fancy"</span>);
+</code></pre>
+<p>Often you might do everything in one line:</p>
+<pre><code class="language-javascript">$( <span class="hljs-string">"p"</span> ).addClass(<span class="hljs-string">"fancy"</span>);
+</code></pre>
+<p>The line above will find every <code>p</code> element in the document and add the <code>fancy</code> class to each of them.</p>
+<h1>Underscore</h1>
+<blockquote>
+<p><a href="http://underscorejs.org/#sample">Underscore</a> is a JavaScript library that provides a whole mess of useful functional programming helpers without extending any built-in objects.</p>
+</blockquote>
+<p>Underscore is great for working with data in a clean, <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> way.</p>
+<h2>_.shuffle()</h2>
+<blockquote>
+<p>Shuffle a collection, using the modern version of the
+<a href="http://en.wikipedia.org/wiki/Fisher–Yates_shuffle">Fisher-Yates shuffle</a>.</p>
+</blockquote>
+<pre><code class="language-javascript">_.shuffle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj</span>) </span>{
+  <span class="hljs-keyword">var</span> set = isArrayLike(obj) ? obj : _.values(obj);
+  <span class="hljs-keyword">var</span> length = set.length;
+  <span class="hljs-keyword">var</span> shuffled = <span class="hljs-built_in">Array</span>(length);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span>, rand; index &lt; length; index++) {
+    rand = _.random(<span class="hljs-number">0</span>, index);
+    <span class="hljs-keyword">if</span> (rand !== index) shuffled[index] = shuffled[rand];
+    shuffled[rand] = set[index];
+  }
+  <span class="hljs-keyword">return</span> shuffled;
+};
+</code></pre>
+<p>You can use it like this:</p>
+<pre><code><span class="hljs-built_in">var</span> items = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"e"</span>];
+<span class="hljs-built_in">var</span> shuffledItems = <span class="hljs-symbol">_</span>.shuffle(items);
+// [<span class="hljs-string">"b"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"a"</span>, <span class="hljs-string">"e"</span>]
+</code></pre>
+<h2>_.sample()</h2>
+<blockquote>
+<p>Sample <strong>n</strong> random values from a collection.
+If <strong>n</strong> is not specified, returns a single random element.
+The internal <code>guard</code> argument allows it to work with <code>map</code>.</p>
+</blockquote>
+<pre><code class="language-javascript">_.sample = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">obj, n, guard</span>) </span>{
+  <span class="hljs-keyword">if</span> (n == <span class="hljs-literal">null</span> || guard) {
+    <span class="hljs-keyword">if</span> (!isArrayLike(obj)) obj = _.values(obj);
+    <span class="hljs-keyword">return</span> obj[_.random(obj.length - <span class="hljs-number">1</span>)];
+  }
+  <span class="hljs-keyword">return</span> _.shuffle(obj).slice(<span class="hljs-number">0</span>, <span class="hljs-built_in">Math</span>.max(<span class="hljs-number">0</span>, n));
+};
+</code></pre>
+<p>You can use it like this:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> items = [<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>, <span class="hljs-string">"d"</span>, <span class="hljs-string">"e"</span>];
+item = _.sample(items);
+<span class="hljs-comment">// "d"</span>
+items = _.sample(items, <span class="hljs-number">2</span>);
+<span class="hljs-comment">// ["c", "b"]</span>
+</code></pre>
+<h1>Study Examples</h1>
+<h2>Study Example 1: Title Generator</h2>
+<p>This example generates a book title and subtitle using a template and randomly chosen words from lists. The title and subtitle are styled with HTML/CSS. It generates ideas.</p>
+<p>It is written in pure Javascript, without the p5.js library or jQuery.</p>
+<ul>
+<li><a href="madness">Title Generator</a></li>
+</ul>
+<h2>Study Example 2: Life Expectancy</h2>
+<p>This example modifies its content to suit input provided by the user. It helps you understand <a href="[https://www.ssa.gov/OACT/STATS/table4c6.html]">this table</a>.</p>
+<p>It is written in Javascript, using the jQuery library.</p>
+<ul>
+<li><a href="death">Life Expectancy</a></li>
+</ul>
+<h1>In-class Challenge</h1>
+<ol>
+<li>Study the examples above.</li>
+<li>Create a new script that generates a fortune using the following template.</li>
+</ol>
+<blockquote>
+<p>You will [verb] a [noun] on [day of week].</p>
+</blockquote>
+<h1>Related Links</h1>
+<ul>
+<li><a href="http://devdocs.io/">devdocs.io</a></li>
+</ul>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
