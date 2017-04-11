@@ -3,28 +3,33 @@ title: Week 10 - Vector Drawing
 toc: show
 ---
 
-[Today's Plan](plan.html)
+[Lady Gaga Midi](https://freemidi.org/artist-1586-lady-gaga)
 
 # Today's Groups
 
 Group 	| Members
 ---		| ---
-A		| ?
-B		| ?
-C		| ?
-D		| ?
-E		| ?
+A		| Sachi, Amber
+B		| Sanie, Dorothy, Jonathan
+C		| Talia, Jennifer
+D		| Jane, Bateel, Dorothy
+E		| Enayet, Gabriel, Kim
 
 
 # Homework Review Part 1
-- A: Turtle graphics are a great fit for "Spirograph" forms. Choose your favorite sketch that features a Spirograph form and discuss its core strengths.
-- B: Paradigm Shift (Turtles): Working with a turtle shift the approach to coordinates and drawing. Choose a work that demonstrates this and discuss.
-- C: Node-based Programming: Choose a work created with a node-based tool that stands out from the sketches in previous weeks. Discuss the relationship between the tool and result.
-- D: Visualizer Challenge: Choose your favorite response to the Visualizer Challenge. Discuss its strengths.
-- E: Animal Challenge:  Choose your favorite response to the Animal Challenge. Discuss its strengths.
+- **A: Spirograph**  
+  Turtle graphics are a great fit for "Spirograph" forms. Choose your favorite sketch that features a Spirograph form and discuss its core strengths.
+- **B: Paradigm Shift**  
+  Working with a turtle shift the approach to coordinates and drawing. Choose a work that demonstrates this and discuss.
+- **C: Node-based Programming**  
+  Choose a work created with a node-based tool that stands out from the sketches in previous weeks. Discuss the relationship between the tool and result.
+- **D: Visualizer Challenge**  
+  Choose your favorite response to the Visualizer Challenge. Discuss its strengths.
+- **E: Animal Challenge**  
+   Choose your favorite response to the Animal Challenge. Discuss its strengths.
 
 # Homework Review Part 2
-Sanie -> Talia -> Dorothy -> Amber -> Jennifer -> Bateel -> Jonathan -> Danielle -> Sachi -> Enayet -> Gabriel -> Jane -> Kim -> Sanie
+Sanie 👉 Talia 👉 Dorothy 👉 Amber 👉 Jennifer 👉 Bateel 👉 Jonathan 👉 Danielle 👉 Sachi 👉 Enayet 👉 Gabriel 👉 Jane 👉 Kim 👉 Sanie
 
 Find your name on the list above, choose a sketch created by the person after you on the list.
 
@@ -39,6 +44,7 @@ Find your name on the list above, choose a sketch created by the person after yo
 - Vector vs Raster Data
 - Boolean Operations on Vector Shapes
 - Intro to [Paper.js](http://paperjs.org/)
+- PaperScript vs JavaScript
 - Creating Vector Data w/ Paper.js
 - Exporting Vector Data w/ Paper.js
 
@@ -50,12 +56,31 @@ Explore using Paper.js. Focus this week on creating vector-based images. I highl
 
 **Required: Choose One**
 
-Option 1: Expand one of your sketches into a poster. Your poster must be printed in color at 24"x24" or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.
+**Option 1: Poster**  
+Expand one of your sketches into a poster. Your poster must be printed in color at 24"x24" or greater. Your poster should promote a specific event (of your choosing) and must include a generative vector element and text describing the title, date, and location of the event.
 
-Option 2: Expand one of your sketches into a laser cut artifact. This can be anything you like as along as it combines generative vector data and laser cutting/etching.
+**Option 2: Lasercut**  
+Expand one of your sketches into a laser cut artifact. This can be anything you like as along as it combines generative vector data and laser cutting/etching.
 
-For either option, create two sketch posts. The first post will show the vector data created by your code. The second post should show photo documentation of your final poster/laser-cut. **Complete both posts before our next class, and bring your poster/laser-cut to class.**
+For either option, create two to three sketch posts. The first posts will show the vector data created by your code. The final post should show photo documentation of your final poster/laser-cut. **Complete your posts before our next class, and bring your poster/laser-cut to class.**
 
+# Vector vs Raster
+
+- Fonts?
+- Render Speed?
+- Photograph?
+- Logo?
+- Twist?
+- Tint?
+- Blur?
+- Print?
+- Animate?
+- Store?
+- Send?
+- Billboard?
+
+# Boolean Operations
+[Sketch](https://www.sketchapp.com/learn/documentation/shapes/boolean-operations/)
 
 # Paper.js
 
@@ -105,6 +130,8 @@ path.moveTo(center + [100, -100]);
 path.lineTo(center + [-100, 100]);
 ```
 
+**The code above is PaperScript, not JavaScript!**
+
 ## Boolean Example
 <div class="sketch" style="width: 100%; height: 520px;">
 <iframe class="figure" height="520" src="./boolean_example/index.html"></iframe>
@@ -153,9 +180,7 @@ function downloadAsSVG(fileName) {
 }
 ```
 
-# In Class Challenge
-
-# In-class Challenge 2
+# In-class Challenge
 
 Explore using paper.js by modifying the scripts above. Work through the following challenges in order. Don't skip any.
 
@@ -167,6 +192,11 @@ Start by downloading the files for the examples above.
 1. Make both lines 8 pixels wide and blue.
 2. Set the `.strokeCap` of the lines to `'round'`
 3. Make 50 lines with random start and end points using a for loop.
+```
+// pick random value from 0 to 500
+var x = Math.random() * 500;
+```
+
 4. Make the lines 5 pixels wide and green.
 5. Give each line a random width and color.
 
