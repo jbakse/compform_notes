@@ -178,5 +178,14 @@ It is written in Javascript, using the jQuery library.
 > You will [verb] a [noun] on [day of week].
 
 
+## Study Example 3: Markov Chain
+<a href="./markov.js" class="p5_example show-lab show-lab-link hidden">pairs</a>
+
+> Congress shall enjoy the right to the Militia, when in a Grand Jury, except in a witness against unreasonable searches and unusual punishments inflicted.
+
+- [Markov](markov)
+
+
+
 # Related Links
 - [devdocs.io](http://devdocs.io/)
