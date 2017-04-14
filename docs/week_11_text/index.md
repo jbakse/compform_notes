@@ -2,6 +2,7 @@
 title: Week 11 - Text
 toc: show
 ---
+[Forgot About Dre](https://www.youtube.com/watch?v=QFcv5Ma8u8k)
 
 <div style="font-size: 200px;">Open Your Javascript Console!</div>
 
@@ -11,16 +12,19 @@ toc: show
 
 
 # Homework Review
-- In one sentence describe the sketch as to someone who hasn't seen it.
-- In one sentence describe the most successful feature of the sketch.
-- In one sentence describe the weakest feature.
-- In one sentence suggest a "polishing move."
+Choose one of your partner's sketches.
+
+- Describe the sketch as to someone who hasn't seen it.
+- Discuss the most successful feature of the sketch.
+- Discuss the weakest feature.
+- Suggest a "polishing move."
 
 
 # Today's Learning Objectives
-- Study a few functions from jQuery and Underscore
-- Generating text with Markov Chains
+- Briefly introduce jQuery and underscore
+- Discuss applications of dynamically generated text
 - Implementing a "Mad Lib" template
+- Generating text with Markov Chains
 
 # Assignment
 
@@ -39,6 +43,12 @@ This week you are posting text! Focus on the words themselves, but also consider
 - [More Animal Fun...](https://www.reddit.com/r/proceduralgeneration/comments/4bhohq/more_animal_fun/)
 - [Mad Libs](http://www.madlibs.com/)
 - [NaNoGenMo 2016](https://github.com/NaNoGenMo/2016)
+- [Indie Game Generator](http://orteil.dashnet.org/gamegen)
+- [Another Indie Game Generator](https://applepinegames.com/tech/steam-game-generator)
+- [Pentametron](https://twitter.com/pentametron?lang=en), [GreatArtBot](https://twitter.com/greatartbot), [ThinkPieceBot](http://barrl.net/2748)
+- [Don't Forget about Tay](https://en.wikipedia.org/wiki/Tay_(bot)), [Tay](http://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
+- [Cheap Bots Done Quick](http://cheapbotsdonequick.com/)
+- [Interactive Journalism](https://github.com/wbkd/awesome-interactive-journalism)
 
 # Mad Libs
 [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs)
