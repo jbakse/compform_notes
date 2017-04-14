@@ -49,7 +49,7 @@ Ideally, your story should:
 - have a clear structure: beginning (exposition), middle (rising action/conflict), end (resolution)
 
 
-See also: [https://en.wikipedia.org/wiki/It_was_a_dark_and_stormy_night]
+See also: [It was a dark and stormy night.](https://en.wikipedia.org/wiki/It_was_a_dark_and_stormy_night)
 
 
 # Examples of Comp Text
@@ -69,12 +69,12 @@ See also: [https://en.wikipedia.org/wiki/It_was_a_dark_and_stormy_night]
 # Mad Libs
 [Mad Libs](https://en.wikipedia.org/wiki/Mad_Libs)
 
-Activity: TBD
+## Activity: Mad Lib Worksheet
 
 # Markov Chains
 [Markov Chains](https://en.wikipedia.org/wiki/Markov_chain)
 
-Activity: TBD
+## Activity: Markov Chain Worksheet
 
 
 # jQuery
@@ -207,11 +207,17 @@ It is written in Javascript, using the jQuery library.
 ## Study Example 3: Markov Chain
 <a href="./markov.js" class="p5_example show-lab show-lab-link hidden">pairs</a>
 
+Bill of Rights
 > Congress shall enjoy the right to the Militia, when in a Grand Jury, except in a witness against unreasonable searches and unusual punishments inflicted.
 
-- [Markov](markov)
+Hansel and Gretel
+> I am looking at the children out of the axe, however, rejoiced, for it until the forest dwelt a short time, he could no longer, they had never in it, and I will take the room, and she awoke, and jewels.
 
+One Fish Two Fish
+> I see? One, two, three… How many fingers Do I can’t say.
 
+The Raven
+> Take thy beak from out that no craven, Ghastly grim and flutter, In there and nothing more.
 
 # Related Links
 - [devdocs.io](http://devdocs.io/)
