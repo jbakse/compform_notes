@@ -164,7 +164,7 @@ comboPath.style = {
 ## Exporting SVG
 [Mike Chambers: Saving an SVG File from Paper.js](http://www.mikechambers.com/blog/2014/07/01/saving-svg-content-from-paper.js/)
 
-```
+```javascript
 function downloadAsSVG(fileName) {
 
    if(!fileName) {
