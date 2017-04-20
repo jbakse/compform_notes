@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 12 - Sound</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 12 - Sound</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 12 - Sound -->
+		<div class="container">
+			<p><a href="plan.html">Today’s Plan</a></p>
+<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: Choose a common theme that has appeared in several pieces. Discuss the theme and one example sketch.</li>
+<li>B: Choose a work that you 1) like and 2) are unsure how it was made. Describe what you see.</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<h1>Assignment</h1>
+<h2>Challenge:</h2>
+<p><a href="./examples/sketch_sound/sketch.js" class="p5_example show-lab show-lab-link hidden">sketch_sound</a></p>
+<h1>sketch_oscilator</h1>
+<ul>
+<li>Change the frame rate to 4 fps</li>
+<li>Change the <code>random</code> call to choose from (-50, 50)</li>
+<li>Use an <code>if/else</code> statement to make a 50/50 chance of either adding or subtracting 20 hz from the frequency</li>
+<li>Modify the <code>if/else</code> above to either multiply or divide the frequency by 1.2.</li>
+<li>Try changing the oscillator type from <code>sine</code>, to <code>triangle</code>, <code>sawtooth</code>, and <code>square</code></li>
+<li>Change the (nearly) last line to <code>myOscillator.freq(frequency, .1);</code></li>
+</ul>
+<h1>sketch_modulator</h1>
+<p><a href="https://p5js.org/examples/sound-frequency-modulation.html">https://p5js.org/examples/sound-frequency-modulation.html</a></p>
+<ul>
+<li>change the carrier frequency to 440; change it back</li>
+<li>change the modular frequency to 5, then try .1; change it back</li>
+<li>change the modulator amplitude to 10, then try 1000; change it back</li>
+<li>try changing the shape of the carrier oscillator</li>
+<li>try changing the shape of the modulator oscillator</li>
+</ul>
+<h1>sketch_loop</h1>
+<ul>
+<li>remove one of the loops</li>
+<li>make a loop over just “big trouble”</li>
+<li>make the loop play twice as fast. tip: <a href="https://p5js.org/reference/#/p5.SoundFile/rate">rate()</a></li>
+<li>make it play backwards</li>
+<li>make it play when the user clicks.</li>
+</ul>
+<h1>challenging chellenges</h1>
+<ul>
+<li>make a sketch that plays random chords (where chords are any two tones at the same time)</li>
+<li>make a sketch that plays a series of ascending tones, then starts back at a low tone.</li>
+<li>add a third oscillator to the modulator example. Have the new oscillator change the frequency of the modulator. Basically chain one modulator into another.</li>
+</ul>
+<h1>final thought</h1>
+<p>Look at the sound examples. Consider choosing one to spin off into a sketch.</p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

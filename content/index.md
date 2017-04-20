@@ -34,7 +34,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 9		| Mar-31	| Live Video + Sound	| Vuo | [class notes](week_9_vuo)
 10		| Apr-07	| Vector Data			| paper.js | [class notes](week_10_vector)
 11		| Apr-14	| Generating Text		| js+html | [class notes](week_11_text)
-12		| Apr-21	| Generating Music		| js+custom | [class notes](#)
+12		| Apr-21	| Comp Sound			| p5.js sound | [class notes](week_12_sound)
 13		| Apr-28	| Generating 3D Forms	| OpenSCAD | [class notes](#)
 14		| May-05	| Interactive Comp Form	| TBD | [class notes](#)
 15		| May-12	| TBD					| TBD | [class notes](#)
