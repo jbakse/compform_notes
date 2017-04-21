@@ -5,7 +5,5 @@ function preload() {
 
 function setup() {
   mySound.loop(0, 1, 1, 0, 4);
-  // mySound2.loop(0, 1, 1, 0, 3.9);
- 
-
+  mySound2.loop(0, 1, 1, 0, 3.9);
 }
