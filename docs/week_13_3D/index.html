@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 13 - 3D</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week 13 - 3D</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week 13 - 3D -->
+		<div class="container">
+			<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Homework Review</h1>
+<ul>
+<li>A: ?</li>
+</ul>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Introduce OpenSCAD</li>
+<li>OpenSCAD syntax basics + modifiers</li>
+<li>Generating Primatives</li>
+<li>Transformations</li>
+<li>Boolean Operations</li>
+<li>Variables</li>
+<li>Loops</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<p>Explore OpenSCAD. Focus this week on creating 3D objects with code.</p>
+<p><strong>Required: Choose One</strong>
+Choose one of your sketches to 3D print. 3D print it. Photograph it nicely. Post to the site.</p>
+<p>Your printed sketch should take up two or three posts. The first posts will show in-progress or finished OpenSCAD renderings. The final post should be a photo of the finished print. <strong>Complete your posts before our next class, and bring your 3d print to class.</strong></p>
+<p>Tips:</p>
+<ul>
+<li>Use the Makerbots (or other self-serve) printers.</li>
+<li>Your first print should be small, but not tiny. Around 1 cubic inch is a good place to start.</li>
+<li>A 2 inch cube is <em>8 times</em> larger than a 1 inch cube, uses <em>8 times</em> the material, takes <em>8 times</em> as long to print.</li>
+<li>If your print doesn’t work out, thats okay. Post a photo of the failed print.</li>
+<li>Programming lets you explore complexity, which is good. But a very complex part can take a long time to calculate and render, and maybe be hard to print.</li>
+</ul>
+<h1>OpenSCAD</h1>
+<p><a href="http://www.openscad.org/">OpenSCAD</a> is “The Programmers Solid 3D CAD Modeller”</p>
+<ul>
+<li>Good for parametric parts</li>
+<li>Good for machine parts</li>
+<li>Not good for character models</li>
+<li>Think CAD and engineering</li>
+<li>Text based scripts, not GUI</li>
+<li>IDE shows code and renders output</li>
+<li>Exports to <code>.stl</code> for 3D printing, machining</li>
+<li>OpenSCAD is a declarative language. The focus is on describing the output rather than the process. This difference is pretty fundamental but is somewhat subtle in OpenSCAD. Its something you have to get a feeling for.</li>
+<li>OpenSCAD looks kind of like Javascript/C, but it very different. That similarity can be confusing at first.</li>
+</ul>
+<h2>Learning OpenSCAD</h2>
+<p>OpenSCAD is pretty well <a href="http://www.openscad.org/documentation.html">documented</a>.</p>
+<p>The documentation includes a great cheatsheet, in depth documentation of the built in functions and syntax, tutorials, examples and videos.</p>
+<p>I recommend starting by reading over the entire CheatSheet once, thining about what each command probably does. After that, read the the docs for <code>sphere</code>, <code>translate</code>, <code>union</code>, and <code>*</code>. This will let you see how the docs are written and teach you a little about the language itself. Finally, look at some of the examples packaged with the application, read the code and try changing a few things. At this point, you should be able to start on making some simple sketches.</p>
+<h1>Study Examples</h1>
+<p>Lets Make a Lego Brick!</p>
+<p>First we need <a href="https://www.cailliau.org/Lego/Dimensions/zMeasurements-en.xhtml">the dimensions of Lego bricks</a>.</p>
+<h2>Generating Primatives</h2>
+<pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
+<span class="hljs-comment">// $fn controls the detail on curves</span>
+
+% <span class="hljs-built_in">cube</span>([<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9.6</span>], <span class="hljs-literal">true</span>);
+<span class="hljs-comment">// what does removing the % do?</span>
+<span class="hljs-comment">// what if `true` were `false`?</span>
+
+<span class="hljs-built_in">cylinder</span>(h=<span class="hljs-number">1.8</span>, r=<span class="hljs-number">2.4</span>, center=<span class="hljs-literal">true</span>);
+<span class="hljs-comment">// OpenSCAD supports both named parameters, which can make code more clear.</span>
+<span class="hljs-comment">// You can also use ordered params, this works too:</span>
+<span class="hljs-comment">// cylinder(1.8, 2.4, 2.4, true);</span>
+</code></pre>
+<h2>Transformations</h2>
+<pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
+
+<span class="hljs-built_in">color</span>(<span class="hljs-string">"SlateBlue"</span>) {
+    <span class="hljs-built_in">cube</span>([<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9.6</span>], <span class="hljs-literal">true</span>);
+}
+
+<span class="hljs-comment">// you can use `color` to change the color used to render a part</span>
+<span class="hljs-comment">// I mostly use this to make my 3D render easier to understand</span>
+
+<span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">9.6</span> * .<span class="hljs-number">5</span> + <span class="hljs-number">1.8</span> * .<span class="hljs-number">5</span>]) {
+    <span class="hljs-built_in">cylinder</span>(h=<span class="hljs-number">1.8</span>, r=<span class="hljs-number">2.4</span>, center=<span class="hljs-literal">true</span>);
+}
+<span class="hljs-comment">// We want our knob on top of our block, not inside.</span>
+<span class="hljs-comment">// `translate` moves it up.</span>
+
+<span class="hljs-comment">// Notice that this syntax looks a lot like c/javascript at first glance</span>
+<span class="hljs-comment">// but works very differently.</span>
+</code></pre>
+<h2>Boolean Operations</h2>
+<pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
+
+<span class="hljs-built_in">difference</span>() {
+    <span class="hljs-built_in">union</span>() {
+        <span class="hljs-built_in">cube</span>([<span class="hljs-number">8</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9.6</span>], <span class="hljs-literal">true</span>);
+        <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">9.6</span> * .<span class="hljs-number">5</span> + <span class="hljs-number">1.8</span> * .<span class="hljs-number">5</span>]) {
+            <span class="hljs-built_in">cylinder</span>(h=<span class="hljs-number">1.8</span>, r=<span class="hljs-number">2.4</span>, center=<span class="hljs-literal">true</span>);
+        }
+    }
+    <span class="hljs-comment">// first combine the block and the knob</span>
+
+
+     <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, -<span class="hljs-number">9.6</span> * .<span class="hljs-number">5</span> + <span class="hljs-number">1.8</span> * .<span class="hljs-number">5</span>]) {
+        <span class="hljs-built_in">cylinder</span>(h=<span class="hljs-number">1.8</span>, r=<span class="hljs-number">2.4</span>, center=<span class="hljs-literal">true</span>);
+    }
+    <span class="hljs-comment">// create a cylinder for the hole</span>
+}
+<span class="hljs-comment">// remove the hole from the block+knob</span>
+
+
+<span class="hljs-comment">// This object probably won't preview very cleanly for you.</span>
+<span class="hljs-comment">// Rendering the object should fix that.</span>
+<span class="hljs-comment">// Main Menu &gt;&gt; Design &gt;&gt; Render</span>
+</code></pre>
+<h2>Variables</h2>
+<pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
+brick_width = <span class="hljs-number">8</span>;
+brick_height = <span class="hljs-number">9.6</span>;
+knob_radius = <span class="hljs-number">2.4</span>;
+knob_height = <span class="hljs-number">1.8</span>;
+
+
+<span class="hljs-built_in">difference</span>() {
+    <span class="hljs-built_in">union</span>() {
+        <span class="hljs-built_in">cube</span>([brick_width, brick_width, brick_height], <span class="hljs-literal">true</span>);
+        <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, (brick_height + knob_height) * .<span class="hljs-number">5</span>]) {
+            <span class="hljs-built_in">cylinder</span>(h=knob_height, r=knob_radius, center=<span class="hljs-literal">true</span>);
+        }
+    }
+
+
+     <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, (-brick_height + knob_height) * .<span class="hljs-number">5</span>]) {
+        <span class="hljs-built_in">cylinder</span>(h=knob_height, r=knob_radius, center=<span class="hljs-literal">true</span>);
+    }
+}
+</code></pre>
+<h2>Loops</h2>
+<pre><code class="language-openscad"><span class="hljs-keyword">$fn</span> = <span class="hljs-number">20</span>;
+brick_width = <span class="hljs-number">8</span>;
+brick_height = <span class="hljs-number">9.6</span>;
+knob_radius = <span class="hljs-number">2.4</span>;
+knob_height = <span class="hljs-number">1.8</span>;
+rows = <span class="hljs-number">2</span>;
+columns = <span class="hljs-number">8</span>;
+
+
+<span class="hljs-function"><span class="hljs-keyword">module</span> <span class="hljs-title">unit_brick</span> <span class="hljs-params">()</span> {</span>
+    <span class="hljs-built_in">difference</span>() {
+        <span class="hljs-built_in">union</span>() {
+            <span class="hljs-built_in">cube</span>([brick_width, brick_width, brick_height], <span class="hljs-literal">true</span>);
+            <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, (brick_height + knob_height) * .<span class="hljs-number">5</span>]) {
+                <span class="hljs-built_in">cylinder</span>(h=knob_height, r=knob_radius, center=<span class="hljs-literal">true</span>);
+            }
+        }
+
+
+         <span class="hljs-built_in">translate</span>([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, (-brick_height + knob_height) * .<span class="hljs-number">5</span>]) {
+            <span class="hljs-built_in">cylinder</span>(h=knob_height, r=knob_radius, center=<span class="hljs-literal">true</span>);
+        }
+    }
+}
+
+
+<span class="hljs-keyword">for</span> (x = [<span class="hljs-number">0</span>:columns-<span class="hljs-number">1</span>], y = [<span class="hljs-number">0</span>:rows-<span class="hljs-number">1</span>]) {
+    <span class="hljs-built_in">translate</span>([x*brick_width, y*brick_width, <span class="hljs-number">0</span>]) {
+        unit_brick();
+    }
+}
+<span class="hljs-comment">// `for` looks alot like a c/javascript loop but works very differently</span>
+<span class="hljs-comment">// the example above uses a single `for` loop here enumerates all the combinations over x and y</span>
+<span class="hljs-comment">// in c/javascript you would use a nested pair of loops to achieve this</span>
+
+<span class="hljs-comment">// also notice that the for is also an implicit `union`, the loop output is merged</span>
+</code></pre>
+<h1>Challenges</h1>
+<p>Make a Tophat</p>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>
