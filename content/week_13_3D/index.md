@@ -31,7 +31,8 @@ Keep Sketching!
 
 Explore OpenSCAD. Focus this week on creating 3D objects with code.
 
-**Required: Choose One**
+**Required!**
+
 Choose one of your sketches to 3D print. 3D print it. Photograph it nicely. Post to the site.
 
 Your printed sketch should take up two or three posts. The first posts will show in-progress or finished OpenSCAD renderings. The final post should be a photo of the finished print. **Complete your posts before our next class, and bring your 3d print to class.**
