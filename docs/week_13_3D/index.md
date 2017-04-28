@@ -9,11 +9,17 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| ?
+A		| Enayet, Dorothy, Sachi
+B		| Jonathan, Amber, Talia
+C		| Jennifer, Bateel, Sanie, Kim
+D		| Danielle, Jane, Gabriel
 
 
 # Homework Review
-- A: ?
+- A: **Instrument** Choose a strong sketch that allows the user to control the sound generated in some way. Discuss.
+- B: **Visualizing Sound** A number of sketches explore visualizing an audio clip with FFT or other means. Choose one and discuss.
+- C: **Soundtrack** Choose a sketch that recontextualizes an image or video with sound to good effect. Discuss.
+- D: **Critic's Choice** Choose a sketch to comment on, comment on.
 
 # Today's Learning Objectives
 
@@ -44,7 +50,7 @@ Tips:
 - A 2 inch cube is *8 times* larger than a 1 inch cube, uses *8 times* the material, takes *8 times* as long to print.
 - If your print doesn't work out, thats okay. Post a photo of the failed print.
 - Programming lets you explore complexity, which is good. But a very complex part can take a long time to calculate and render, and maybe be hard to print.
-
+- Info about [3D Printing at Parsons](http://resources.parsons.edu/labs/3d-print-lab/)
 
 # OpenSCAD
 
@@ -90,6 +96,9 @@ cylinder(h=1.8, r=2.4, center=true);
 // cylinder(1.8, 2.4, 2.4, true);
 ```
 
+![example_1](images/example_1.png)
+
+
 ## Transformations
 ```openscad
 $fn = 20;
@@ -111,6 +120,7 @@ translate([0,0,9.6 * .5 + 1.8 * .5]) {
 // but works very differently.
 ```
 
+![example_2](images/example_2.png)
 
 ## Boolean Operations
 ```openscad
@@ -138,6 +148,7 @@ difference() {
 // Rendering the object should fix that.
 // Main Menu >> Design >> Render
 ```
+![example_3](images/example_3.png)
 
 ## Variables
 
@@ -204,8 +215,11 @@ for (x = [0:columns-1], y = [0:rows-1]) {
 
 // also notice that the for is also an implicit `union`, the loop output is merged
 ```
+![example_4](images/example_4.png)
+
 
 
 # Challenges
-
-Make a Tophat
+![barbell](images/barbell.png)
+![pipes](images/pipes.png)
+![tag](images/tag.png)
