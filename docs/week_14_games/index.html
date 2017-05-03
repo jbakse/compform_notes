@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Week X - X</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/styles/bootswatch.css"> -->
+		<link rel="stylesheet" type="text/css" href="/styles/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="/styles/atelier-health.light.css">
+		<link rel="stylesheet" type="text/css" href="/styles/main.css">
+		<script type="text/javascript">
+			var base_url = "/";
+		</script>
+
+		<link rel="stylesheet" href="/tocbot/tocbot.css">
+
+	</head>
+	<body id="compform" class="show-toc">
+
+		<div class="side-bar">
+			<div class="top-bar">
+				<a href="..">Comp Form</a>
+				<span class="title">Week X - X</span>
+			</div>
+			<div class="js-toc"></div>
+		</div>
+		<!-- title: Week X - X -->
+		<div class="container">
+			<h4>Today’s Groups</h4>
+<table>
+<thead>
+<tr><th>Group</th><th>Members</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>?</td></tr>
+</tbody>
+</table>
+<h1>Today’s Learning Objectives</h1>
+<ul>
+<li>Critically consider the boundaries of games</li>
+<li>Introduce the p5.play library</li>
+</ul>
+<h1>Assignment</h1>
+<p>Keep Sketching!</p>
+<p>Make some (micro) games. Explore making games with as little complexity as possible.</p>
+<h2>Challenge: Couch Co-op</h2>
+<p>Cooperative games are games where two or more players work together to achieve a goal. Pandemic, Forbidden Island, and Hanabi are great co-op board games. Portal 2, Lovers in a Dangerous Spacetime, Gauntlet, and Towerfall a great co-op video games.</p>
+<p>Couch Co-op games are local multiplayer video games, where two people play together in the same room (on the same couch).</p>
+<p>For this challenge create a couch co-op micro-game!</p>
+<h1>What is a Game?</h1>
+<p>Many interactive artifacts fall into the categories of Games, Toys, or Tools. What is the difference?</p>
+<ul>
+<li>Break into teams.</li>
+<li>In teams, list 10 factors common to games.</li>
+<li>Order lists by importance.</li>
+<li>As a class, compare lists.</li>
+<li>Compare factors to list of interactive artifacts.</li>
+</ul>
+<p>Legos, Monopoly, Soccer, Photoshop, A Hammer, A Top, Dolls, Chess, Mario Brothers, Pac-man, Telephone,</p>
+<h1>Microgames</h1>
+<p><strong>Minigames</strong> a small videogames included within a larger video game. These are often included to add variety to the larger game. They may also be included as easter-eggs.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jPdqIekEg1U">Grand Theft Auto, Bowling</a></li>
+</ul>
+<p><strong>Microgames</strong> are less common. Microgames are tiny games, stripped down to the bare essentials, and playable in a few seconds. The WarioWare series of games from Nintendo creates a frantic experience by stringing together dozens of microgames in rapid succession.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Wario_(franchise)">Microgames @ Wikipedia</a></li>
+<li><a href="https://www.youtube.com/watch?v=zm3cWWH6dAE">WarioWare, Inc</a></li>
+</ul>
+<h1>p5.Play</h1>
+<p>The <a href="http://p5play.molleindustria.org/">p5.play</a> library adds functionality to p5.js that supports creating video-games.</p>
+<ul>
+<li>Sprites</li>
+<li>Image sequence animation</li>
+<li>Basic physics</li>
+<li>Basic collision detection</li>
+<li>Basic collision response</li>
+</ul>
+<p>Take a look at the <a href="http://p5play.molleindustria.org/examples/index.html">examples</a> and the <a href="http://p5play.molleindustria.org/docs/classes/Sprite.html">docs</a>.</p>
+<h2>Example 1—Sprites</h2>
+<div class="sketch" style="width: 100%; height: 320px;">
+<iframe class="figure" height="300" src="./examples/sprites"></iframe>
+</div>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> sprite1, sprite2;
+
+<span class="hljs-comment">// art from opengameart.org</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">600</span>, <span class="hljs-number">300</span>);
+
+    <span class="hljs-keyword">var</span> kingImage = loadImage(<span class="hljs-string">"king.png"</span>);
+    <span class="hljs-keyword">var</span> guyImage = loadImage(<span class="hljs-string">"guy.png"</span>);
+
+
+    sprite1 = createSprite(<span class="hljs-number">200</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+    sprite1.addImage(<span class="hljs-string">"main"</span>, kingImage);
+    sprite1.scale = <span class="hljs-number">4</span>;
+
+    sprite2 = createSprite(<span class="hljs-number">400</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+    sprite2.addImage(<span class="hljs-string">"main"</span>, guyImage);
+    sprite2.scale = <span class="hljs-number">4</span>;
+    sprite2.addSpeed(<span class="hljs-number">1</span>, <span class="hljs-number">180</span>);
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+    background(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">80</span>);
+    noSmooth();
+    drawSprites();
+}
+</code></pre>
+<h2>Example 2—Interaction</h2>
+<div class="sketch" style="width: 100%; height: 320px;">
+<iframe class="figure" height="300" src="./examples/interaction"></iframe>
+</div>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> sprite1;
+
+<span class="hljs-comment">// art from opengameart.org</span>
+<span class="hljs-comment">// https://opengameart.org/content/a-platformer-in-the-forest</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+    createCanvas(<span class="hljs-number">600</span>, <span class="hljs-number">300</span>);
+
+    <span class="hljs-keyword">var</span> kingImage = loadImage(<span class="hljs-string">"king.png"</span>);
+
+    sprite1 = createSprite(<span class="hljs-number">200</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+    sprite1.addImage(<span class="hljs-string">"main"</span>, kingImage);
+    sprite1.scale = <span class="hljs-number">4</span>;
+    sprite1.mouseActive = <span class="hljs-literal">true</span>;
+
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+    background(<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">80</span>);
+
+    <span class="hljs-keyword">if</span>(sprite1.mouseIsOver)
+        sprite1.rotation = <span class="hljs-number">-20</span>;
+    <span class="hljs-keyword">else</span>{
+        sprite1.rotation = <span class="hljs-number">0</span>;
+    }
+
+    noSmooth();
+    drawSprites();
+}
+</code></pre>
+<h1>In-Class Challenges</h1>
+<p>Download the <a href="examples.zip">example files</a>. Complete the following challenges.</p>
+<h2>Modify Example 1</h2>
+<ul>
+<li>Comment out the <code>addImage</code> lines. See what happens. Put them back.</li>
+<li>Change the size parameters on <code>createSprite</code>. What happens?</li>
+<li>The kid in green is running backwards. Fix that. Tip: <code>mirrorX</code></li>
+<li>Make the king run to the right.</li>
+</ul>
+<h2>Modify Example 2</h2>
+<ul>
+<li>Comment out the <code>mouseActive</code> line. See what happens. Put it back.</li>
+<li>Make the king spin when the mouse is over him.</li>
+<li>Make the king spin when the mouse is NOT over him.</li>
+<li>Make the king spin when he is clicked, and stop when clicked again.</li>
+</ul>
+<h2>Challenging Challenges</h2>
+<ul>
+<li>With Example 1: Make the king and the kid in green run towards each other. Make them stop when they collide. Tip: <code>overlap()</code></li>
+<li>With Example 1: Make the king and the kid in green chase the cursor. Make the kid much faster than the king. Optional: use the collision system to prevent the kid and the king from overlapping.</li>
+<li>With Example 2: Remove the king from the scene when he is clicked. Start the scene with 10 kings.</li>
+<li>Start making microgames!</li>
+</ul>
+
+		</div>
+
+		<script type="text/javascript" src="/javascript/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/javascript/highlight.pack.js"></script>
+		<script type="text/javascript" src="/javascript/p5_example.js"></script>
+		<script src="/tocbot/tocbot.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$("table").addClass("table table-bordered");
+			});
+			$("h1, h2, h3, h4").each(function (i) {
+				$(this).attr("id", "h_" + i);
+
+			});
+
+			tocbot.init({
+				// Where to render the table of contents.
+				tocSelector: '.show-toc .js-toc',
+				// Where to grab the headings to build the table of contents.
+				contentSelector: '.container',
+				// Which headings to grab inside of the contentSelector element.
+				headingSelector: 'h1, h2, h3',
+				collapseDepth: 2
+			});
+		</script>
+	</body>
+</html>

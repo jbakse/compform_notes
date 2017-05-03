@@ -36,7 +36,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 11		| Apr-14	| Generating Text		| js+html | [class notes](week_11_text)
 12		| Apr-21	| Comp Sound			| p5.js sound | [class notes](week_12_sound)
 13		| Apr-28	| Generating 3D Forms	| OpenSCAD | [class notes](week_13_3D)
-14		| May-05	| Interactive Comp Form	| TBD | [class notes](#)
+14		| May-05	| Microgames			| p5.play | [class notes](week_14_games)
 15		| May-12	| TBD					| TBD | [class notes](#)
 
 
