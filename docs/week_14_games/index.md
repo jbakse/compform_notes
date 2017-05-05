@@ -7,8 +7,10 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| ?
-
+A		| Sanie, Dorothy, Bateel
+B		| Gabriel, Amber, Sachi
+C		| Jennifer, Jonathan, Danielle
+D		| Kim, Jane, Talia, Enayet
 
 # Today's Learning Objectives
 - Critically consider the boundaries of games
@@ -21,9 +23,9 @@ Make some (micro) games. Explore making games with as little complexity as possi
 
 
 ## Challenge: Couch Co-op
-Cooperative games are games where two or more players work together to achieve a goal. Pandemic, Forbidden Island, and Hanabi are great co-op board games. Portal 2, Lovers in a Dangerous Spacetime, Gauntlet, and Towerfall a great co-op video games.
+Cooperative games are games where two or more players work together to achieve a goal. Pandemic, Forbidden Island, and Hanabi are great co-op board games. Portal 2, Lovers in a Dangerous Spacetime, and Towerfall a great co-op video games.
 
-Couch Co-op games are local multiplayer video games, where two people play together in the same room (on the same couch).
+Couch co-op games are local multiplayer video games, where two people play together in the same room (on the same couch).
 
 For this challenge create a couch co-op micro-game!
 
@@ -32,18 +34,20 @@ For this challenge create a couch co-op micro-game!
 
 Many interactive artifacts fall into the categories of Games, Toys, or Tools. What is the difference?
 
+Legos, Monopoly, Soccer, Photoshop, a Hammer, a Top, Dolls, Chess, Mario Brothers, Pac-man, a Telephone.
+
 - Break into teams.
 - In teams, list 10 factors common to games.
 - Order lists by importance.
 - As a class, compare lists.
 - Compare factors to list of interactive artifacts.
 
-Legos, Monopoly, Soccer, Photoshop, A Hammer, A Top, Dolls, Chess, Mario Brothers, Pac-man, Telephone,
+
 
 
 # Microgames
 
-**Minigames** a small videogames included within a larger video game. These are often included to add variety to the larger game. They may also be included as easter-eggs.
+**Minigames** are small videogames included within a larger video game. These are often included to add variety to the larger game. They may also be included as easter-eggs.
 
 - [Grand Theft Auto, Bowling](https://www.youtube.com/watch?v=jPdqIekEg1U)
 
@@ -147,7 +151,7 @@ Download the [example files](examples.zip). Complete the following challenges.
 
 ## Modify Example 1
 - Comment out the `addImage` lines. See what happens. Put them back.
-- Change the size parameters on `createSprite`. What happens?
+- Change the size parameters on `createSprite`. What happens? Why?
 - The kid in green is running backwards. Fix that. Tip: `mirrorX`
 - Make the king run to the right.
 
@@ -159,6 +163,6 @@ Download the [example files](examples.zip). Complete the following challenges.
 
 ## Challenging Challenges
 - With Example 1: Make the king and the kid in green run towards each other. Make them stop when they collide. Tip: `overlap()`
-- With Example 1: Make the king and the kid in green chase the cursor. Make the kid much faster than the king. Optional: use the collision system to prevent the kid and the king from overlapping.
 - With Example 2: Remove the king from the scene when he is clicked. Start the scene with 10 kings.
+- With Example 1: Make the king and the kid "bounce" when they collide. Tip: Look at the "bouncing" p5play example.
 - Start making microgames!
