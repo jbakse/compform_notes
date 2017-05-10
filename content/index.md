@@ -37,7 +37,7 @@ Week    | Date      | Topic                 | Tool  | Notes
 12		| Apr-21	| Comp Sound			| p5.js sound | [class notes](week_12_sound)
 13		| Apr-28	| Generating 3D Forms	| OpenSCAD | [class notes](week_13_3D)
 14		| May-05	| Microgames			| p5.play | [class notes](week_14_games)
-15		| May-12	| Post-mortem			| TBD | [class notes](#)
+15		| May-12	| Post-mortem			| Pen, Paper, Tape | [class notes](week_15_post)
 
 
 
