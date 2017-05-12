@@ -33,29 +33,12 @@ A		| ?
 <span style="color: red; font-size: 30px;">FTN! No Challenge! Class Over!</span>
 
 
-# Part 1 - Your Sketches
-
+# Postmortem
 ## Partner Feedback
-Round 1 Assigned, Round 2 Open
-
-1. Choose your partners best 3 unrelated posts.
-2. Describe the post.
-3. Describe why you chose it as one of their best.
-4. Describe the strongest feature of the post.
-5. Suggest something for your partner to do over the summer.
-
-
 ## Student Award Ballots
-Most Posts, 😍, 🤓, 😂, Helpful
-
-# Part 2 - The Class
-
 ## Matrix 1: Hard, Practical, Easy, Esoteric
 ## Matrix 2: Fun, Clear, Lame, Confusing
 ## Week Worksheet: Week Awards: Best, Worst, Best Sketches
-
-# Part 3 - The Blog
-TBD
-
-# Part 4 - Awards
-Announce the results!
+## Online Course Eval
+## The Blog Worksheet
+## Awards
