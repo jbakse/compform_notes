@@ -8,7 +8,10 @@ toc: show
 
 Group 	| Members
 ---		| ---
-A		| ?
+A		| Amber, Gabriel, Bateel
+B		| Jennifer, Dorothy, Sachi
+C		| Talia, Jonathan, Jane, Kim
+D		| Enayet, Sanie, Danielle
 
 
 # Homework Review
