@@ -11,7 +11,7 @@ Computational Form is a class at [Parsons](http://amt.parsons.edu/) that explore
 
 [Class Sketch Blog](http://sketches.compform.net/) |
 [Class Notes Github](https://github.com/jbakse/compform_notes) |
-[Syllaubs](syllabus.html) |
+[Syllabus](syllabus.html) |
 [Links](links.html)
 
 
